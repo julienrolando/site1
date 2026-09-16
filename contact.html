@@ -20,6 +20,7 @@
   <div class="container nav">
     <a href="index.html" class="logo">
       <img class="logo-mark" src="img/logo-icon.png" alt="Julien Rolando Le Bian — Conseil & Solutions IA">
+      <span class="logo-text">Julien Rolando Le Bian<small>Conseil & Solutions IA</small></span>
     </a>
     <nav class="nav-links">
       <a href="index.html">Accueil</a>
@@ -59,24 +60,7 @@
             <input type="email" id="email" name="email" required>
           </div>
           <div class="field">
-            <label>Vous êtes :</label>
-            <div class="radio-group">
-              <div class="radio-option">
-                <input type="radio" id="profil-particulier" name="profil" value="Particulier" checked>
-                <label for="profil-particulier">Particulier</label>
-              </div>
-              <div class="radio-option">
-                <input type="radio" id="profil-indep" name="profil" value="Indépendant / freelance">
-                <label for="profil-indep">Indépendant / freelance</label>
-              </div>
-              <div class="radio-option">
-                <input type="radio" id="profil-nsp" name="profil" value="Je ne sais pas encore">
-                <label for="profil-nsp">Je ne sais pas encore</label>
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <label for="besoin">Votre besoin en quelques mots</label>
+            <label for="besoin">Votre message</label>
             <textarea id="besoin" name="besoin" rows="4" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-block">Envoyer ma demande</button>
@@ -96,7 +80,7 @@
         <h2 style="color:var(--white);font-size:1.5rem;">Pourquoi commencer par un échange ?</h2>
         <p>Chaque situation est unique. Ce premier échange permet de comprendre vos usages actuels, vos priorités, et de vous orienter — sans jargon — vers la formule la plus adaptée.</p>
         <ul style="display:flex;flex-direction:column;gap:12px;margin-top:20px;">
-          <li style="color:var(--ice-2);">📍 Toulouse, en visio ou en présentiel</li>
+          <li style="color:var(--ice-2);">📍 En visio ou en présentiel, partout</li>
           <li style="color:var(--ice-2);">⏱️ 20 à 30 minutes, sans engagement</li>
           <li style="color:var(--ice-2);">🎯 Une recommandation claire à la clé</li>
         </ul>
@@ -149,5 +133,6 @@
 
 <script src="js/main.js"></script>
 <script src="js/contact.js"></script>
+<script src="js/chat-widget.js"></script>
 </body>
 </html>

@@ -1,13 +1,13 @@
-// Quiz de diagnostic — 5 questions, logique de mapping simple, sans backend.
+// Quiz de diagnostic — 4 questions qui qualifient le besoin réel, sans backend.
 (function () {
   const root = document.getElementById('diag-quiz');
   if (!root) return;
 
   const questions = [
     {
-      key: 'profil',
-      q: 'Vous êtes plutôt…',
-      options: ['Particulier', 'Indépendant / freelance', 'Je ne sais pas encore']
+      key: 'situation',
+      q: 'Votre situation ?',
+      options: ['Particulier', 'Indépendant / freelance', 'Autre']
     },
     {
       key: 'usage',
@@ -16,18 +16,13 @@
     },
     {
       key: 'besoin',
-      q: 'Votre besoin principal ?',
-      options: ['Mieux m\'organiser au quotidien', 'Automatiser une tâche répétitive', 'Produire des contenus / visuels']
+      q: 'Votre besoin concret ?',
+      options: ['Gagner du temps au quotidien', 'Automatiser une tâche professionnelle', 'Produire des contenus']
     },
     {
-      key: 'dispo',
-      q: 'Votre disponibilité ?',
-      options: ['Une seule séance me suffit', 'Je peux m\'investir sur plusieurs semaines', 'Je préfère déléguer complètement']
-    },
-    {
-      key: 'contact',
-      q: 'Comment préférez-vous être contacté ?',
-      options: ['Email', 'Téléphone', 'Réserver directement un créneau']
+      key: 'frein',
+      q: 'Qu\'est-ce qui vous freine aujourd\'hui ?',
+      options: ['Le manque de temps', 'Je ne sais pas par où commencer', 'Je préfère déléguer entièrement']
     }
   ];
 
@@ -39,20 +34,17 @@
     body: root.querySelector('.quiz-body'),
   };
 
+  const PILLARS = {
+    'prise-en-main': { title: 'Prise en main', desc: 'Reprenez la main sur votre quotidien grâce à l\'IA — sans jargon, à votre rythme.', link: 'offres.html#prise-en-main' },
+    'automatisation': { title: 'Automatisation', desc: 'Automatisez ce qui vous prend du temps, concentrez-vous sur ce qui compte.', link: 'offres.html#automatisation' },
+    'creation': { title: 'Création', desc: 'Des contenus qui vous ressemblent, sans y passer vos soirées.', link: 'offres.html#creation' },
+  };
+
   function computeResult() {
-    if (answers.dispo === 'Je préfère déléguer complètement') {
-      return { tag: 'Recommandation', title: 'Mission à la carte / Pack lancement', desc: 'Vous préférez déléguer : on prend le sujet en charge de bout en bout, vous restez concentré sur votre activité.', link: 'offres.html#creation' };
-    }
-    if (answers.besoin === 'Produire des contenus / visuels') {
-      return { tag: 'Recommandation', title: 'Création & Communication', desc: 'Des contenus qui vous ressemblent — posts, visuels, flyers — sans y passer vos soirées.', link: 'offres.html#creation' };
-    }
-    if (answers.profil === 'Indépendant / freelance' && answers.besoin === 'Automatiser une tâche répétitive') {
-      return { tag: 'Recommandation', title: 'Pack Copilote IA', desc: 'Un audit de vos tâches chronophages et des automatisations durables mises en place avec vous.', link: 'offres.html#copilote' };
-    }
-    if (answers.profil === 'Particulier' && answers.besoin === 'Mieux m\'organiser au quotidien') {
-      return { tag: 'Recommandation', title: 'Prise en main IA', desc: 'Reprenez la main sur votre quotidien grâce à l\'IA — sans jargon, à votre rythme.', link: 'offres.html#prise-en-main' };
-    }
-    return { tag: 'Recommandation', title: 'Prise en main IA', desc: 'Un premier échange pour cerner précisément ce que l\'IA peut faire pour vous.', link: 'offres.html' };
+    if (answers.besoin === 'Produire des contenus') return PILLARS['creation'];
+    if (answers.besoin === 'Automatiser une tâche professionnelle') return PILLARS['automatisation'];
+    if (answers.frein === 'Je préfère déléguer entièrement') return PILLARS['automatisation'];
+    return PILLARS['prise-en-main'];
   }
 
   function render() {
@@ -63,10 +55,10 @@
       const r = computeResult();
       els.body.innerHTML = `
         <div class="quiz-result">
-          <span class="result-tag">${r.tag}</span>
+          <span class="result-tag">Recommandation</span>
           <h3>${r.title}</h3>
           <p>${r.desc}</p>
-          <a class="btn btn-primary btn-block" href="${r.link}">Voir cette offre</a>
+          <a class="btn btn-primary btn-block" href="${r.link}">Voir ce pilier</a>
           <a class="btn btn-ghost btn-block" style="margin-top:10px" href="contact.html">Réserver un échange</a>
           <button class="quiz-restart" type="button">Refaire le diagnostic</button>
         </div>`;

@@ -20,6 +20,7 @@
   <div class="container nav">
     <a href="index.html" class="logo">
       <img class="logo-mark" src="img/logo-icon.png" alt="Julien Rolando Le Bian — Conseil & Solutions IA">
+      <span class="logo-text">Julien Rolando Le Bian<small>Conseil & Solutions IA</small></span>
     </a>
     <nav class="nav-links">
       <a href="index.html">Accueil</a>
@@ -47,8 +48,7 @@
         </div>
         <div class="hero-trust">
           <div><strong>100%</strong>Sans jargon technique</div>
-          <div><strong>Toulouse</strong>Visio ou présentiel</div>
-          <div><strong>0€</strong>Premier échange offert</div>
+          <div><strong>Partout</strong>En visio ou en présentiel</div>
         </div>
       </div>
       <div class="hero-visual">
@@ -79,31 +79,31 @@
       </div>
       <div class="bento">
         <div class="bento-card reveal">
-          <div class="icon">🧭</div>
-          <span class="tag">Particuliers</span>
-          <h3>Prise en main IA</h3>
+          <div class="bento-visual"><img src="img/pilier-prise-en-main.png" alt="Illustration du pilier Prise en main" loading="lazy"></div>
+          <span class="tag">Pour vous simplifier le quotidien</span>
+          <h3>Prise en main</h3>
           <p>Reprenez la main sur votre quotidien grâce à l'IA — sans jargon, à votre rythme.</p>
           <ul>
-            <li>Séance découverte (1h30–2h)</li>
-            <li>Parcours accompagné en 3 séances</li>
+            <li>Séance découverte, à votre rythme</li>
+            <li>Parcours accompagné sur plusieurs séances</li>
           </ul>
           <a href="offres.html#prise-en-main" class="card-link">En savoir plus <span class="arrow">→</span></a>
         </div>
         <div class="bento-card reveal" style="transition-delay:.08s">
-          <div class="icon">🤖</div>
-          <span class="tag">Indépendants & freelances</span>
-          <h3>Pack Copilote IA</h3>
+          <div class="bento-visual"><img src="img/pilier-automatisation.png" alt="Illustration du pilier Automatisation" loading="lazy"></div>
+          <span class="tag">Pour gagner du temps sur les tâches répétitives</span>
+          <h3>Automatisation</h3>
           <p>Automatisez ce qui vous prend du temps, concentrez-vous sur ce qui compte.</p>
           <ul>
             <li>Sprint Copilote</li>
             <li>Suivi mensuel · Mission à la carte</li>
           </ul>
-          <a href="offres.html#copilote" class="card-link">En savoir plus <span class="arrow">→</span></a>
+          <a href="offres.html#automatisation" class="card-link">En savoir plus <span class="arrow">→</span></a>
         </div>
         <div class="bento-card reveal" style="transition-delay:.16s">
-          <div class="icon">✨</div>
-          <span class="tag">Tous profils</span>
-          <h3>Création & Communication</h3>
+          <div class="bento-visual"><img src="img/pilier-creation.png" alt="Illustration du pilier Création" loading="lazy"></div>
+          <span class="tag">Pour des contenus qui vous ressemblent</span>
+          <h3>Création</h3>
           <p>Des contenus qui vous ressemblent, sans y passer vos soirées.</p>
           <ul>
             <li>Pack contenus mensuel</li>
@@ -121,7 +121,7 @@
       <div class="diag-banner reveal">
         <div>
           <span class="eyebrow">Pas sûr de l'offre qu'il vous faut ?</span>
-          <h2>Discutez avec l'assistant du site : il pose 2-3 questions et vous oriente vers la bonne prestation, avec une proposition de créneau immédiate.</h2>
+          <h2>Discutez avec l'assistant du site : il qualifie votre besoin en quelques questions et vous oriente vers la bonne prestation.</h2>
           <div class="hero-actions" style="margin-top:28px;margin-bottom:0;">
             <a href="contact.html" class="btn btn-primary">Réserver un échange</a>
           </div>
@@ -129,7 +129,7 @@
         <div id="diag-quiz" class="widget">
           <div class="widget-head">
             <div class="avatar">🧭</div>
-            <div><strong>Diagnostic express</strong><span>5 questions · 2 minutes</span></div>
+            <div><strong>Diagnostic express</strong><span>4 questions · 2 minutes</span></div>
           </div>
           <div class="progress-bar"><i></i></div>
           <div class="quiz-body"></div>
@@ -138,26 +138,6 @@
     </div>
   </section>
 
-  <!-- CHATBOT SIMULATION -->
-  <section class="section section-tight">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Assistant virtuel</span>
-        <h2>Ou laissez-vous guider par l'assistant</h2>
-        <p>Une simulation de conversation pour vous orienter rapidement — sans backend, sans engagement.</p>
-      </div>
-      <div style="max-width:480px;margin:0 auto;">
-        <div id="site-chatbot" class="widget reveal">
-          <div class="widget-head">
-            <div class="avatar">💬</div>
-            <div><strong>Assistant Conseil & IA</strong><span>Simulation de conversation</span></div>
-          </div>
-          <div class="chat-window"></div>
-          <div class="chat-options"></div>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -197,6 +177,6 @@
 
 <script src="js/main.js"></script>
 <script src="js/quiz.js"></script>
-<script src="js/chatbot.js"></script>
+<script src="js/chat-widget.js"></script>
 </body>
 </html>
