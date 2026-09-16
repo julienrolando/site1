@@ -364,29 +364,6 @@ button{font-family:inherit;cursor:pointer;}
   .bento-card{grid-column:span 1;}
 }
 
-/* ---------- Diagnostic / Chatbot banner ---------- */
-.diag-banner{
-  border-radius:24px;
-  padding:56px;
-  background:linear-gradient(135deg, rgba(30,58,138,.55), rgba(15,26,51,.9));
-  border:1px solid rgba(94,200,216,.25);
-  position:relative;
-  overflow:hidden;
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:40px;
-  align-items:center;
-}
-.diag-banner::before{
-  content:"";
-  position:absolute;
-  width:400px;height:400px;
-  background:radial-gradient(circle, rgba(94,200,216,.25), transparent 70%);
-  top:-150px;right:-100px;
-}
-.diag-banner h2{font-size:clamp(1.5rem,2.6vw,2rem);color:var(--white);}
-@media (max-width:900px){.diag-banner{grid-template-columns:1fr;padding:36px 24px;}}
-
 /* ---------- Widget shell (chatbot) ---------- */
 .widget{
   background:rgba(255,255,255,.05);
