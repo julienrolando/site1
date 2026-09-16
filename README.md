@@ -57,7 +57,6 @@ Ces piliers ne sont plus associés à un profil (particulier/indépendant) mais 
 - [ ] Remplacer les placeholders de la page Créations par de vrais projets
 - [ ] Décider si un outil de calendrier (Calendly ou équivalent) est branché, et où
 - [ ] Vérifier que l'adresse de l'hébergeur (Netlify) dans les mentions légales reste à jour
-- [ ] La page Offres (intro) et sa CTA "Pack Copilote IA" mentionnent encore un "échange gratuit" / "audit gratuit" — à harmoniser si la règle "aucune mention de gratuité" doit s'appliquer à tout le site et pas seulement au hero de l'accueil
 
 ## Pour toute nouvelle session Claude Code
 
