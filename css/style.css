@@ -439,10 +439,11 @@ button{font-family:inherit;cursor:pointer;}
 }
 
 /* Chatbot */
-.chat-window{height:340px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding-right:4px;margin-bottom:14px;}
+.chat-window{height:340px;overflow-y:auto;overflow-x:hidden;display:flex;flex-direction:column;gap:10px;padding-right:4px;margin-bottom:14px;}
 .chat-window::-webkit-scrollbar{width:5px;}
 .chat-window::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:99px;}
-.msg{max-width:82%;padding:11px 15px;border-radius:14px;font-size:.9rem;animation:pop .25s var(--ease);}
+.msg{max-width:82%;padding:11px 15px;border-radius:14px;font-size:.9rem;animation:pop .25s var(--ease);overflow-wrap:anywhere;word-break:break-word;white-space:pre-wrap;}
+.msg a{color:inherit;text-decoration:underline;overflow-wrap:anywhere;}
 @keyframes pop{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
 .msg.bot{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);color:var(--ice);align-self:flex-start;border-bottom-left-radius:4px;}
 .msg.user{background:linear-gradient(135deg,var(--cyan),var(--navy-light));color:var(--navy-deep);font-weight:600;align-self:flex-end;border-bottom-right-radius:4px;}
@@ -480,7 +481,8 @@ button{font-family:inherit;cursor:pointer;}
   font-size:3.4rem;
   overflow:hidden;
 }
-.offer-visual img{width:100%;height:100%;object-fit:cover;display:block;}
+.offer-visual img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s var(--ease);}
+.offer-block:hover .offer-visual img{transform:scale(1.04);}
 .offer-num{font-family:var(--font-display);font-weight:800;font-size:.85rem;color:var(--cyan);letter-spacing:.1em;}
 .offer-block h2{font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--white);margin-top:8px;}
 .offer-formats{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 26px;}
@@ -533,14 +535,22 @@ button{font-family:inherit;cursor:pointer;}
 @media (max-width:560px){.gallery{grid-template-columns:1fr;}}
 
 .case-study{
-  display:grid;grid-template-columns:.6fr 1.4fr;gap:32px;
   padding:32px;border-radius:var(--radius);
   background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
   margin-bottom:20px;
 }
-.case-study .cs-meta{display:flex;flex-direction:column;gap:10px;font-size:.85rem;}
+.demo-badge{
+  display:inline-block;
+  padding:6px 14px;border-radius:999px;
+  background:rgba(94,200,216,.12);border:1px solid rgba(94,200,216,.35);
+  color:var(--cyan-bright);font-size:.72rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.06em;
+  margin-bottom:14px;
+}
+.case-study-title{color:var(--white);font-size:1.15rem;margin-bottom:18px;}
+.case-study .cs-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;font-size:.85rem;}
 .case-study .cs-meta b{color:var(--white);font-family:var(--font-display);}
-@media (max-width:700px){.case-study{grid-template-columns:1fr;}}
+@media (max-width:700px){.case-study .cs-meta{grid-template-columns:1fr;}}
 
 /* ---------- About ---------- */
 .about-hero{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center;}
@@ -549,7 +559,9 @@ button{font-family:inherit;cursor:pointer;}
   background:linear-gradient(160deg, rgba(94,200,216,.25), rgba(30,58,138,.5));
   border:1px solid rgba(255,255,255,.1);
   display:flex;align-items:center;justify-content:center;font-size:4rem;
+  overflow:hidden;
 }
+.about-photo img{width:100%;height:100%;object-fit:cover;display:block;}
 .value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px;}
 .value-card{
   padding:22px;border-radius:var(--radius-sm);
@@ -734,3 +746,62 @@ button{font-family:inherit;cursor:pointer;}
 .gallery-item{transition:transform .3s var(--ease), border-color .3s var(--ease);}
 .footer-grid ul li a{position:relative;}
 .nav-links a, .card-link, .filter-btn{will-change:transform;}
+
+/* ---------- Pillar loop animations (Automatisation / Création) ----------
+   Pas de génération vidéo dans ce périmètre : boucle CSS/SVG légère (5-8s,
+   sans son) simulant le même effet qu'une courte vidéo. */
+.pillar-anim{position:relative;}
+
+/* Automatisation : engrenages qui tournent + flux qui s'écoule */
+.anim-automatisation .gear{
+  position:absolute;border-radius:50%;
+  border:5px dashed rgba(255,255,255,.4);
+}
+.anim-automatisation .gear-1{width:34%;aspect-ratio:1/1;top:18%;left:12%;border-color:var(--cyan-bright);animation:pillar-spin 7s linear infinite;}
+.anim-automatisation .gear-2{width:22%;aspect-ratio:1/1;top:46%;left:34%;border-color:var(--cyan);animation:pillar-spin-rev 5s linear infinite;}
+@keyframes pillar-spin{to{transform:rotate(360deg);}}
+@keyframes pillar-spin-rev{to{transform:rotate(-360deg);}}
+.anim-automatisation .flow-line{position:absolute;bottom:22%;left:8%;right:8%;height:2px;background:rgba(255,255,255,.18);overflow:hidden;}
+.anim-automatisation .flow-line span{
+  position:absolute;top:-3px;width:8px;height:8px;border-radius:50%;
+  background:var(--cyan-bright);box-shadow:0 0 8px var(--cyan-bright);
+  animation:pillar-flow 3.6s linear infinite;opacity:0;
+}
+.anim-automatisation .flow-line span:nth-child(2){animation-delay:1.2s;}
+.anim-automatisation .flow-line span:nth-child(3){animation-delay:2.4s;}
+@keyframes pillar-flow{
+  0%{left:0%;opacity:0;}
+  8%{opacity:1;}
+  92%{opacity:1;}
+  100%{left:100%;opacity:0;}
+}
+
+/* Création : cartes de visuels qui s'assemblent + palette qui se forme */
+.anim-creation .card{
+  position:absolute;width:26%;aspect-ratio:3/4;border-radius:8px;
+  background:linear-gradient(160deg, rgba(255,255,255,.28), rgba(255,255,255,.06));
+  border:1px solid rgba(255,255,255,.35);
+  opacity:0;
+  animation:pillar-card-in 5s ease-in-out infinite;
+}
+.anim-creation .card-a{left:14%;top:22%;animation-delay:0s;}
+.anim-creation .card-b{left:40%;top:12%;animation-delay:.7s;}
+.anim-creation .card-c{left:66%;top:26%;animation-delay:1.4s;}
+@keyframes pillar-card-in{
+  0%{opacity:0;transform:translateY(14px) scale(.9);}
+  18%{opacity:1;transform:translateY(0) scale(1);}
+  75%{opacity:1;transform:translateY(0) scale(1);}
+  100%{opacity:0;transform:translateY(-8px) scale(.96);}
+}
+.anim-creation .swatch{
+  position:absolute;bottom:16%;left:10%;right:10%;height:10px;border-radius:6px;
+  background:linear-gradient(90deg, var(--navy-light), var(--cyan), var(--cyan-bright), var(--navy-light));
+  background-size:300% 100%;
+  animation:pillar-swatch 6s linear infinite;
+}
+@keyframes pillar-swatch{to{background-position:300% 0;}}
+
+@media (prefers-reduced-motion: reduce){
+  .anim-automatisation .gear, .anim-automatisation .flow-line span,
+  .anim-creation .card, .anim-creation .swatch{animation:none;opacity:1;}
+}

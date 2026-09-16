@@ -8,20 +8,46 @@ const CREATIONS = [
   { title: 'Projet à ajouter', category: 'Visuels de marque' },
 ];
 
+// Démonstrations — cas fictifs illustrant chaque pilier, jamais présentés
+// comme de vrais clients (badge "Démonstration" affiché sur chaque carte).
 const CASE_STUDIES = [
-  { client: 'Client à venir', format: 'Pack contenus mensuel', result: 'Résultat à venir', desc: 'Cette étude de cas sera complétée dès la première mission de création réalisée.' },
+  {
+    badge: 'Démonstration · Pilier Création',
+    title: 'Kit de lancement réseaux sociaux',
+    contexte: 'Un commerce fictif souhaite lancer son compte Instagram avec une identité visuelle cohérente dès le premier post.',
+    realisation: '3 visuels de posts pensés comme un mini kit de lancement : même palette, même typographie, un fil visuel reconnaissable.',
+    resultat: 'Un aperçu concret de ce que donne un pack de contenus mensuel, adaptable à une vraie activité.',
+  },
+  {
+    badge: 'Démonstration · Pilier Automatisation',
+    title: 'Automatisation de facturation',
+    contexte: 'Un artisan fictif perd plusieurs heures chaque mois à établir ses factures et relancer les clients en retard.',
+    realisation: 'Schéma avant/après : un processus manuel et répétitif transformé en flux automatisé (génération, envoi, relances programmées).',
+    resultat: 'Une illustration du temps gagné une fois les tâches répétitives déléguées à l\'automatisation.',
+  },
+  {
+    badge: 'Démonstration · Pilier Prise en main',
+    title: 'Assistant IA personnalisé',
+    contexte: 'Une personne peu à l\'aise avec la technique veut mieux gérer ses rendez-vous et sa correspondance au quotidien.',
+    realisation: 'Mise en place d\'un assistant IA simple pour trier les mails, préparer des réponses et organiser l\'agenda.',
+    resultat: 'Un cas type de ce que permet un accompagnement Prise en main, sans jargon ni prérequis technique.',
+  },
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
   const gallery = document.getElementById('gallery');
   const filters = document.getElementById('filters');
-  if (!gallery) return;
+  const io = new IntersectionObserver(
+    (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add('in')),
+    { threshold: 0.12 }
+  );
 
   function renderGallery(filter) {
+    if (!gallery) return;
     gallery.innerHTML = '';
-    CREATIONS.filter(c => filter === 'Tout' || c.category === filter).forEach(c => {
+    CREATIONS.filter((c) => filter === 'Tout' || c.category === filter).forEach((c) => {
       const el = document.createElement('div');
-      el.className = 'gallery-item reveal in';
+      el.className = 'gallery-item reveal';
       el.innerHTML = `
         <div class="gallery-thumb">Visuel à venir</div>
         <div class="gallery-info">
@@ -29,36 +55,38 @@ document.addEventListener('DOMContentLoaded', () => {
           <h4>${c.title}</h4>
         </div>`;
       gallery.appendChild(el);
+      io.observe(el);
     });
   }
 
-  if (filters) {
-    filters.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        filters.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        renderGallery(btn.dataset.filter);
+  if (gallery) {
+    if (filters) {
+      filters.querySelectorAll('.filter-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          filters.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderGallery(btn.dataset.filter);
+        });
       });
-    });
+    }
+    renderGallery('Tout');
   }
-
-  renderGallery('Tout');
 
   const cs = document.getElementById('case-studies');
   if (cs) {
-    CASE_STUDIES.forEach(c => {
+    CASE_STUDIES.forEach((c) => {
       const el = document.createElement('div');
       el.className = 'case-study reveal';
       el.innerHTML = `
+        <span class="demo-badge">${c.badge}</span>
+        <h3 class="case-study-title">${c.title}</h3>
         <div class="cs-meta">
-          <div><b>Client</b><br>${c.client}</div>
-          <div><b>Format</b><br>${c.format}</div>
-          <div><b>Résultat</b><br>${c.result}</div>
-        </div>
-        <div><p>${c.desc}</p></div>`;
+          <div><b>Contexte</b><br>${c.contexte}</div>
+          <div><b>Réalisation</b><br>${c.realisation}</div>
+          <div><b>Résultat</b><br>${c.resultat}</div>
+        </div>`;
       cs.appendChild(el);
+      io.observe(el);
     });
-    const io = new IntersectionObserver((entries) => entries.forEach(e => e.isIntersecting && e.target.classList.add('in')), { threshold: .12 });
-    cs.querySelectorAll('.reveal').forEach(el => io.observe(el));
   }
 });

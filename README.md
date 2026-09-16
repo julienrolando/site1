@@ -25,6 +25,7 @@ Site vitrine statique (HTML/CSS/JS, sans framework) pour la micro-entreprise de 
 - **Typographie** : titres en `Sora` (600-800), texte courant en `Inter` (400-600)
 - **Style** : Bento Grid pour les 3 piliers (chacun avec un visuel généré par IA, `img/pilier-*.png`) + point d'entrée interactif (quiz de diagnostic + chatbot IA flottant) dès le hero de la page d'accueil
 - Logo fourni par le client (`img/logo.png` / `img/logo-icon.png`), utilisé pour le favicon et le header/footer — à ne pas modifier
+- Vraie photo de Julien (`img/julien-profil.jpg`, fournie par le client, pas générée par IA) utilisée sur la page À propos
 - Aucune restriction géographique affichée : les interventions sont présentées "en visio ou en présentiel", sans mention de ville imposée (Toulouse reste l'adresse légale/de base, cf. mentions légales)
 - Aucune mention de prix ni de gratuité dans le hero de l'accueil
 
@@ -47,14 +48,16 @@ Ces piliers ne sont plus associés à un profil (particulier/indépendant) mais 
 
 ## Fonctionnalités à connaître
 
-- **Quiz de diagnostic** (`js/quiz.js`) : 4 questions (situation / usage actuel / besoin concret / frein), sans backend, oriente vers l'un des 3 piliers
-- **Chatbot IA** (`js/chat-widget.js` + `netlify/functions/chat.js`) : widget flottant en bas à droite, fermé par défaut. Appelle l'API Claude côté serveur avec un prompt système qui connaît les 3 piliers et la façon de travailler de Julien. **Nécessite `ANTHROPIC_API_KEY` dans les variables d'environnement Netlify** (Project configuration → Environment variables) pour fonctionner en production.
+- **Quiz de diagnostic** (`js/quiz.js`) : 4 questions (situation / usage actuel / besoin concret / frein), système de score pondéré sur les 3 piliers (le besoin exprimé pèse le plus, les autres réponses affinent), sans backend
+- **Chatbot IA** (`js/chat-widget.js` + `netlify/functions/chat.js`) : widget flottant en bas à droite, fermé par défaut, titre "Assistant Conseil & IA" sans sous-titre. Appelle l'API Claude (modèle `claude-haiku-4-5-20251001`) côté serveur avec un prompt système qui connaît les 3 piliers et la façon de travailler de Julien. Rendu markdown minimal côté front (gras + liens) avec retour à la ligne forcé (`overflow-wrap`) pour éviter tout débordement. **Nécessite `ANTHROPIC_API_KEY` dans les variables d'environnement Netlify** (Project configuration → Environment variables) — déjà configurée et fonctionnelle en production à ce jour.
+- **Visuels des piliers** : Prise en main utilise une photo générée par IA (`img/pilier-prise-en-main.png`) ; Automatisation et Création utilisent des animations en boucle CSS/SVG (classes `.anim-automatisation` / `.anim-creation` dans `css/style.css`) plutôt qu'une vidéo — la génération vidéo n'étant pas dans le périmètre direct. À remplacer par de vraies vidéos courtes (5-10s, sans son) si un outil externe est utilisé plus tard.
+- **Créations** (`creations.html`) : la galerie reste en placeholders, mais la section "Études de cas" contient désormais 3 démonstrations fictives (une par pilier), chacune avec un badge "Démonstration · Pilier …" bien visible — jamais présentées comme de vrais clients.
 - **Calendrier de rendez-vous** : pas encore intégré (ni Calendly ni autre) — le formulaire de contact fait office de point d'entrée unique en attendant
 
 ## Ce qui reste en attente / à faire un jour
 
-- [ ] **Créer une clé API sur console.anthropic.com et l'ajouter comme variable d'environnement `ANTHROPIC_API_KEY` sur Netlify** — sans ça le chatbot ne fonctionne pas en production
-- [ ] Remplacer les placeholders de la page Créations par de vrais projets
+- [ ] Remplacer les placeholders de la galerie Créations par de vrais projets (les 3 démonstrations des études de cas restent fictives par nature)
+- [ ] Remplacer les animations CSS des piliers Automatisation/Création par de vraies vidéos courtes si un outil de génération externe est utilisé
 - [ ] Décider si un outil de calendrier (Calendly ou équivalent) est branché, et où
 - [ ] Vérifier que l'adresse de l'hébergeur (Netlify) dans les mentions légales reste à jour
 

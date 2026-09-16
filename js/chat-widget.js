@@ -11,6 +11,18 @@
     return e;
   }
 
+  // Rendu markdown minimal (échappe le HTML, puis gère **gras** et [liens](url))
+  function escapeHtml(str) {
+    return str.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+  function formatMessage(text) {
+    let safe = escapeHtml(text);
+    safe = safe.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    safe = safe.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    safe = safe.replace(/\n/g, '<br>');
+    return safe;
+  }
+
   const fab = el('button', 'chat-fab', '💬');
   fab.type = 'button';
   fab.setAttribute('aria-label', 'Ouvrir le chat');
@@ -20,7 +32,7 @@
     <div class="chat-panel-head">
       <div class="widget-head" style="margin-bottom:0;">
         <div class="avatar">💬</div>
-        <div><strong>Assistant Conseil & IA</strong><span>Propulsé par Claude (Anthropic)</span></div>
+        <div><strong>Assistant Conseil & IA</strong></div>
       </div>
       <button type="button" class="chat-panel-close" aria-label="Fermer le chat">✕</button>
     </div>
@@ -41,7 +53,8 @@
     const closeBtn = panel.querySelector('.chat-panel-close');
 
     function addMessage(text, from) {
-      const div = el('div', 'msg ' + from, text);
+      const html = from === 'bot' ? formatMessage(text) : escapeHtml(text);
+      const div = el('div', 'msg ' + from, html);
       windowEl.appendChild(div);
       windowEl.scrollTop = windowEl.scrollHeight;
       return div;
