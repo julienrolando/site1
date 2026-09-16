@@ -13,8 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
   // marque le lien de nav actif
-  const path = location.pathname.split('/').pop() || 'index.html';
+  const path = (location.pathname.split('/').pop() || 'index.html').replace(/\.html$/, '') || 'index';
   document.querySelectorAll('.nav-links a').forEach(a => {
-    if (a.getAttribute('href') === path) a.classList.add('active');
+    const href = (a.getAttribute('href') || '').replace(/\.html$/, '');
+    if (href === path) a.classList.add('active');
   });
 });
