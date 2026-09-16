@@ -18,4 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const href = (a.getAttribute('href') || '').replace(/\.html$/, '');
     if (href === path) a.classList.add('active');
   });
+
+  // respecte la préférence "réduire les animations" pour les vidéos en boucle
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.bento-visual video, .offer-visual video').forEach(v => {
+      v.removeAttribute('autoplay');
+      v.pause();
+    });
+  }
 });
