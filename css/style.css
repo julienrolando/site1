@@ -89,7 +89,8 @@ button{font-family:inherit;cursor:pointer;}
   color:var(--white);
 }
 .logo-mark{
-  width:36px;height:36px;flex:none;
+  width:44px;height:44px;flex:none;
+  object-fit:contain;
 }
 .logo-text small{
   display:block;
