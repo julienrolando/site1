@@ -1,7 +1,8 @@
 // Widget de chat flottant — connecté à un vrai assistant IA (API Claude via
-// la fonction serverless Netlify /.netlify/functions/chat). La clé API reste
+// un Cloudflare Worker qui fait office de backend). La clé API reste
 // côté serveur, jamais exposée ici.
 (function () {
+  const CHAT_ENDPOINT = 'https://julienrolando-chat.julienrolando-pro.workers.dev';
   const history = [];
 
   function el(tag, cls, html) {
@@ -99,7 +100,7 @@
       form.querySelector('button').disabled = true;
 
       try {
-        const res = await fetch('/.netlify/functions/chat', {
+        const res = await fetch(CHAT_ENDPOINT, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ messages: history }),
