@@ -560,11 +560,17 @@ button{font-family:inherit;cursor:pointer;}
 .form-success .icon-big{font-size:2.8rem;margin-bottom:10px;}
 .calendar-slot{
   border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);
-  overflow:hidden;margin-top:24px;background:rgba(255,255,255,.03);
+  overflow:visible;margin-top:24px;
+  background-color:#ffffff;
+  filter:none;backdrop-filter:none;opacity:1;
+  min-height:600px;
 }
-.calendar-slot iframe{display:block;width:100%;}
+.calendar-slot iframe{display:block;width:100%;height:600px;border:0;}
 @media (max-width:900px){.contact-grid{grid-template-columns:1fr;}}
-@media (max-width:520px){.calendar-slot iframe{height:520px;}}
+@media (max-width:520px){
+  .calendar-slot{min-height:520px;}
+  .calendar-slot iframe{height:520px;}
+}
 
 /* ---------- Legal ---------- */
 .legal-content{max-width:760px;}
