@@ -20,4 +20,8 @@
     <loc>https://julienrolando.fr/contact.html</loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://julienrolando.fr/reserver.html</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>
