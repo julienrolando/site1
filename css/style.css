@@ -563,9 +563,9 @@ button{font-family:inherit;cursor:pointer;}
   overflow:visible;margin-top:24px;
   background-color:#ffffff;
   filter:none;backdrop-filter:none;opacity:1;
-  height:800px;
+  height:1000px;
 }
-.calendar-slot iframe{display:block;width:100%;height:800px;border:0;}
+.calendar-slot iframe{display:block;width:100%;height:1000px;border:0;}
 @media (max-width:900px){.contact-grid{grid-template-columns:1fr;}}
 
 /* ---------- Legal ---------- */
