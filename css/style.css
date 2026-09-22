@@ -248,9 +248,14 @@ button{font-family:inherit;cursor:pointer;}
 .hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan-bright);box-shadow:0 0 10px var(--cyan-bright);animation:pulse 1.8s infinite;}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
 .hero h1{
-  font-size:clamp(2.2rem,4.6vw,3.6rem);
+  font-family:'Caveat',cursive;
+  font-weight:700;
+  font-size:clamp(3rem,6.2vw,5rem);
+  line-height:1.15;
   color:var(--white);
   margin-bottom:22px;
+  transform:rotate(-3deg);
+  transform-origin:left bottom;
 }
 .hero h1 .accent{
   background:linear-gradient(135deg,var(--cyan-bright),var(--cyan));
