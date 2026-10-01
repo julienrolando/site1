@@ -577,6 +577,7 @@ body.modal-open{overflow:hidden;}
   overflow:hidden;
 }
 .case-study-visual{
+  position:relative;
   aspect-ratio:16/9;border-radius:var(--radius-sm);
   overflow:hidden;margin:-32px -32px 24px;
 }
