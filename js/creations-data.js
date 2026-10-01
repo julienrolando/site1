@@ -1,10 +1,5 @@
 // Structure de données du portfolio — ajouter un projet ici suffit, pas besoin de toucher au HTML.
-const CREATIONS = [
-  { title: 'Projet à ajouter', category: 'Flyers' },
-  { title: 'Projet à ajouter', category: 'Flyers' },
-  { title: 'Projet à ajouter', category: 'Visuels de marque' },
-  { title: 'Projet à ajouter', category: 'Visuels de marque' },
-];
+const CREATIONS = [];
 
 // ---------- Projets réels, en pleine largeur avec carrousel manuel (boutons ← →) ----------
 const REAL_CASE_STUDIES = [
