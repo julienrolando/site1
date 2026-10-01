@@ -24,6 +24,18 @@ const CREATIONS = [
     ],
     demo: 'piazzetta',
   },
+  {
+    title: 'Automatisation d\'une agence immobilière indépendante',
+    category: 'Automatisation',
+    carousel: [
+      'img/creations/automatisation-agence-1.jpg',
+      'img/creations/automatisation-agence-2.jpg',
+      'img/creations/automatisation-agence-3.jpg',
+      'img/creations/automatisation-agence-4.jpg',
+      'img/creations/automatisation-agence-5.jpg',
+    ],
+    demo: 'automatisation-agence',
+  },
   { title: 'Projet à ajouter', category: 'Flyers' },
   { title: 'Projet à ajouter', category: 'Visuels de marque' },
   { title: 'Projet à ajouter', category: 'Flyers' },
@@ -108,7 +120,26 @@ const PIAZZETTA_DEMO = {
   resultat: 'Un mois de contenu qui alterne le produit (pizza, ingrédients), le savoir-faire (la pâte), le lieu (la salle) et l\'expérience (entre amis) — pour donner plusieurs bonnes raisons de pousser la porte, pas juste "encore une photo de pizza".',
 };
 
-const DEMOS = { 'salon-eclat': SALON_ECLAT_DEMO, 'piazzetta': PIAZZETTA_DEMO };
+// Démonstration à carrousel manuel (navigation par boutons précédent/suivant).
+const AUTOMATISATION_AGENCE_DEMO = {
+  title: 'Automatisation d\'une agence immobilière indépendante',
+  contexte: 'Une agence indépendante de 5 agents reçoit chaque jour pièces d\'identité, mandats, diagnostics et justificatifs par email. Le classement manuel dans la plateforme de gestion était long, source d\'erreurs, sans interconnexion native avec le CRM — d\'où doublons de dossiers et documents égarés.',
+  realisation: 'Audit des outils et de l\'interconnexion existante, cadrage fonctionnel (types de pièces, règles de rattachement, circuit de repli), puis développement d\'un programme de lecture et d\'analyse des emails qui classe automatiquement chaque pièce dans le bon dossier — avec un circuit « à vérifier » pour toute pièce non reconnue et des règles de classification paramétrables sans toucher au code.',
+  resultat: 'Les agents sont déchargés du tri documentaire et peuvent se concentrer sur leur métier : plus aucun document perdu, et un contrôle humain conservé sur les cas ambigus.',
+  images: [
+    'img/creations/automatisation-agence-1.jpg',
+    'img/creations/automatisation-agence-2.jpg',
+    'img/creations/automatisation-agence-3.jpg',
+    'img/creations/automatisation-agence-4.jpg',
+    'img/creations/automatisation-agence-5.jpg',
+    'img/creations/automatisation-agence-6.jpg',
+    'img/creations/automatisation-agence-7.jpg',
+    'img/creations/automatisation-agence-8.jpg',
+    'img/creations/automatisation-agence-9.jpg',
+  ],
+};
+
+const DEMOS = { 'salon-eclat': SALON_ECLAT_DEMO, 'piazzetta': PIAZZETTA_DEMO, 'automatisation-agence': AUTOMATISATION_AGENCE_DEMO };
 
 // Démonstrations — cas fictifs illustrant chaque pilier, jamais présentés
 // comme de vrais clients (badge "Démonstration" affiché sur chaque carte).
@@ -121,15 +152,6 @@ const CASE_STUDIES = [
     contexte: 'Un commerce fictif souhaite lancer son compte Instagram avec une identité visuelle cohérente dès le premier post.',
     realisation: '3 visuels de posts pensés comme un mini kit de lancement : même palette, même typographie, un fil visuel reconnaissable.',
     resultat: 'Un aperçu concret de ce que donne un pack de contenus mensuel, adaptable à une vraie activité.',
-  },
-  {
-    badge: 'Démonstration · Pilier Automatisation',
-    title: 'Automatisation de facturation',
-    image: 'img/demo-automatisation-facturation.jpg',
-    alt: 'Photo avant/après d\'un artisan fictif : débordé par sa facturation manuelle, puis serein grâce à un processus automatisé',
-    contexte: 'Un artisan fictif perd plusieurs heures chaque mois à établir ses factures et relancer les clients en retard.',
-    realisation: 'Schéma avant/après : un processus manuel et répétitif transformé en flux automatisé (génération, envoi, relances programmées).',
-    resultat: 'Une illustration du temps gagné une fois les tâches répétitives déléguées à l\'automatisation.',
   },
   {
     badge: 'Démonstration · Pilier Prise en main',
@@ -247,27 +269,59 @@ document.addEventListener('DOMContentLoaded', () => {
   function openDemoModal(key) {
     const demo = DEMOS[key];
     if (!demo) return;
-    modalBody.innerHTML = `
-      <span class="demo-badge">Démonstration</span>
-      <h2 class="demo-modal-title">${demo.title}</h2>
-      <h3 class="demo-modal-h3">Contexte</h3>
-      <p>${demo.contexte}</p>
-      <h3 class="demo-modal-h3">Le livrable</h3>
-      <div class="demo-weeks">
-        ${demo.semaines.map((s, i) => `
-          <div class="demo-week">
-            <img src="${s.image}" alt="Visuel semaine ${i + 1}" loading="lazy">
-            <div>
-              <span class="demo-week-num">Semaine ${i + 1}</span>
-              <p class="demo-week-legende">« ${escapeHtml(s.legende)} »</p>
-              <p class="demo-week-hashtags">${escapeHtml(s.hashtags)}</p>
-              <p class="demo-week-why"><b>Pourquoi ce post :</b> ${escapeHtml(s.pourquoi)}</p>
-            </div>
-          </div>`).join('')}
-      </div>
-      <h3 class="demo-modal-h3">Le résultat</h3>
-      <p>${demo.resultat}</p>
-    `;
+
+    if (demo.images) {
+      modalBody.innerHTML = `
+        <span class="demo-badge">Démonstration</span>
+        <h2 class="demo-modal-title">${demo.title}</h2>
+        <div class="demo-slider">
+          <button type="button" class="demo-slider-btn demo-slider-prev" aria-label="Image précédente">‹</button>
+          <img class="demo-slider-img" src="${demo.images[0]}" alt="${escapeHtml(demo.title)} — visuel 1" loading="lazy">
+          <button type="button" class="demo-slider-btn demo-slider-next" aria-label="Image suivante">›</button>
+          <span class="demo-slider-counter">1 / ${demo.images.length}</span>
+        </div>
+        <h3 class="demo-modal-h3">Contexte</h3>
+        <p>${demo.contexte}</p>
+        <h3 class="demo-modal-h3">Réalisation</h3>
+        <p>${demo.realisation}</p>
+        <h3 class="demo-modal-h3">Résultat</h3>
+        <p>${demo.resultat}</p>
+      `;
+      let i = 0;
+      const imgEl = modalBody.querySelector('.demo-slider-img');
+      const counterEl = modalBody.querySelector('.demo-slider-counter');
+      const show = (n) => {
+        i = (n + demo.images.length) % demo.images.length;
+        imgEl.src = demo.images[i];
+        imgEl.alt = `${demo.title} — visuel ${i + 1}`;
+        counterEl.textContent = `${i + 1} / ${demo.images.length}`;
+      };
+      modalBody.querySelector('.demo-slider-prev').addEventListener('click', () => show(i - 1));
+      modalBody.querySelector('.demo-slider-next').addEventListener('click', () => show(i + 1));
+    } else {
+      modalBody.innerHTML = `
+        <span class="demo-badge">Démonstration</span>
+        <h2 class="demo-modal-title">${demo.title}</h2>
+        <h3 class="demo-modal-h3">Contexte</h3>
+        <p>${demo.contexte}</p>
+        <h3 class="demo-modal-h3">Le livrable</h3>
+        <div class="demo-weeks">
+          ${demo.semaines.map((s, i) => `
+            <div class="demo-week">
+              <img src="${s.image}" alt="Visuel semaine ${i + 1}" loading="lazy">
+              <div>
+                <span class="demo-week-num">Semaine ${i + 1}</span>
+                <p class="demo-week-legende">« ${escapeHtml(s.legende)} »</p>
+                <p class="demo-week-hashtags">${escapeHtml(s.hashtags)}</p>
+                <p class="demo-week-why"><b>Pourquoi ce post :</b> ${escapeHtml(s.pourquoi)}</p>
+              </div>
+            </div>`).join('')}
+        </div>
+        <h3 class="demo-modal-h3">Le résultat</h3>
+        <p>${demo.resultat}</p>
+      `;
+    }
+
     overlay.classList.add('open');
     document.body.classList.add('modal-open');
   }
