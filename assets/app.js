@@ -1,11 +1,12 @@
 /* ============================================================
-   À RENSEIGNER UNE SEULE FOIS : réception des demandes par email.
-   Colle ici l'adresse de ton formulaire Formspree (voir PUBLIER.md).
-   Exemple : window.FORM_ENDPOINT = 'https://formspree.io/f/xxxxxxxx';
-   Tant que la ligne reste vide, le questionnaire affiche la confirmation
-   et le mémo bascule sur un email pré-rempli. Les deux l'utilisent.
+   Réception des demandes par email — service Web3Forms.
+   Les deux formulaires du site (questionnaire pro + guide gratuit)
+   arrivent sur la boîte configurée dans le tableau de bord Web3Forms.
+   La clé ci-dessous est publique par conception : elle ne donne accès
+   à rien, elle indique seulement vers quelle adresse transférer.
    ============================================================ */
-window.FORM_ENDPOINT = '';
+window.FORM_ENDPOINT   = 'https://api.web3forms.com/submit';
+window.FORM_ACCESS_KEY = 'f4e2bd23-82e1-4c93-8df5-6d22a1750b63';
 
 (function(){
   'use strict';
@@ -335,12 +336,9 @@ window.FORM_ENDPOINT = '';
 
   /* ---------- Questionnaire multi-étapes ---------- */
   (function(){
-    /* ====== À RENSEIGNER : réception des demandes par email ======
-       Colle ici l'URL de ton formulaire Formspree (voir RECEVOIR-LES-DEMANDES.md).
-       Exemple : var FORM_ENDPOINT = 'https://formspree.io/f/xxxxxxxx';
-       Tant que c'est vide, le visiteur voit la confirmation et le bouton
-       « Recevoir une copie par email » reste le seul relais.            */
+    /* Réception des demandes : configuration en haut du fichier. */
     var FORM_ENDPOINT = window.FORM_ENDPOINT || '';
+    var ACCESS_KEY    = window.FORM_ACCESS_KEY || '';
 
     var form = document.getElementById('contactForm');
     if (!form) return;
@@ -524,7 +522,7 @@ window.FORM_ENDPOINT = '';
         form.scrollIntoView({behavior: reduced ? 'auto' : 'smooth', block:'center'});
       }
 
-      if (!FORM_ENDPOINT){ done(); return; }
+      if (!FORM_ENDPOINT || !ACCESS_KEY){ done(); return; }
 
       var btn = document.getElementById('wizSubmit');
       btn.disabled = true;
@@ -533,6 +531,7 @@ window.FORM_ENDPOINT = '';
         method:'POST',
         headers:{'Content-Type':'application/json', 'Accept':'application/json'},
         body: JSON.stringify({
+          access_key: ACCESS_KEY,
           nom: document.getElementById('name').value.trim(),
           email: document.getElementById('email').value.trim(),
           telephone: ph,
@@ -540,10 +539,12 @@ window.FORM_ENDPOINT = '';
           objectif: val('objectif'),
           recapitulatif: body.join('\n'),
           message: msg,
-          _subject: 'Demande ' + (val('objectif') || 'Conseil IA') + ' — ' + document.getElementById('name').value.trim()
+          from_name: document.getElementById('name').value.trim(),
+          subject: 'Demande ' + (val('objectif') || 'Conseil IA') + ' — ' + document.getElementById('name').value.trim()
         })
       })
-      .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); done(); })
+      .then(function(r){ return r.json(); })
+      .then(function(j){ if (!j || j.success !== true) throw new Error('refus'); done(); })
       .catch(function(){
         /* en cas d'échec réseau, on affiche quand même la confirmation :
            le bouton « Recevoir une copie par email » sert alors de secours */
@@ -762,17 +763,20 @@ window.FORM_ENDPOINT = '';
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(v)) return fail('Cette adresse ne semble pas valide.');
       fail('');
 
-      if (!window.FORM_ENDPOINT){ versEmail(); return; }
+      if (!window.FORM_ENDPOINT || !window.FORM_ACCESS_KEY){ versEmail(); return; }
 
       var btn = form.querySelector('button[type=submit]');
       btn.disabled = true;
       var data = new FormData();
+      data.append('access_key', window.FORM_ACCESS_KEY);
       data.append('nom', nom.value.trim());
+      data.append('from_name', nom.value.trim());
       data.append('email', v);
       data.append('demande', 'Guide gratuit — dix premiers usages de l\'IA');
-      data.append('_subject', SUJET);
+      data.append('subject', SUJET);
       fetch(window.FORM_ENDPOINT, {method:'POST', body:data, headers:{'Accept':'application/json'}})
-        .then(function(r){ if (!r.ok) throw new Error('envoi'); reussi(); })
+        .then(function(r){ return r.json(); })
+        .then(function(j){ if (!j || j.success !== true) throw new Error('envoi'); reussi(); })
         .catch(function(){ btn.disabled = false; versEmail(); });
     });
   })();

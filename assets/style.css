@@ -1041,3 +1041,124 @@ a.contact__card:hover{transform:translateX(4px);box-shadow:var(--sh-2)}
   body{background:#fff;color:#000}
   .dark,.hero,.footer{background:#fff!important;color:#000!important}
 }
+/* ===================== Vignettes animées des réalisations ===================== */
+.viz{overflow:hidden}
+.viz__svg{position:absolute;inset:0;width:100%;height:100%;display:block;
+  transition:transform var(--d-slow) var(--e-out),filter var(--d-mid) var(--e-out)}
+.work:hover .viz__svg,.work:focus-visible .viz__svg{transform:scale(1.035);filter:saturate(1.12) brightness(1.08)}
+.viz__svg g,.viz__svg rect,.viz__svg circle,.viz__svg path,.viz__svg text{transform-box:fill-box}
+.v-grid path{stroke:rgba(255,255,255,.07);stroke-width:1}
+
+/* 1 — Charte graphique */
+.v1-aa{fill:#EEF2FF;font-family:var(--font-head);font-size:76px;font-weight:700;text-anchor:middle;
+  animation:v1aa 7s var(--e-out) infinite}
+.v1-rule rect{fill:#7FE3F0;transform-origin:50% 50%;animation:v1rule 7s var(--e-out) infinite}
+.v1-sw .sw{opacity:0;stroke:rgba(255,255,255,.2);stroke-width:1;animation:v1pop 7s var(--e-spring) infinite}
+.sw1{fill:#1E3A8A;animation-delay:.15s}
+.sw2{fill:#4F30A6;animation-delay:.3s}
+.sw3{fill:#7C5CE0;animation-delay:.45s}
+.sw4{fill:#5EC8D8;animation-delay:.6s}
+.sw5{fill:#EEF2FF;animation-delay:.75s}
+@keyframes v1aa{0%,100%{opacity:0;transform:translateY(10px)}10%,82%{opacity:.96;transform:translateY(0)}}
+@keyframes v1rule{0%,6%,100%{transform:scaleX(0)}18%,82%{transform:scaleX(1)}}
+@keyframes v1pop{0%{opacity:0;transform:translateY(18px)}14%,84%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(18px)}}
+
+/* 2 — Kit de marque */
+.v2-stack .card rect{fill:rgba(255,255,255,.07);stroke:rgba(255,255,255,.2);stroke-width:1.5}
+.v2-stack .c1 rect:first-child{fill:rgba(238,242,255,.13);stroke:rgba(255,255,255,.4)}
+.v2-stack .card{transform-origin:50% 100%}
+.c3{animation:v2fan3 6.5s var(--e-out) infinite}
+.c2{animation:v2fan2 6.5s var(--e-out) infinite}
+.c1{animation:v2fan1 6.5s var(--e-out) infinite}
+.roof{fill:none;stroke:#7FE3F0;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.door{fill:rgba(127,227,240,.4);stroke:none}
+.v2-stack .ln{fill:rgba(255,255,255,.32);stroke:none}
+@keyframes v2fan3{0%,100%{transform:rotate(0) translateX(0)}35%,72%{transform:rotate(-14deg) translateX(-26px)}}
+@keyframes v2fan2{0%,100%{transform:rotate(0) translateX(0)}35%,72%{transform:rotate(-7deg) translateX(-12px)}}
+@keyframes v2fan1{0%,100%{transform:translateY(0) scale(1)}35%,72%{transform:translateY(-10px) scale(1.04)}}
+
+/* 3 — Automatisation / flux */
+.v3-cols rect{fill:rgba(255,255,255,.045);stroke:rgba(255,255,255,.13);stroke-width:1}
+.v3-heads rect{fill:rgba(127,227,240,.45)}
+.tk rect{fill:rgba(155,134,240,.55);stroke:rgba(255,255,255,.22);stroke-width:1}
+.tk{animation:v3move 8s var(--e-out) infinite}
+.tk2{animation-delay:-2.7s}
+.tk3{animation-delay:-5.4s}
+@keyframes v3move{
+  0%,8%{transform:translateX(0);opacity:1}
+  22%,38%{transform:translateX(108px);opacity:1}
+  52%,80%{transform:translateX(216px);opacity:1}
+  90%{transform:translateX(216px);opacity:0}
+  91%{transform:translateX(0);opacity:0}
+  100%{transform:translateX(0);opacity:1}}
+.v3-check circle{fill:rgba(127,227,240,.12);stroke:#7FE3F0;stroke-width:2}
+.v3-check path{fill:none;stroke:#7FE3F0;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:32;stroke-dashoffset:32;animation:v3draw 8s var(--e-out) infinite}
+.v3-check{transform-origin:50% 50%;animation:v3pulse 8s var(--e-out) infinite}
+@keyframes v3draw{0%,52%{stroke-dashoffset:32}64%,88%{stroke-dashoffset:0}100%{stroke-dashoffset:32}}
+@keyframes v3pulse{0%,52%,100%{opacity:.35;transform:scale(.94)}64%,88%{opacity:1;transform:scale(1)}}
+
+/* 4 — Agent financier */
+.v4-doc rect:first-child{fill:rgba(255,255,255,.07);stroke:rgba(255,255,255,.22);stroke-width:1.5}
+.v4-doc .dl rect{fill:rgba(255,255,255,.3);transform-origin:0 50%;animation:v4line 6s var(--e-out) infinite}
+.v4-doc .dl rect:nth-child(2){animation-delay:.12s}
+.v4-doc .dl rect:nth-child(3){animation-delay:.24s}
+.v4-doc .dl rect:nth-child(4){animation-delay:.36s}
+.v4-arrow path{fill:none;stroke:#7FE3F0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.v4-arrow{animation:v4push 6s var(--e-out) infinite}
+.v4-bars .b{transform-origin:50% 100%;animation:v4grow 6s var(--e-spring) infinite}
+.b1{fill:rgba(127,227,240,.4);animation-delay:.6s}
+.b2{fill:rgba(127,227,240,.55);animation-delay:.75s}
+.b3{fill:rgba(127,227,240,.72);animation-delay:.9s}
+.b4{fill:#7FE3F0;animation-delay:1.05s}
+.v4-base path{stroke:rgba(255,255,255,.22);stroke-width:2}
+.v4-alert circle{fill:rgba(155,134,240,.2);stroke:#9B86F0;stroke-width:2}
+.v4-alert path{stroke:#EEF2FF;stroke-width:3;stroke-linecap:round}
+.v4-alert{transform-origin:50% 50%;animation:v4alert 6s var(--e-out) infinite}
+@keyframes v4line{0%,8%{transform:scaleX(0);opacity:0}20%,86%{transform:scaleX(1);opacity:1}100%{transform:scaleX(0);opacity:0}}
+@keyframes v4push{0%,30%,100%{opacity:.4;transform:translateX(-6px)}45%,85%{opacity:1;transform:translateX(0)}}
+@keyframes v4grow{0%,10%{transform:scaleY(0);opacity:0}30%,86%{transform:scaleY(1);opacity:1}100%{transform:scaleY(0);opacity:0}}
+@keyframes v4alert{0%,55%,100%{opacity:0;transform:scale(.7)}68%,88%{opacity:1;transform:scale(1)}}
+
+/* 5 — Site web */
+.v5-frame rect{fill:rgba(255,255,255,.05);stroke:rgba(255,255,255,.2);stroke-width:1.5}
+.v5-frame path{stroke:rgba(255,255,255,.18);stroke-width:1.5}
+.v5-dots circle{fill:rgba(255,255,255,.28)}
+.v5-url rect{fill:rgba(127,227,240,.28)}
+.v5-blocks .bk{opacity:0;transform-origin:0 50%;animation:v5in 7s var(--e-out) infinite}
+.k1{fill:rgba(238,242,255,.85);animation-delay:.1s}
+.k2{fill:rgba(255,255,255,.3);animation-delay:.25s}
+.k3{fill:#7FE3F0;animation-delay:.4s}
+.k4{fill:rgba(124,92,224,.6);animation-delay:.55s}
+.k5{fill:rgba(255,255,255,.14);animation-delay:.7s}
+.k6{fill:rgba(255,255,255,.14);animation-delay:.85s}
+.k7{fill:rgba(255,255,255,.14);animation-delay:1s}
+@keyframes v5in{0%{opacity:0;transform:translateY(10px) scaleX(.88)}12%,84%{opacity:1;transform:none}96%,100%{opacity:0;transform:translateY(10px) scaleX(.88)}}
+
+/* 6 — Application de jeu */
+.v6-phone rect{fill:rgba(255,255,255,.06);stroke:rgba(255,255,255,.24);stroke-width:2}
+.v6-phone .notch{fill:rgba(255,255,255,.35);stroke:none}
+.v6-die rect{fill:rgba(238,242,255,.94)}
+.v6-die .pip{fill:#13224A}
+.v6-die{transform-origin:50% 50%;animation:v6roll 5s var(--e-spring) infinite}
+.p3{animation:v6p3 5s steps(1) infinite}
+.p2,.p4{animation:v6p24 5s steps(1) infinite}
+.v6-bar rect{fill:rgba(127,227,240,.45);transform-origin:0 50%;animation:v6bar 5s var(--e-out) infinite}
+.v6-players .pl{fill:rgba(255,255,255,.08);stroke:rgba(255,255,255,.22);stroke-width:2;
+  transform-origin:50% 50%;animation:v6turn 5s var(--e-out) infinite}
+.q2{animation-delay:1.25s}
+.q3{animation-delay:2.5s}
+.q4{animation-delay:3.75s}
+@keyframes v6roll{0%,10%{transform:rotate(0) translateY(0)}32%{transform:rotate(-200deg) translateY(-16px)}55%,100%{transform:rotate(-360deg) translateY(0)}}
+@keyframes v6p3{0%,28%{opacity:1}29%,100%{opacity:0}}
+@keyframes v6p24{0%,28%{opacity:0}29%,100%{opacity:1}}
+@keyframes v6bar{0%,100%{transform:scaleX(.25)}50%{transform:scaleX(1)}}
+@keyframes v6turn{0%{fill:rgba(127,227,240,.45);stroke:#7FE3F0;transform:scale(1.14)}
+  18%{fill:rgba(127,227,240,.45);stroke:#7FE3F0;transform:scale(1.14)}
+  30%,100%{fill:rgba(255,255,255,.08);stroke:rgba(255,255,255,.22);transform:scale(1)}}
+
+@media (prefers-reduced-motion:reduce){
+  .viz__svg *{animation:none!important}
+  .viz__svg .sw,.viz__svg .bk,.viz__svg .b,.viz__svg .tk,.viz__svg .v1-aa,.viz__svg .v3-check,.viz__svg .v4-alert{opacity:1!important;transform:none!important}
+  .v3-check path{stroke-dashoffset:0!important}
+}
