@@ -721,34 +721,42 @@ window.FORM_ENDPOINT = '';
   (function(){
     var form = document.getElementById('memoForm');
     if (!form) return;
+    var nom   = document.getElementById('memoNom');
     var input = document.getElementById('memoEmail');
+    var errN  = document.getElementById('err-memoNom');
     var err   = document.getElementById('err-memoEmail');
     var ok    = document.getElementById('memoOk');
     var SUJET = 'Demande du guide « Vos dix premiers usages de l\'IA au quotidien »';
 
-    function fail(msg){
-      err.textContent = msg;
-      input.setAttribute('aria-invalid', msg ? 'true' : 'false');
-      if (msg) input.focus();
+    function marque(champ, zone, msg){
+      zone.textContent = msg;
+      champ.setAttribute('aria-invalid', msg ? 'true' : 'false');
       return !msg;
     }
+    function fail(msg){ var r = marque(input, err, msg); if (msg) input.focus(); return r; }
+    function failNom(msg){ var r = marque(nom, errN, msg); if (msg) nom.focus(); return r; }
+    function prenom(){ return nom.value.trim().split(/\s+/)[0] || ''; }
     function reussi(){
-      form.querySelector('.memo__row').hidden = true;
-      form.querySelector('.memo__label').hidden = true;
+      form.querySelector('.memo__grid').hidden = true;
+      form.querySelector('button[type=submit]').hidden = true;
+      form.querySelector('.memo__note').hidden = true;
       ok.hidden = false;
-      ok.textContent = 'C\'est noté, merci. Je vous envoie le guide à ' + input.value.trim() + ' sous 24 h, depuis contact@julienrolando.fr. Pensez à regarder vos indésirables si vous ne le voyez pas.';
+      ok.textContent = 'C\'est noté, merci ' + prenom() + '. Je vous envoie le guide à ' + input.value.trim() + ' sous 24 h, depuis contact@julienrolando.fr. Pensez à regarder vos indésirables si vous ne le voyez pas.';
     }
     function versEmail(){
-      var corps = 'Bonjour,\n\nJe souhaite recevoir le guide « Vos dix premiers usages de l\'IA au quotidien ».\n\nMon adresse : ' + input.value.trim() + '\n\nMerci !';
+      var corps = 'Bonjour,\n\nJe souhaite recevoir le guide « Vos dix premiers usages de l\'IA au quotidien ».\n\nNom : ' + nom.value.trim() + '\nAdresse : ' + input.value.trim() + '\n\nMerci !';
       window.location.href = 'mailto:contact@julienrolando.fr?subject=' + encodeURIComponent(SUJET) + '&body=' + encodeURIComponent(corps);
       reussi();
     }
 
     input.addEventListener('input', function(){ if (err.textContent) fail(''); });
+    nom.addEventListener('input', function(){ if (errN.textContent) failNom(''); });
 
     form.addEventListener('submit', function(e){
       e.preventDefault();
       if (document.getElementById('memoTrap').value !== '') return;   /* piège à robots */
+      if (!nom.value.trim()) return failNom('Dites-moi au moins votre prénom.');
+      failNom('');
       var v = input.value.trim();
       if (!v) return fail('Il me faut votre adresse email pour vous envoyer le guide.');
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(v)) return fail('Cette adresse ne semble pas valide.');
@@ -759,6 +767,7 @@ window.FORM_ENDPOINT = '';
       var btn = form.querySelector('button[type=submit]');
       btn.disabled = true;
       var data = new FormData();
+      data.append('nom', nom.value.trim());
       data.append('email', v);
       data.append('demande', 'Guide gratuit — dix premiers usages de l\'IA');
       data.append('_subject', SUJET);

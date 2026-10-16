@@ -292,7 +292,7 @@
         <p class="eyebrow">Comment ça se passe</p>
         <h2 style="font-size:var(--fs-h2);margin-bottom:var(--s-3)">On avance à votre rythme, <span class="accent">jamais au mien</span></h2>
         <p class="lead">Il n'y a rien à savoir avant de commencer, et aucune question n'est bête. On répète autant de fois qu'il faut, on revient en arrière si besoin, et c'est vous qui dites quand ça vous suffit.</p>
-        <a class="btn btn--primary" href="#contact" style="margin-top:var(--s-4)" data-magnet>
+        <a class="btn btn--primary" href="#rendezvous" style="margin-top:var(--s-4)" data-magnet>
           Prendre le premier rendez-vous
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
@@ -357,7 +357,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> On commence avec les versions gratuites</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Mémo écrit à la fin de chaque séance</li>
         </ul>
-        <a class="btn btn--primary btn--block" href="#contact" data-prefill="Prise en main">Demander un devis</a>
+        <a class="btn btn--primary btn--block" href="#rendezvous">Prendre rendez-vous</a>
       </li>
     </ul>
 
@@ -447,17 +447,24 @@
       </div>
 
       <form class="memo__form" id="memoForm" novalidate>
-        <label class="memo__label" for="memoEmail">Votre adresse email</label>
-        <div class="memo__row">
-          <input type="email" id="memoEmail" name="email" placeholder="prenom@exemple.fr" autocomplete="email" required>
-          <button class="btn btn--primary" type="submit" data-magnet>
-            Recevoir le guide
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </button>
+        <div class="memo__grid">
+          <p class="memo__field">
+            <label class="memo__label" for="memoNom">Prénom et nom</label>
+            <input type="text" id="memoNom" name="nom" placeholder="Marie Dupont" autocomplete="name" required>
+            <span class="field__error" id="err-memoNom" aria-live="polite"></span>
+          </p>
+          <p class="memo__field">
+            <label class="memo__label" for="memoEmail">Adresse email</label>
+            <input type="email" id="memoEmail" name="email" placeholder="marie@exemple.fr" autocomplete="email" required>
+            <span class="field__error" id="err-memoEmail" aria-live="polite"></span>
+          </p>
         </div>
-        <span class="field__error" id="err-memoEmail" aria-live="polite"></span>
+        <button class="btn btn--primary btn--block" type="submit" data-magnet>
+          Recevoir le guide
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
         <input type="text" id="memoTrap" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <p class="memo__note">Je vous l'envoie moi-même, en une fois. Pas d'inscription, pas de liste de diffusion, pas de relance commerciale&nbsp;: votre adresse sert à ça et à rien d'autre. <a href="confidentialite.html">En savoir plus</a>.</p>
+        <p class="memo__note">Je vous envoie le guide moi-même, puis un message de temps en temps&nbsp;: un conseil, un outil qui vaut le détour. Jamais plus d'une fois par mois, et un simple mot suffit pour que j'arrête. <a href="confidentialite.html">Ce que je fais de vos données</a>.</p>
         <p class="memo__ok" id="memoOk" role="status" hidden></p>
       </form>
     </div>
@@ -470,282 +477,13 @@
     <div class="section-head" data-reveal>
       <p class="eyebrow">Prendre rendez-vous</p>
       <h2>Choisissez votre créneau, <span class="accent">directement dans mon agenda</span></h2>
-      <p class="lead">30 minutes, en visio ou autour d'un café à Toulouse, sans engagement. Vous me racontez ce qui vous bloque, je vous dis franchement si je peux vous aider et comment. Si vous préférez d'abord écrire, le questionnaire juste en dessous prend trois minutes.</p>
+      <p class="lead">30 minutes, en visio ou autour d'un café à Toulouse, sans engagement. Vous me racontez ce qui vous bloque, je vous dis franchement si je peux vous aider et comment. Rien à préparer, rien à installer — et si ce n'est pas pour vous, je vous le dirai.</p>
     </div>
 
     <div class="booking" id="booking" data-reveal="scale">
       <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25uoD1O1Y-dagX5nLsBhHxMVNaUTiB6Z2745vF_IbIQU9n8ObBLU2lw5xra8ya03DOLU56-fyI?gv=true" title="Agenda de prise de rendez-vous de Julien Rolando Le Bian" loading="lazy" frameborder="0"></iframe>
     </div>
     <p class="booking__note form__note">L'agenda est hébergé par Google&nbsp;: son affichage dépose des cookies Google. <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25uoD1O1Y-dagX5nLsBhHxMVNaUTiB6Z2745vF_IbIQU9n8ObBLU2lw5xra8ya03DOLU56-fyI?gv=true" target="_blank" rel="noopener">Ouvrir dans un nouvel onglet</a></p>
-  </div>
-</section>
-
-<!-- ============================ CONTACT ============================ -->
-<section class="section" id="contact">
-  <div class="wrap">
-    <div class="section-head" data-reveal>
-      <p class="eyebrow">Premier échange</p>
-      <h2>Racontez-moi votre semaine, <span class="accent">on part de là</span></h2>
-      <p class="lead">Quelques questions pour comprendre où vous en êtes avec ces outils et ce que vous aimeriez simplifier. Trois minutes, et je vous réponds sous 48&nbsp;h avec une proposition concrète.</p>
-    </div>
-
-    <div class="contact">
-      <div class="contact__aside" data-reveal="left">
-        <a class="contact__card" href="mailto:contact@julienrolando.fr">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M3 7l9 6 9-6"/></svg>
-          <span><strong>contact@julienrolando.fr</strong><span>Réponse sous 48 h ouvrées</span></span>
-        </a>
-        <a class="contact__card" href="#rendezvous">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
-          <span><strong>Réserver un créneau</strong><span>30 minutes, en visio ou en présentiel</span></span>
-        </a>
-        <div class="contact__card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-10a7 7 0 1114 0c0 4.8-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
-          <span><strong>Toulouse (31500)</strong><span>Présentiel dans le Sud-Ouest, visio partout en France</span></span>
-        </div>
-        <div class="contact__card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-3.6 8-10V5.5L12 2 4 5.5V12c0 6.4 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-          <span><strong>Entreprise individuelle déclarée</strong><span>SIRET 830 012 175 00055 · APE 6202A</span></span>
-        </div>
-      </div>
-
-      <form class="form form--wizard" id="contactForm" novalidate data-reveal="right">
-        <div class="form__body">
-
-          <div class="wizard__head">
-            <div class="wizard__bar"><span class="wizard__fill" id="wizFill"></span></div>
-            <p class="wizard__meta"><b id="wizTitle">Votre situation</b><span id="wizCount">Étape 1 / 4</span></p>
-          </div>
-
-          <!-- Étape 1 -->
-          <fieldset class="wstep" data-step="1">
-            <legend>Qui êtes-vous, et que cherchez-vous&nbsp;?</legend>
-            <p class="wstep__hint">Deux clics, pour que je prépare l'échange avec les bons exemples.</p>
-
-            <div class="wgroup">
-              <span class="wlabel" id="lbl-profil">Vous êtes…</span>
-              <div class="choices choices--3" role="group" aria-labelledby="lbl-profil">
-            <label class="choice"><input type="radio" name="profil" value="Particulier" checked><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Un particulier<small>pour alléger le quotidien</small></span></label>
-            <label class="choice"><input type="radio" name="profil" value="Indépendant"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Indépendant / freelance<small>pour gagner du temps</small></span></label>
-            <label class="choice"><input type="radio" name="profil" value="Entreprise"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Une petite structure<small>équipe, association, agence</small></span></label>
-              </div>
-              <span class="field__error" id="err-profil" aria-live="polite"></span>
-            </div>
-
-            <div class="wgroup">
-              <span class="wlabel" id="lbl-objectif">Ce qui vous intéresse</span>
-              <div class="choices choices--2" role="group" aria-labelledby="lbl-objectif">
-            <label class="choice"><input type="radio" name="objectif" value="Prise en main"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Prise en main<small>utiliser l'IA au quotidien · dès 60 €</small></span></label>
-            <label class="choice"><input type="radio" name="objectif" value="Automatisation"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Automatisation<small>mails, devis, relances · sur devis</small></span></label>
-            <label class="choice"><input type="radio" name="objectif" value="Création"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Création de contenus<small>posts, visuels, flyers · dès 25 €</small></span></label>
-            <label class="choice"><input type="radio" name="objectif" value="Je ne sais pas encore"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Je ne sais pas encore<small>on en parle, je vous oriente</small></span></label>
-              </div>
-              <span class="field__error" id="err-objectif" aria-live="polite"></span>
-            </div>
-          </fieldset>
-
-          <!-- Étape 2 : questions selon l'objectif -->
-          <fieldset class="wstep" data-step="2" hidden>
-            <legend id="step2Title">Votre besoin, en détail</legend>
-            <p class="wstep__hint">Cochez ce qui vous parle. Plusieurs réponses possibles, rien n'est figé.</p>
-
-            <div class="wbranch" data-branch="Prise en main" hidden>
-              <div class="wgroup">
-                <span class="wlabel" id="lbl-outils">Où en êtes-vous avec ces outils&nbsp;?</span>
-                <div class="choices choices--2" role="group" aria-labelledby="lbl-outils">
-            <label class="choice"><input type="radio" name="niveau" value="Jamais essayé"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Je n'ai jamais essayé<small>on part de zéro, c'est courant</small></span></label>
-            <label class="choice"><input type="radio" name="niveau" value="Quelques essais"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">J'ai essayé une ou deux fois<small>sans savoir quoi en faire</small></span></label>
-            <label class="choice"><input type="radio" name="niveau" value="Usage régulier"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Je m'en sers déjà<small>mais sûrement mal</small></span></label>
-            <label class="choice"><input type="radio" name="niveau" value="Pour un proche"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">C'est pour aider un proche<small>parent, conjoint, ami</small></span></label>
-                </div>
-              </div>
-              <div class="wgroup">
-                <span class="wlabel" id="lbl-simplifier">Ce que vous aimeriez simplifier <span class="opt">(plusieurs choix)</span></span>
-                <div class="choices choices--2" role="group" aria-labelledby="lbl-simplifier">
-            <label class="choice choice--check"><input type="checkbox" name="simplifier" value="Rédiger mes mails et courriers"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Rédiger mes mails et courriers</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="simplifier" value="Mes démarches administratives"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Mes démarches administratives</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="simplifier" value="Rechercher et résumer des informations"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Rechercher et résumer des informations</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="simplifier" value="M'organiser au quotidien"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">M'organiser au quotidien</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="simplifier" value="Créer des images ou des textes"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Créer des images ou des textes</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="simplifier" value="Comprendre ce que l'IA peut faire"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Comprendre ce que l'IA peut faire</span></label>
-                </div>
-              </div>
-            </div>
-
-            <div class="wbranch" data-branch="Automatisation" hidden>
-              <div class="wgroup">
-                <span class="wlabel" id="lbl-taches">Quelles tâches vous mangent le plus de temps&nbsp;? <span class="opt">(plusieurs choix)</span></span>
-                <div class="choices choices--2" role="group" aria-labelledby="lbl-taches">
-            <label class="choice choice--check"><input type="checkbox" name="taches" value="Tri et réponse aux mails"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Tri et réponse aux mails</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="taches" value="Rédaction des devis"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Rédaction des devis</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="taches" value="Facturation"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Facturation</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="taches" value="Relances des impayés"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Relances des impayés</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="taches" value="Suivi et reporting client"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Suivi et reporting client</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="taches" value="Prise de rendez-vous"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Prise de rendez-vous</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="taches" value="Saisie recopiée d'un outil à l'autre"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Saisie recopiée d'un outil à l'autre</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="taches" value="Veille et recherche d'informations"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Veille et recherche d'informations</span></label>
-                </div>
-                <span class="field__error" id="err-taches" aria-live="polite"></span>
-              </div>
-              <div class="wgroup">
-                <span class="wlabel" id="lbl-outilspro">Avec quoi travaillez-vous aujourd'hui&nbsp;? <span class="opt">(plusieurs choix)</span></span>
-                <div class="choices choices--3" role="group" aria-labelledby="lbl-outilspro">
-            <label class="choice choice--check"><input type="checkbox" name="outilspro" value="Gmail / Google"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Gmail / Google</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="outilspro" value="Outlook / Microsoft"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Outlook / Microsoft</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="outilspro" value="Excel ou Google Sheets"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Excel ou Google Sheets</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="outilspro" value="Un logiciel de facturation"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Un logiciel de facturation</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="outilspro" value="Un CRM"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Un CRM</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="outilspro" value="Papier et carnet"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Papier et carnet</span></label>
-                </div>
-              </div>
-              <div class="wgroup">
-                <span class="wlabel" id="lbl-volume">Combien d'heures par semaine, à la louche&nbsp;?</span>
-                <div class="choices choices--3" role="group" aria-labelledby="lbl-volume">
-            <label class="choice"><input type="radio" name="volume" value="Moins de 3 h"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Moins de 3 h</span></label>
-            <label class="choice"><input type="radio" name="volume" value="Entre 3 et 8 h"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Entre 3 et 8 h</span></label>
-            <label class="choice"><input type="radio" name="volume" value="Plus de 8 h"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Plus de 8 h</span></label>
-                </div>
-              </div>
-            </div>
-
-            <div class="wbranch" data-branch="Création" hidden>
-              <div class="wgroup">
-                <span class="wlabel" id="lbl-supports">De quels supports avez-vous besoin&nbsp;? <span class="opt">(plusieurs choix)</span></span>
-                <div class="choices choices--2" role="group" aria-labelledby="lbl-supports">
-            <label class="choice choice--check"><input type="checkbox" name="supports" value="Publications réseaux sociaux"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Publications réseaux sociaux</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="supports" value="Visuels et illustrations"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Visuels et illustrations</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="supports" value="Flyers et affiches"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Flyers et affiches</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="supports" value="Supports de présentation"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Supports de présentation</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="supports" value="Textes pour mon site"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Textes pour mon site</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="supports" value="Une ligne graphique complète"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Une ligne graphique complète</span></label>
-                </div>
-                <span class="field__error" id="err-supports" aria-live="polite"></span>
-              </div>
-              <div class="wgroup">
-                <span class="wlabel" id="lbl-rythme">À quel rythme&nbsp;?</span>
-                <div class="choices choices--3" role="group" aria-labelledby="lbl-rythme">
-            <label class="choice"><input type="radio" name="rythme" value="Une fois, pour lancer"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Une fois, pour lancer</span></label>
-            <label class="choice"><input type="radio" name="rythme" value="Chaque mois"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Chaque mois</span></label>
-            <label class="choice"><input type="radio" name="rythme" value="On verra ensemble"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">On verra ensemble</span></label>
-                </div>
-              </div>
-              <div class="wgroup">
-                <span class="wlabel" id="lbl-charte">Avez-vous déjà une charte graphique&nbsp;?</span>
-                <div class="choices choices--3" role="group" aria-labelledby="lbl-charte">
-            <label class="choice"><input type="radio" name="charte" value="Oui, complète"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Oui, complète</span></label>
-            <label class="choice"><input type="radio" name="charte" value="Un logo seulement"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Un logo seulement</span></label>
-            <label class="choice"><input type="radio" name="charte" value="Rien pour l'instant"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Rien pour l'instant</span></label>
-                </div>
-              </div>
-            </div>
-
-            <div class="wbranch" data-branch="Je ne sais pas encore" hidden>
-              <div class="wgroup">
-                <span class="wlabel" id="lbl-flou">Qu'est-ce qui vous pèse le plus en ce moment&nbsp;? <span class="opt">(plusieurs choix)</span></span>
-                <div class="choices choices--2" role="group" aria-labelledby="lbl-flou">
-            <label class="choice choice--check"><input type="checkbox" name="flou" value="Je manque de temps"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Je manque de temps</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="flou" value="Je me sens dépassé par les outils"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Je me sens dépassé par les outils</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="flou" value="Je perds des clients faute de suivi"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Je perds des clients faute de suivi</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="flou" value="Je ne sais pas par où commencer"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Je ne sais pas par où commencer</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="flou" value="Je veux juste comprendre l'IA"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Je veux juste comprendre l'IA</span></label>
-            <label class="choice choice--check"><input type="checkbox" name="flou" value="Autre chose"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Autre chose</span></label>
-                </div>
-              </div>
-            </div>
-          </fieldset>
-
-          <!-- Étape 3 -->
-          <fieldset class="wstep" data-step="3" hidden>
-            <legend>Comment on s'organise</legend>
-            <p class="wstep__hint">Pour vous proposer des créneaux qui tombent bien.</p>
-
-            <div class="wgroup">
-              <span class="wlabel" id="lbl-delai">Vous aimeriez commencer…</span>
-              <div class="choices choices--3" role="group" aria-labelledby="lbl-delai">
-            <label class="choice"><input type="radio" name="delai" value="Dès que possible" checked><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Dès que possible</span></label>
-            <label class="choice"><input type="radio" name="delai" value="Dans le mois"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Dans le mois</span></label>
-            <label class="choice"><input type="radio" name="delai" value="Je me renseigne"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Je me renseigne</span></label>
-              </div>
-            </div>
-
-            <div class="wgroup">
-              <span class="wlabel" id="lbl-format">Vous préférez…</span>
-              <div class="choices choices--3" role="group" aria-labelledby="lbl-format">
-            <label class="choice"><input type="radio" name="format" value="Visio" checked><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">En visio<small>partout en France</small></span></label>
-            <label class="choice"><input type="radio" name="format" value="Présentiel"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">En présentiel<small>Toulouse et Sud-Ouest</small></span></label>
-            <label class="choice"><input type="radio" name="format" value="Peu importe"><span class="choice__mark" aria-hidden="true"></span><span class="choice__text">Peu importe</span></label>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="message">Un mot sur votre situation <span style="font-weight:400;color:var(--text-muted)">(facultatif)</span></label>
-              <textarea id="message" name="message" placeholder="Par exemple : « Je passe mes soirées sur mes devis et mes relances, je ne sais pas par où commencer. »"></textarea>
-            </div>
-          </fieldset>
-
-          <!-- Étape 4 -->
-          <fieldset class="wstep" data-step="4" hidden>
-            <legend>Où puis-je vous répondre&nbsp;?</legend>
-            <p class="wstep__hint">Réponse sous 48 h ouvrées, avec deux ou trois créneaux au choix.</p>
-
-            <div class="wrecap" id="wizRecap" aria-live="polite"></div>
-
-            <div class="form__row">
-              <div class="field">
-                <label for="name">Votre nom <span class="req" aria-hidden="true">*</span></label>
-                <input type="text" id="name" name="name" autocomplete="name" required>
-                <span class="field__error" id="err-name" aria-live="polite"></span>
-              </div>
-              <div class="field">
-                <label for="email">Votre email <span class="req" aria-hidden="true">*</span></label>
-                <input type="email" id="email" name="email" autocomplete="email" required>
-                <span class="field__error" id="err-email" aria-live="polite"></span>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="phone">Téléphone <span style="font-weight:400;color:var(--text-muted)">(facultatif)</span></label>
-              <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel">
-              <span class="field__error" id="err-phone" aria-live="polite"></span>
-            </div>
-
-            <div class="field hp" aria-hidden="true">
-              <label for="website">Ne pas remplir ce champ</label>
-              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
-            </div>
-
-            <div class="field--check">
-              <input type="checkbox" id="consent" name="consent" required>
-              <label for="consent">J'accepte que mes informations soient utilisées pour me recontacter au sujet de ma demande. Elles ne sont ni revendues ni utilisées à d'autres fins. <span class="req" aria-hidden="true">*</span></label>
-            </div>
-            <span class="field__error" id="err-consent" aria-live="polite" style="margin-top:-16px;display:block"></span>
-          </fieldset>
-
-          <div class="wizard__nav">
-            <button type="button" class="btn btn--ghost" id="wizPrev" hidden>Retour</button>
-            <button type="button" class="btn btn--primary btn--lg" id="wizNext" data-magnet>
-              Continuer
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </button>
-            <button type="submit" class="btn btn--primary btn--lg" id="wizSubmit" hidden data-magnet>
-              Envoyer ma demande
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-            </button>
-          </div>
-          <p class="form__note">Premier échange gratuit et sans engagement · Vos réponses servent uniquement à préparer le rendez-vous</p>
-        </div>
-
-        <div class="form__success" role="status">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
-          <h3>C'est envoyé, merci&nbsp;!</h3>
-          <p>Je reviens vers vous sous 48 h ouvrées avec deux ou trois créneaux au choix. Si vous préférez ne pas attendre, vous pouvez déjà réserver directement dans mon agenda.</p>
-          <div class="hero__actions" style="justify-content:center;margin:var(--s-4) 0 0">
-            <a class="btn btn--primary" href="#rendezvous">Choisir un créneau maintenant</a>
-            <a class="btn btn--ghost" id="recapMail" href="#">Recevoir une copie par email</a>
-          </div>
-        </div>
-      </form>
-    </div>
   </div>
 </section>
 
