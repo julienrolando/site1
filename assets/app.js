@@ -727,7 +727,7 @@ window.FORM_ACCESS_KEY = 'f4e2bd23-82e1-4c93-8df5-6d22a1750b63';
     var errN  = document.getElementById('err-memoNom');
     var err   = document.getElementById('err-memoEmail');
     var ok    = document.getElementById('memoOk');
-    var SUJET = 'Demande du guide « Vos dix premiers usages de l\'IA au quotidien »';
+    var SUJET = 'Demande du guide « Premiers pas avec l\'intelligence artificielle »';
 
     function marque(champ, zone, msg){
       zone.textContent = msg;
@@ -745,7 +745,7 @@ window.FORM_ACCESS_KEY = 'f4e2bd23-82e1-4c93-8df5-6d22a1750b63';
       ok.textContent = 'C\'est noté, merci ' + prenom() + '. Je vous envoie le guide à ' + input.value.trim() + ' sous 24 h, depuis contact@julienrolando.fr. Pensez à regarder vos indésirables si vous ne le voyez pas.';
     }
     function versEmail(){
-      var corps = 'Bonjour,\n\nJe souhaite recevoir le guide « Vos dix premiers usages de l\'IA au quotidien ».\n\nNom : ' + nom.value.trim() + '\nAdresse : ' + input.value.trim() + '\n\nMerci !';
+      var corps = 'Bonjour,\n\nJe souhaite recevoir le guide « Premiers pas avec l\'intelligence artificielle ».\n\nNom : ' + nom.value.trim() + '\nAdresse : ' + input.value.trim() + '\n\nMerci !';
       window.location.href = 'mailto:contact@julienrolando.fr?subject=' + encodeURIComponent(SUJET) + '&body=' + encodeURIComponent(corps);
       reussi();
     }
@@ -772,7 +772,7 @@ window.FORM_ACCESS_KEY = 'f4e2bd23-82e1-4c93-8df5-6d22a1750b63';
       data.append('nom', nom.value.trim());
       data.append('from_name', nom.value.trim());
       data.append('email', v);
-      data.append('demande', 'Guide gratuit — dix premiers usages de l\'IA');
+      data.append('demande', 'Guide gratuit — Premiers pas avec l\'IA');
       data.append('subject', SUJET);
       fetch(window.FORM_ENDPOINT, {method:'POST', body:data, headers:{'Accept':'application/json'}})
         .then(function(r){ return r.json(); })
