@@ -1,192 +1,524 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Julien Rolando Le Bian — Conseil & Solutions IA</title>
-<meta name="description" content="Conseil et accompagnement pour alléger votre quotidien, gagner du temps et vivre à votre rythme, en visio ou en présentiel.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Julien Rolando Le Bian — Conseil &amp; Solutions IA à Toulouse</title>
+<meta name="description" content="Conseil, accompagnement et formation IA. Deux parcours : particuliers (prise en main) et indépendants (automatisation). Premier échange gratuit, à Toulouse et en visio.">
+<meta name="author" content="Julien Rolando Le Bian">
+<meta name="theme-color" content="#13224A">
 <link rel="canonical" href="https://julienrolando.fr/">
+
 <meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Julien Rolando Le Bian — Conseil & Solutions IA">
-<meta property="og:title" content="Julien Rolando Le Bian — Conseil & Solutions IA">
-<meta property="og:description" content="Conseil et accompagnement pour alléger votre quotidien, gagner du temps et vivre à votre rythme, en visio ou en présentiel.">
+<meta property="og:title" content="Et si votre quotidien devenait enfin plus léger ?">
+<meta property="og:description" content="Deux chemins selon qui vous êtes : prendre l'IA en main, ou automatiser son activité. Premier échange gratuit.">
 <meta property="og:url" content="https://julienrolando.fr/">
-<meta property="og:image" content="https://julienrolando.fr/img/pilier-prise-en-main.jpg">
+<meta property="og:image" content="https://julienrolando.fr/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Julien Rolando Le Bian — Conseil & Solutions IA">
-<meta name="twitter:description" content="Conseil et accompagnement pour alléger votre quotidien, gagner du temps et vivre à votre rythme, en visio ou en présentiel.">
-<meta name="twitter:image" content="https://julienrolando.fr/img/pilier-prise-en-main.jpg">
+<meta name="twitter:title" content="Et si votre quotidien devenait enfin plus léger ?">
+<meta name="twitter:description" content="Deux chemins selon qui vous êtes : prendre l'IA en main, ou automatiser son activité. Premier échange gratuit.">
+<meta name="twitter:image" content="https://julienrolando.fr/og-image.jpg">
+
+<link rel="icon" href="assets/logo-mark.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Julien Rolando Le Bian — Conseil & Solutions IA",
-  "url": "https://julienrolando.fr/",
-  "image": "https://julienrolando.fr/img/logo-icon.png",
-  "areaServed": "FR",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Toulouse",
-    "addressCountry": "FR"
-  },
-  "description": "Accompagnement en intelligence artificielle : prise en main, automatisation et création de contenus, en visio ou en présentiel."
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://julienrolando.fr/#organization",
+      "name": "Julien Rolando Le Bian — Conseil & Solutions IA",
+      "description": "Conseil, accompagnement et formation sur les solutions d'intelligence artificielle pour particuliers et indépendants.",
+      "url": "https://julienrolando.fr/",
+      "email": "contact@julienrolando.fr",
+      "founder": { "@type": "Person", "name": "Julien Rolando Le Bian" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Avenue Henri Guillaumet",
+        "addressLocality": "Toulouse",
+        "postalCode": "31500",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "France" },
+        { "@type": "City", "name": "Toulouse" }
+      ],
+      "priceRange": "À partir de 25 €",
+      "knowsLanguage": "fr-FR",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Accompagnements IA",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Prise en main", "description": "Utiliser ChatGPT ou Claude comme assistant personnel : rédaction, organisation, recherche, démarches." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatisation", "description": "Audit des tâches chronophages et mise en place d'automatisations durables." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Création", "description": "Posts, visuels et supports de communication prêts à diffuser." } }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://julienrolando.fr/#website",
+      "url": "https://julienrolando.fr/",
+      "name": "Julien Rolando Le Bian — Conseil & Solutions IA",
+      "inLanguage": "fr-FR",
+      "publisher": { "@id": "https://julienrolando.fr/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": { "@type": "EntryPoint", "urlTemplate": "https://julienrolando.fr/?s={search_term_string}" },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://julienrolando.fr/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Je n'y connais rien en informatique, est-ce que c'est pour moi ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. On part de votre quotidien, pas de la technique. Aucun vocabulaire technique n'est nécessaire : si un mot est utile, je vous l'explique en une phrase." } },
+        { "@type": "Question", "name": "Faut-il acheter des logiciels ou des abonnements ?", "acceptedAnswer": { "@type": "Answer", "text": "Pas nécessairement. On commence avec les versions gratuites. Si un abonnement devient utile, je vous dis lequel, pourquoi et combien, et vous décidez." } },
+        { "@type": "Question", "name": "Est-ce que vous intervenez à distance ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, en visio partout en France, et en présentiel à Toulouse et dans le Sud-Ouest." } },
+        { "@type": "Question", "name": "Mes données sont-elles en sécurité ?", "acceptedAnswer": { "@type": "Answer", "text": "On choisit ensemble ce qui peut être confié à un outil et ce qui ne doit jamais en sortir. Aucune donnée client n'est conservée en dehors de ce qui est nécessaire à la mission, conformément au RGPD." } },
+        { "@type": "Question", "name": "Combien ça coûte ?", "acceptedAnswer": { "@type": "Answer", "text": "Prise en main à partir de 60 € la séance, création à partir de 25 € la prestation, automatisation sur devis après audit. Premier échange gratuit et sans engagement, devis clair et détaillé. TVA non applicable, article 293 B du CGI." } },
+        { "@type": "Question", "name": "Combien de temps avant de voir un résultat ?", "acceptedAnswer": { "@type": "Answer", "text": "Dès la première séance, vous repartez avec au moins un usage concret que vous pouvez refaire seul." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://julienrolando.fr/" }
+      ]
+    }
+  ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="bg-glow"></div>
-
-<header class="site-header">
-  <div class="container nav">
-    <a href="index.html" class="logo">
-      <img class="logo-mark" src="img/logo-icon.png" alt="Julien Rolando Le Bian — Conseil & Solutions IA">
-      <span class="logo-text">Julien Rolando Le Bian<small>Conseil & Solutions IA</small></span>
+<!-- ============================ HEADER ============================ -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a class="brand" href="index.html" aria-label="Julien Rolando Le Bian, Conseil &amp; Solutions IA — accueil">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__name">Julien ROLANDO LE BIAN<span class="brand__tag">Conseil &amp; Solutions IA</span></span>
     </a>
-    <nav class="nav-links">
-      <a href="index.html">Accueil</a>
-      <a href="offres.html">Offres</a>
-      <a href="creations.html">Créations</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="contact.html">Contact</a>
-      <a href="reserver.html" class="nav-cta">Réserver un échange</a>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="particuliers.html">Particuliers</a>
+      <a href="professionnels.html">Professionnels</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#rendezvous">Rendez-vous</a>
     </nav>
-    <button class="nav-toggle" aria-label="Menu"><span></span></button>
+
+    <a class="btn btn--primary header__cta" href="#rendezvous" data-magnet>
+      Réserver un échange
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="drawer" aria-label="Ouvrir le menu">
+      <span></span>
+    </button>
   </div>
 </header>
 
-<main>
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="hero-eyebrow"><span class="dot"></span> Conseil & Solutions IA</span>
-        <h1>Et si votre quotidien devenait enfin plus léger ?</h1>
-        <p class="lead">Retrouvez du temps pour vivre à votre rythme. Un premier échange pour cerner vos usages actuels, puis des offres adaptées à votre profil : prise en main, automatisation, ou création de vos contenus.</p>
-        <div class="hero-actions">
-          <a href="reserver.html" class="btn btn-primary">Réserver un échange</a>
-          <a href="offres.html" class="btn btn-ghost">Voir les offres</a>
-        </div>
-        <div class="hero-trust">
-          <div><strong>100%</strong>Sans jargon technique</div>
-          <div><strong>Partout</strong>En visio ou en présentiel</div>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-orb"></div>
-        <div class="hero-card c1">
-          <h4>🗓️ Organisation</h4>
-          <p>Mails triés, tâches planifiées automatiquement.</p>
-        </div>
-        <div class="hero-card c2">
-          <h4>⚙️ Automatisation</h4>
-          <p>Facturation & relances sans y penser.</p>
-        </div>
-        <div class="hero-card c3">
-          <h4>🎨 Création</h4>
-          <p>Vos visuels et posts, prêts à publier.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <button class="drawer__close" id="drawerClose" aria-label="Fermer le menu">&times;</button>
+  <div class="drawer__inner">
+    <a href="particuliers.html">Particuliers</a>
+    <a href="professionnels.html">Professionnels</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#rendezvous">Rendez-vous</a>
+    <a class="btn btn--primary btn--block" href="#rendezvous">Réserver un échange</a>
+  </div>
+</div>
 
-  <!-- OFFRES — BENTO -->
-  <section class="section" id="offres">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Nos accompagnements</span>
-        <h2>Trois façons de mettre l'IA au service de votre quotidien</h2>
-        <p>Chaque offre est pensée pour un profil précis — sans prix caché, sans engagement au premier échange.</p>
-      </div>
-      <div class="bento">
-        <div class="bento-card reveal">
-          <div class="bento-visual">
-            <video src="video/pilier-prise-en-main.mp4" poster="img/pilier-prise-en-main-poster.jpg" autoplay loop muted playsinline aria-label="Animation illustrant la prise en main d'un assistant IA"></video>
-          </div>
-          <span class="tag">Pour vous simplifier le quotidien</span>
-          <h3>Prise en main</h3>
-          <p>Reprenez la main sur votre quotidien grâce à l'IA — sans jargon, à votre rythme.</p>
-          <ul>
-            <li>Séance découverte, à votre rythme</li>
-            <li>Parcours accompagné sur plusieurs séances</li>
-          </ul>
-          <a href="offres.html#prise-en-main" class="card-link">En savoir plus <span class="arrow">→</span></a>
-        </div>
-        <div class="bento-card reveal" style="transition-delay:.08s">
-          <div class="bento-visual">
-            <video src="video/pilier-automatisation.mp4" poster="img/pilier-automatisation-poster.jpg" autoplay loop muted playsinline aria-label="Animation illustrant l'automatisation d'une tâche"></video>
-          </div>
-          <span class="tag">Pour gagner du temps sur les tâches répétitives</span>
-          <h3>Automatisation</h3>
-          <p>Automatisez ce qui vous prend du temps, concentrez-vous sur ce qui compte.</p>
-          <ul>
-            <li>Sprint Copilote</li>
-            <li>Suivi mensuel · Mission à la carte</li>
-          </ul>
-          <a href="offres.html#automatisation" class="card-link">En savoir plus <span class="arrow">→</span></a>
-        </div>
-        <div class="bento-card reveal" style="transition-delay:.16s">
-          <div class="bento-visual">
-            <video src="video/pilier-creation.mp4" poster="img/pilier-creation-poster.jpg" autoplay loop muted playsinline aria-label="Animation illustrant la création de contenus"></video>
-          </div>
-          <span class="tag">Pour des contenus qui vous ressemblent</span>
-          <h3>Création</h3>
-          <p>Des contenus qui vous ressemblent, sans y passer vos soirées.</p>
-          <ul>
-            <li>Pack contenus mensuel</li>
-            <li>Prestation à la carte · Pack lancement</li>
-          </ul>
-          <a href="offres.html#creation" class="card-link">En savoir plus <span class="arrow">→</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
+<main id="main">
 
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero__grid">
+
+      <div class="hero__content">
+        <p class="hero__badge"><span class="dot" aria-hidden="true"></span> Premier échange gratuit, sans engagement</p>
+        <h1 class="hero__title">
+          <span class="hw-line"><span class="hw-text">Et si votre quotidien</span><span class="hw-pen" aria-hidden="true"></span></span>
+          <span class="hw-line"><span class="hw-text hw-text--accent">devenait plus léger&nbsp;?</span><span class="hw-pen" aria-hidden="true"></span></span>
+        </h1>
+        <p class="hero__lead">Je mets l'intelligence artificielle au service de vos vraies journées, sans jargon et à votre rythme. Deux chemins selon qui vous êtes&nbsp;: apprivoiser ces outils chez soi, ou récupérer les heures que l'administratif vous prend.</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#choisir" data-magnet>
+            Choisir mon parcours
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#rendezvous">Réserver un échange</a>
+        </div>
+
+        <ul class="hero__facts">
+          <li class="hero__fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.8 2.8M16.2 16.2L19 19M19 5l-2.8 2.8M7.8 16.2L5 19"/></svg>
+            <span><b>Sans jargon</b> technique</span>
+          </li>
+          <li class="hero__fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-10a7 7 0 1114 0c0 4.8-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+            <span><b>Toulouse</b> &amp; toute la France, en visio</span>
+          </li>
+          <li class="hero__fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <span><b>Vous décidez</b> à chaque étape</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero__visual">
+        <div class="orbit" aria-hidden="true">
+          <span class="dot" style="left:105.4%;top:49.2%;--s:4px;--o:0.77;--d1x:21px;--d1y:-16px;--d2x:18px;--d2y:-1px;--d3x:7px;--d3y:-16px;--dur:22.6s;--delay:-4.5s"></span>
+          <span class="dot dot--glow" style="left:102.5%;top:73.2%;--s:12px;--o:0.52;--d1x:9px;--d1y:6px;--d2x:-21px;--d2y:-25px;--d3x:2px;--d3y:-23px;--dur:18.2s;--delay:-7.7s"></span>
+          <span class="dot" style="left:94.5%;top:78.5%;--s:8px;--o:0.85;--d1x:8px;--d1y:-0px;--d2x:10px;--d2y:-2px;--d3x:-13px;--d3y:26px;--dur:31.9s;--delay:-26.9s"></span>
+          <span class="dot dot--ring" style="left:83.1%;top:84.7%;--s:9px;--o:0.96;--d1x:4px;--d1y:-20px;--d2x:-24px;--d2y:-11px;--d3x:-26px;--d3y:-25px;--dur:26.6s;--delay:-6.8s"></span>
+          <span class="dot dot--glow" style="left:77.5%;top:93.8%;--s:12px;--o:0.57;--d1x:4px;--d1y:-16px;--d2x:10px;--d2y:-8px;--d3x:-11px;--d3y:-25px;--dur:22.0s;--delay:-29.5s"></span>
+          <span class="dot" style="left:53.3%;top:93.0%;--s:4px;--o:0.71;--d1x:-19px;--d1y:3px;--d2x:-3px;--d2y:-16px;--d3x:14px;--d3y:-19px;--dur:25.9s;--delay:-3.7s"></span>
+          <span class="dot" style="left:47.5%;top:99.4%;--s:9px;--o:0.50;--d1x:-29px;--d1y:-16px;--d2x:30px;--d2y:5px;--d3x:5px;--d3y:-24px;--dur:17.5s;--delay:-14.1s"></span>
+          <span class="dot dot--ring dot--glow" style="left:22.3%;top:106.5%;--s:12px;--o:0.79;--d1x:-25px;--d1y:4px;--d2x:-15px;--d2y:5px;--d3x:-8px;--d3y:-2px;--dur:31.3s;--delay:-15.5s"></span>
+          <span class="dot dot--ring" style="left:15.8%;top:82.0%;--s:7px;--o:0.74;--d1x:-16px;--d1y:6px;--d2x:14px;--d2y:-18px;--d3x:8px;--d3y:3px;--dur:26.7s;--delay:-12.4s"></span>
+          <span class="dot dot--ring" style="left:17.1%;top:78.5%;--s:6px;--o:0.86;--d1x:28px;--d1y:-14px;--d2x:12px;--d2y:-13px;--d3x:19px;--d3y:5px;--dur:20.0s;--delay:-5.6s"></span>
+          <span class="dot" style="left:6.7%;top:69.8%;--s:5px;--o:0.52;--d1x:7px;--d1y:-22px;--d2x:-17px;--d2y:22px;--d3x:15px;--d3y:-22px;--dur:22.0s;--delay:-8.0s"></span>
+          <span class="dot dot--ring" style="left:-4.6%;top:53.8%;--s:7px;--o:0.74;--d1x:-22px;--d1y:-3px;--d2x:-10px;--d2y:12px;--d3x:1px;--d3y:23px;--dur:25.0s;--delay:-29.6s"></span>
+          <span class="dot dot--ring" style="left:1.9%;top:38.0%;--s:5px;--o:0.95;--d1x:8px;--d1y:-1px;--d2x:14px;--d2y:-9px;--d3x:30px;--d3y:-22px;--dur:24.3s;--delay:-23.6s"></span>
+          <span class="dot dot--ring dot--glow" style="left:3.0%;top:13.9%;--s:10px;--o:0.69;--d1x:11px;--d1y:21px;--d2x:22px;--d2y:-4px;--d3x:17px;--d3y:19px;--dur:24.7s;--delay:-20.0s"></span>
+          <span class="dot dot--ring" style="left:14.1%;top:5.4%;--s:6px;--o:0.77;--d1x:-23px;--d1y:-13px;--d2x:-5px;--d2y:-9px;--d3x:26px;--d3y:10px;--dur:22.8s;--delay:-14.8s"></span>
+          <span class="dot" style="left:27.7%;top:-0.6%;--s:9px;--o:0.65;--d1x:-1px;--d1y:-14px;--d2x:12px;--d2y:-0px;--d3x:7px;--d3y:22px;--dur:19.3s;--delay:-0.4s"></span>
+          <span class="dot" style="left:45.9%;top:2.4%;--s:7px;--o:0.88;--d1x:-9px;--d1y:22px;--d2x:-0px;--d2y:-13px;--d3x:-6px;--d3y:-13px;--dur:25.8s;--delay:-25.7s"></span>
+          <span class="dot" style="left:52.3%;top:2.0%;--s:8px;--o:0.58;--d1x:-11px;--d1y:-19px;--d2x:-0px;--d2y:18px;--d3x:21px;--d3y:11px;--dur:31.2s;--delay:-8.9s"></span>
+          <span class="dot" style="left:69.5%;top:4.6%;--s:8px;--o:0.64;--d1x:-7px;--d1y:1px;--d2x:10px;--d2y:11px;--d3x:21px;--d3y:6px;--dur:20.4s;--delay:-26.5s"></span>
+          <span class="dot" style="left:89.6%;top:6.4%;--s:9px;--o:0.57;--d1x:-11px;--d1y:15px;--d2x:-29px;--d2y:-19px;--d3x:-3px;--d3y:-25px;--dur:29.1s;--delay:-7.6s"></span>
+          <span class="dot dot--ring" style="left:93.2%;top:11.9%;--s:4px;--o:0.88;--d1x:2px;--d1y:7px;--d2x:-8px;--d2y:-22px;--d3x:-18px;--d3y:17px;--dur:19.4s;--delay:-22.9s"></span>
+          <span class="dot dot--ring" style="left:91.3%;top:38.1%;--s:8px;--o:0.54;--d1x:-9px;--d1y:10px;--d2x:1px;--d2y:6px;--d3x:15px;--d3y:-6px;--dur:28.5s;--delay:-29.0s"></span>
+        </div>
+
+        <figure class="portrait" data-parallax="0.03">
+          <img src="assets/julien-profil.jpg" alt="Portrait de Julien Rolando Le Bian, consultant en solutions IA à Toulouse" width="676" height="760" fetchpriority="high" decoding="async">
+          <figcaption class="portrait__card">
+            <strong>Julien Rolando Le Bian</strong>
+            <span>Je m'occupe de la technique, vous gardez la main.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PREUVE ============================ -->
+<section class="proof" aria-label="Parcours et formations">
+  <div class="wrap">
+    <div class="proof__inner">
+      <p class="proof__label">Formé aux outils que j'installe chez vous</p>
+      <ul class="proof__list">
+        <li class="proof__item">Google <em>IA générative</em></li>
+        <li class="proof__sep" aria-hidden="true"></li>
+        <li class="proof__item">Anthropic <em>Claude</em></li>
+        <li class="proof__sep" aria-hidden="true"></li>
+        <li class="proof__item">OpenAI <em>ChatGPT</em></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ LES DEUX PORTES ============================ -->
+<section class="section" id="choisir">
+  <div class="wrap">
+    <div class="section-head" style="text-align:center;margin-inline:auto" data-reveal>
+      <p class="eyebrow" style="justify-content:center">Par où commencer</p>
+      <h2>Deux façons de travailler ensemble. <span class="accent">Choisissez la vôtre.</span></h2>
+      <p class="lead">Le besoin n'est pas le même quand on veut apprivoiser l'IA chez soi et quand on veut récupérer des heures dans son activité. J'ai séparé les deux chemins pour aller droit au but.</p>
+    </div>
+
+    <ul class="offers" data-stagger data-reveal style="max-width:880px;margin-inline:auto">
+      <li class="offer">
+        <h3>Je suis un particulier</h3>
+        <p class="offer__for">Découvrir et prendre en main</p>
+        <p class="offer__price">À partir de 60&nbsp;€<small>la séance · après un premier échange gratuit</small></p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Vous n'y connaissez rien et c'est le point de départ</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Mails, démarches, organisation, recherche</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> On commence avec les versions gratuites</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Un mémo écrit à la fin de chaque séance</li>
+        </ul>
+        <a class="btn btn--ghost btn--block" href="particuliers.html">Voir l'accompagnement particuliers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </li>
+
+      <li class="offer offer--featured" data-badge="">
+        <h3>Je suis indépendant ou freelance</h3>
+        <p class="offer__for">Automatiser et gagner du temps</p>
+        <p class="offer__price">Sur devis<small>chiffré après l'audit de vos tâches</small></p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Facturation, relances, suivi client, contenus</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Audit des tâches qui vous mangent vos soirées</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Automatisations documentées, reprenables par vous</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Supports de communication au besoin</li>
+        </ul>
+        <a class="btn btn--primary btn--block" href="professionnels.html" data-magnet>Voir l'accompagnement pro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </li>
+    </ul>
+
+    <p class="form__note" style="margin-top:var(--s-4);text-align:center">Vous hésitez&nbsp;? Prenez le premier échange gratuit&nbsp;: on verra ensemble lequel des deux vous correspond.</p>
+  </div>
+</section>
+
+<!-- ============================ RÉALISATIONS ============================ -->
+<section class="section" id="realisations">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Réalisations</p>
+      <h2>Ce que j'ai déjà <span class="accent">construit</span></h2>
+      <p class="lead">Quelques missions et projets menés de bout en bout. Les noms de clients restent confidentiels — ce qui compte ici, c'est ce qui a changé concrètement dans leur organisation.</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filtrer les réalisations" data-reveal>
+      <button type="button" data-filter="all" aria-pressed="true">Tout voir</button>
+      <button type="button" data-filter="automatisation" aria-pressed="false">Automatisation</button>
+      <button type="button" data-filter="creation" aria-pressed="false">Création</button>
+      <button type="button" data-filter="marque" aria-pressed="false">Marque</button>
+    </div>
+
+    <ul class="works" id="works" data-stagger data-reveal>
+      <li>
+        <button type="button" class="work" data-cat="marque" data-title="Charte graphique complète" data-catlabel="Marque" data-meta="Projet interne · 2026"
+                data-desc="Identité de A à Z pour mon propre cabinet : symbole, palette navy / ice / violet, typographies, règles d'usage et bibliothèque de visuels." data-points="&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Logo et déclinaisons (couleur, blanc, noir)&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Palette documentée en HEX, RVB et CMJN&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Règles de voix et de ton par canal&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Document de référence de 16 pages&lt;/li&gt;"
+                aria-haspopup="dialog">
+          <span class="work__cat">Marque</span>
+          <span class="work__visual">
+            <span class="work__ph"><span class="brand__mark"></span></span>
+          </span>
+          <span class="work__body">
+            <h3>Charte graphique complète</h3>
+            <p>Identité de A à Z pour mon propre cabinet : symbole, palette navy / ice / violet, typographies, règles d'usage et bibl…</p>
+            <span class="work__more">Voir le détail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="work" data-cat="marque" data-title="Kit de marque pour une agence immobilière" data-catlabel="Marque" data-meta="Mission 2026 · client anonymisé"
+                data-desc="Kit de marque et de communication pour une agence immobilière du Tarn : supports de vente, modèles de publications et règles graphiques réutilisables par l'équipe." data-points="&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Déclinaisons print et réseaux sociaux&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Modèles réutilisables sans graphiste&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Formation de l&#x27;équipe à leur usage&lt;/li&gt;"
+                aria-haspopup="dialog">
+          <span class="work__cat">Marque</span>
+          <span class="work__visual">
+            <span class="work__ph"><span class="brand__mark"></span></span>
+          </span>
+          <span class="work__body">
+            <h3>Kit de marque pour une agence immobilière</h3>
+            <p>Kit de marque et de communication pour une agence immobilière du Tarn : supports de vente, modèles de publications et …</p>
+            <span class="work__more">Voir le détail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="work" data-cat="automatisation" data-title="Automatisation de la gestion de projets" data-catlabel="Automatisation" data-meta="Mission 2026 · client anonymisé"
+                data-desc="Mise en place d'un suivi de projets automatisé pour la même agence : centralisation des informations, relances et points d'étape générés sans ressaisie." data-points="&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Fin de la double saisie entre outils&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Relances et rappels automatiques&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Tableau de suivi lisible par toute l&#x27;équipe&lt;/li&gt;"
+                aria-haspopup="dialog">
+          <span class="work__cat">Automatisation</span>
+          <span class="work__visual">
+            <span class="work__ph"><span class="brand__mark"></span></span>
+          </span>
+          <span class="work__body">
+            <h3>Automatisation de la gestion de projets</h3>
+            <p>Mise en place d'un suivi de projets automatisé pour la même agence : centralisation des informations, relances et poin…</p>
+            <span class="work__more">Voir le détail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="work" data-cat="automatisation" data-title="Agent financier sur mesure" data-catlabel="Automatisation" data-meta="Mission 2026 · client anonymisé"
+                data-desc="Création d'un assistant dédié au suivi financier : lecture des documents comptables, synthèses mensuelles et alertes sur les écarts." data-points="&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Synthèses mensuelles générées automatiquement&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Alertes sur les écarts et les impayés&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Prise en main en une séance&lt;/li&gt;"
+                aria-haspopup="dialog">
+          <span class="work__cat">Automatisation</span>
+          <span class="work__visual">
+            <span class="work__ph"><span class="brand__mark"></span></span>
+          </span>
+          <span class="work__body">
+            <h3>Agent financier sur mesure</h3>
+            <p>Création d'un assistant dédié au suivi financier : lecture des documents comptables, synthèses mensuelles et alertes s…</p>
+            <span class="work__more">Voir le détail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="work" data-cat="creation" data-title="Site web et présence en ligne" data-catlabel="Création" data-meta="Projet interne · 2026"
+                data-desc="Conception et mise en ligne d'un site vitrine complet : structure, textes, visuels, hébergement et nom de domaine, sans agence ni abonnement mensuel." data-points="&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Site statique rapide et sans frais récurrents&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Textes et visuels produits en interne&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Nom de domaine et email professionnel configurés&lt;/li&gt;"
+                aria-haspopup="dialog">
+          <span class="work__cat">Création</span>
+          <span class="work__visual">
+            <span class="work__ph"><span class="brand__mark"></span></span>
+          </span>
+          <span class="work__body">
+            <h3>Site web et présence en ligne</h3>
+            <p>Conception et mise en ligne d'un site vitrine complet : structure, textes, visuels, hébergement et nom de domaine, san…</p>
+            <span class="work__more">Voir le détail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="work" data-cat="creation" data-title="Application de jeu multi-joueurs" data-catlabel="Création" data-meta="Projet personnel · 2026"
+                data-desc="Application de jeu complète conçue et développée de bout en bout : plusieurs niveaux de difficulté, trois tranches d'âge, animations, effets sonores et système de score jusqu'à 8 joueurs." data-points="&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Conçue, testée et corrigée sur un mois&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Trois modes selon l&#x27;âge, trois difficultés&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Preuve concrète de ce que l&#x27;IA permet de construire&lt;/li&gt;"
+                aria-haspopup="dialog">
+          <span class="work__cat">Création</span>
+          <span class="work__visual">
+            <span class="work__ph"><span class="brand__mark"></span></span>
+          </span>
+          <span class="work__body">
+            <h3>Application de jeu multi-joueurs</h3>
+            <p>Application de jeu complète conçue et développée de bout en bout : plusieurs niveaux de difficulté, trois tranches d'â…</p>
+            <span class="work__more">Voir le détail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ RENDEZ-VOUS ============================ -->
+<section class="section section--ice" id="rendezvous">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Prendre rendez-vous</p>
+      <h2>Choisissez votre créneau, <span class="accent">directement dans mon agenda</span></h2>
+      <p class="lead">30 minutes, en visio ou en présentiel, sans engagement. Vous voyez mes disponibilités réelles et vous réservez en deux clics — confirmation immédiate par email. Particulier ou indépendant, c'est le même point de départ&nbsp;: on regarde votre situation et on voit si je peux vous être utile.</p>
+    </div>
+
+    <div class="booking" id="booking" data-reveal="scale">
+      <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25uoD1O1Y-dagX5nLsBhHxMVNaUTiB6Z2745vF_IbIQU9n8ObBLU2lw5xra8ya03DOLU56-fyI?gv=true" title="Agenda de prise de rendez-vous de Julien Rolando Le Bian" loading="lazy" frameborder="0"></iframe>
+    </div>
+    <p class="booking__note form__note">L'agenda est hébergé par Google&nbsp;: son affichage dépose des cookies Google. <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25uoD1O1Y-dagX5nLsBhHxMVNaUTiB6Z2745vF_IbIQU9n8ObBLU2lw5xra8ya03DOLU56-fyI?gv=true" target="_blank" rel="noopener">Ouvrir dans un nouvel onglet</a></p>
+  </div>
+</section>
+
+<!-- ============================ CTA FINAL ============================ -->
+<section class="section dark cta-final">
+  <div class="wrap wrap--narrow">
+    <h2 data-reveal>Le plus dur, c'est le premier pas. <span class="accent">Il est gratuit.</span></h2>
+    <p class="lead" data-reveal>Trente minutes pour voir, concrètement, ce que l'IA peut alléger dans vos journées. Sans engagement, sans vocabulaire technique, et sans rien vous vendre si ce n'est pas utile.</p>
+    <div class="hero__actions" data-reveal>
+      <a class="btn btn--light btn--lg" href="#rendezvous" data-magnet>
+        Réserver mon échange
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn--ghost btn--lg" href="mailto:contact@julienrolando.fr">Écrire un message</a>
+    </div>
+  </div>
+</section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lbTitle" hidden>
+  <div class="lightbox__inner">
+    <button class="lightbox__close" id="lbClose" aria-label="Fermer">&times;</button>
+    <span class="lightbox__cat" id="lbCat"></span>
+    <h3 id="lbTitle"></h3>
+    <p id="lbDesc"></p>
+    <ul id="lbPoints"></ul>
+    <p class="form__note" id="lbMeta" style="text-align:left"></p>
+    <a class="btn btn--primary btn--block" href="#rendezvous" id="lbCta">Parler d'un projet similaire</a>
+  </div>
+</div>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
       <div>
-        <a href="index.html" class="logo" style="margin-bottom:14px;">
-          <img class="logo-mark" src="img/logo-icon.png" alt="Julien Rolando Le Bian — Conseil & Solutions IA">
-        </a>
-        <p style="font-size:.88rem;max-width:320px;">Conseil, formation IA et création de contenus pour particuliers et indépendants — basé à Toulouse.</p>
+        <div class="footer__brand">
+          <span class="brand__mark brand__mark--lg" aria-hidden="true"></span>
+          <span><strong>Julien ROLANDO LE BIAN</strong><span>Conseil &amp; Solutions IA</span></span>
+        </div>
+        <p>Conseil, accompagnement et formation sur les solutions d'intelligence artificielle, pour les particuliers et les indépendants. Basé à Toulouse, présent dans tout le Sud-Ouest et en visio partout en France.</p>
       </div>
-      <div>
-        <h4>Navigation</h4>
+
+      <nav aria-label="Pied de page — navigation">
+        <h3>Le site</h3>
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="offres.html">Offres</a></li>
-          <li><a href="creations.html">Créations</a></li>
-          <li><a href="a-propos.html">À propos</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="particuliers.html">Particuliers</a></li>
+          <li><a href="professionnels.html">Professionnels</a></li>
+          <li><a href="#realisations">Réalisations</a></li>
+          <li><a href="#rendezvous">Prendre rendez-vous</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:contact@julienrolando.fr">contact@julienrolando.fr</a></li>
+          <li><a href="tel:+33764440520">07&nbsp;64&nbsp;44&nbsp;05&nbsp;20</a></li>
+          <li><a href="index.html#rendezvous">Prendre rendez-vous</a></li>
+          <li>Toulouse · 31500</li>
         </ul>
       </div>
+
       <div>
-        <h4>Informations</h4>
+        <h3>Informations</h3>
         <ul>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
-          <li><a href="mentions-legales.html#confidentialite">Confidentialité</a></li>
-          <li><a href="contact.html">Nous contacter</a></li>
+          <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+          <li>SIRET 830 012 175 00055</li>
+          <li>APE 6202A · TVA non applicable</li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Julien Rolando Le Bian — Conseil & Solutions IA. Tous droits réservés.</span>
-      <span>Toulouse, France</span>
+
+    <div class="footer__bottom">
+      <p>© <span id="year">2026</span> Julien Rolando Le Bian — Conseil &amp; Solutions IA. Tous droits réservés.</p>
+      <div class="footer__legal">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/julienrolando" target="_blank" rel="noopener me" aria-label="Julien Rolando Le Bian sur LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg> LinkedIn</a>
+          <a href="https://www.instagram.com/julienrolando" target="_blank" rel="noopener me" aria-label="Julien Rolando Le Bian sur Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg> Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61595437739787" target="_blank" rel="noopener me" aria-label="Julien Rolando Le Bian sur Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg> Facebook</a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
-<script src="js/chat-widget.js"></script>
+
+
+<button class="chat-fab" id="chatFab" aria-expanded="false" aria-controls="chat" aria-label="Ouvrir l'assistant">
+  <span class="chat-fab__badge" aria-hidden="true"></span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M8 9.5h8M8 13h5"/></svg>
+</button>
+
+<div class="chat" id="chat" role="dialog" aria-modal="false" aria-label="Assistant de Julien Rolando Le Bian" hidden>
+  <div class="chat__head">
+    <span class="chat__avatar" aria-hidden="true"><span class="brand__mark"></span></span>
+    <span>
+      <strong>L'assistant de Julien</strong>
+      <span id="chatStatus">Répond en quelques secondes</span>
+    </span>
+    <button class="chat__close" id="chatClose" aria-label="Fermer l'assistant">&times;</button>
+  </div>
+
+  <div class="chat__log" id="chatLog" role="log" aria-live="polite" aria-relevant="additions"></div>
+
+  <div class="chat__chips" id="chatChips">
+    <button type="button">Vos tarifs ?</button>
+    <button type="button">Je n'y connais rien, c'est pour moi ?</button>
+    <button type="button">Vous intervenez où ?</button>
+    <button type="button">Prendre rendez-vous</button>
+  </div>
+
+  <form class="chat__form" id="chatForm">
+    <label class="sr-only" for="chatInput">Votre message</label>
+    <input type="text" id="chatInput" autocomplete="off" placeholder="Posez votre question…" maxlength="500">
+    <button class="chat__send" type="submit" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+    </button>
+  </form>
+  <p class="chat__legal">Assistant automatique. Il peut se tromper : pour un engagement, passez par le rendez-vous. Aucune donnée n'est conservée après la fermeture de l'onglet.</p>
+</div>
+
+<script src="assets/app.js" defer></script>
 </body>
 </html>
