@@ -1,0 +1,156 @@
+/* ============================================================
+   ARTICLES — rubrique Conseils
+   S'appuie sur les tokens de style.css
+   ============================================================ */
+
+/* ---------- En-tête d'article ---------- */
+.art-hero{padding-top:calc(var(--header-h) + var(--s-6));padding-bottom:var(--s-5);background:var(--ice)}
+.art-hero__meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:var(--fs-small);color:var(--text-muted);margin-bottom:var(--s-3)}
+.art-hero__meta span{display:inline-flex;align-items:center;gap:7px}
+.art-hero__meta span+span::before{content:"·";margin-right:7px;color:var(--line)}
+.art-hero h1{font-size:clamp(2rem,4.4vw,3.1rem);line-height:1.08;margin-bottom:var(--s-3);max-width:20ch}
+.art-hero .lead{max-width:60ch}
+
+.art-figure{margin:0;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-2);background:var(--offwhite)}
+.art-figure img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.art-figure figcaption{font-size:var(--fs-caption);color:var(--text-muted);padding:12px var(--s-3);background:var(--white)}
+.art-hero__figure{margin-top:var(--s-5)}
+
+/* ---------- Corps de texte ---------- */
+.art-body{max-width:72ch;margin-inline:auto}
+.art-body>*+*{margin-top:var(--s-3)}
+.art-body h2{font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.18;margin-top:var(--s-6);margin-bottom:var(--s-2);scroll-margin-top:calc(var(--header-h) + 20px)}
+.art-body h3{font-size:var(--fs-h3);margin-top:var(--s-4);margin-bottom:10px}
+.art-body p,.art-body li{color:var(--text-muted);line-height:1.75;font-size:1.03rem}
+.art-body strong{color:var(--text);font-weight:600}
+.art-body ul,.art-body ol{margin-left:1.15em;display:grid;gap:9px}
+.art-body ul{list-style:disc}
+.art-body ol{list-style:decimal}
+.art-body a:not(.btn){color:var(--navy-light);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.art-body a:not(.btn):hover{color:var(--violet)}
+
+/* Chapô */
+.art-body .art-intro{font-size:var(--fs-lead);color:var(--text);line-height:1.6}
+
+/* ---------- Encadré simple ---------- */
+.art-note{
+  background:var(--ice);border-radius:var(--r-md);padding:var(--s-3) var(--s-4);
+  border-left:3px solid var(--violet);margin-top:var(--s-4)
+}
+.art-note p{margin:0}
+.art-note p+p{margin-top:10px}
+.art-note__label{
+  display:block;font-family:var(--font-head);font-weight:600;font-size:var(--fs-caption);
+  letter-spacing:.12em;text-transform:uppercase;color:var(--violet);margin-bottom:8px
+}
+
+/* ---------- Tableau des prix ---------- */
+.art-table-wrap{margin-top:var(--s-4);overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-md);background:var(--white)}
+.art-table{width:100%;border-collapse:collapse;font-size:.93rem;min-width:540px}
+.art-table th,.art-table td{text-align:left;padding:13px var(--s-2);border-bottom:1px solid var(--line);vertical-align:top}
+.art-table thead th{
+  font-family:var(--font-head);font-weight:600;font-size:var(--fs-caption);letter-spacing:.08em;
+  text-transform:uppercase;color:var(--violet);background:var(--ice);white-space:nowrap
+}
+.art-table tbody tr:last-child td{border-bottom:0}
+.art-table td:first-child{color:var(--text);font-weight:600;white-space:nowrap}
+.art-table td small{display:block;font-weight:400;color:var(--text-muted);font-size:.8rem;margin-top:3px}
+.art-table .price{font-family:var(--font-head);font-weight:600;color:var(--navy);white-space:nowrap}
+.art-table .price--free{color:var(--violet)}
+
+/* ---------- Comparaison gratuit / payant ---------- */
+.art-split{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-2);margin-top:var(--s-4)}
+.art-split__col{border-radius:var(--r-md);padding:var(--s-3);border:1px solid var(--line);background:var(--white)}
+.art-split__col--pay{background:var(--navy);border-color:var(--navy)}
+.art-split h4{
+  font-family:var(--font-head);font-size:.98rem;margin-bottom:12px;display:flex;align-items:center;gap:9px
+}
+.art-split__col--pay h4{color:#fff}
+.art-split h4 i{width:9px;height:9px;border-radius:50%;background:var(--violet);flex:none}
+.art-split__col--pay h4 i{background:var(--cyan)}
+.art-split ul{list-style:none;margin:0;display:grid;gap:9px}
+.art-split li{font-size:.9rem;line-height:1.5;padding-left:17px;position:relative;color:var(--text-muted)}
+.art-split li::before{content:"";position:absolute;left:0;top:.52em;width:7px;height:2px;border-radius:2px;background:var(--line)}
+.art-split__col--pay li{color:var(--text-on-dark)}
+.art-split__col--pay li::before{background:rgba(255,255,255,.35)}
+
+/* ---------- Repères chiffrés ---------- */
+.art-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-2);margin-top:var(--s-4)}
+.art-stat{background:var(--offwhite);border-radius:var(--r-md);padding:var(--s-3);text-align:center}
+.art-stat b{display:block;font-family:var(--font-head);font-weight:700;font-size:1.75rem;color:var(--violet);line-height:1}
+.art-stat span{display:block;font-size:var(--fs-caption);color:var(--text-muted);margin-top:8px;line-height:1.4}
+
+/* ---------- CTA guide ---------- */
+.art-cta{
+  margin-top:var(--s-6);background:var(--navy);color:#fff;border-radius:var(--r-lg);
+  padding:var(--s-5) var(--s-4);text-align:center;box-shadow:var(--sh-2)
+}
+.art-cta h2{color:#fff;margin:0 0 12px;font-size:1.5rem}
+.art-cta p{color:var(--text-on-dark);max-width:48ch;margin:0 auto var(--s-3)}
+.art-cta .btn{margin-top:4px}
+.art-cta__fine{font-size:var(--fs-caption);color:rgba(255,255,255,.6);margin-top:14px}
+
+/* ---------- Pied d'article ---------- */
+.art-foot{margin-top:var(--s-5);padding-top:var(--s-4);border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:var(--s-3);align-items:center;justify-content:space-between}
+.art-foot__author{display:flex;align-items:center;gap:14px}
+.art-foot__author img{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:none}
+.art-foot__author b{display:block;font-family:var(--font-head);font-size:.97rem;color:var(--text)}
+.art-foot__author span{display:block;font-size:var(--fs-small);color:var(--text-muted)}
+
+/* ---------- Fil d'Ariane ---------- */
+.crumb{font-size:var(--fs-caption);color:var(--text-muted);margin-bottom:var(--s-2)}
+.crumb a{color:var(--text-muted);text-decoration:none}
+.crumb a:hover{color:var(--violet)}
+.crumb span{margin-inline:7px;opacity:.5}
+
+/* ---------- Liste des articles ---------- */
+.posts{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:var(--s-4);margin-top:var(--s-5)}
+.post{
+  display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);
+  border-radius:var(--r-lg);overflow:hidden;text-decoration:none;
+  transition:transform var(--d-mid) var(--e-out),box-shadow var(--d-mid) var(--e-out)
+}
+.post:hover{transform:translateY(-4px);box-shadow:var(--sh-2)}
+.post__img{aspect-ratio:4/3;background:var(--ice);overflow:hidden}
+.post__img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform var(--d-slow) var(--e-out)}
+.post:hover .post__img img{transform:scale(1.03)}
+.post__body{padding:var(--s-3);display:flex;flex-direction:column;flex:1}
+.post__meta{font-size:var(--fs-caption);color:var(--violet);font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.post h2{font-size:1.18rem;line-height:1.3;margin-bottom:9px;color:var(--text)}
+.post p{font-size:.92rem;color:var(--text-muted);line-height:1.6;flex:1}
+.post__more{margin-top:var(--s-2);font-size:.9rem;font-weight:600;color:var(--navy-light);display:inline-flex;align-items:center;gap:7px}
+.post:hover .post__more{color:var(--violet)}
+
+/* ---------- Mobile ---------- */
+@media (max-width:720px){
+  .art-split,.art-stats{grid-template-columns:1fr}
+  .art-hero{padding-top:calc(var(--header-h) + var(--s-4))}
+  .art-foot{flex-direction:column;align-items:flex-start}
+}
+
+/* ============================================================
+   EN-TÊTE SUR FOND CLAIR
+   Le header du site est prévu pour un grand visuel sombre.
+   Les pages Conseils ouvrent sur un fond clair : on rétablit
+   le contraste tant que le header n'est pas collé en haut.
+   ============================================================ */
+body.page-light .header:not(.is-stuck) .brand__name{color:var(--navy)}
+body.page-light .header:not(.is-stuck) .brand__tag{color:var(--violet)}
+body.page-light .header:not(.is-stuck) .nav a{color:var(--text-muted)}
+body.page-light .header:not(.is-stuck) .nav a:hover{color:var(--violet);background:var(--violet-soft)}
+body.page-light .header:not(.is-stuck) .burger{color:var(--navy)}
+body.page-light .header:not(.is-stuck) .header__cta.btn--primary{
+  background:var(--violet);color:#fff;box-shadow:var(--sh-violet)
+}
+body.page-light .header:not(.is-stuck) .header__cta.btn--primary:hover{
+  background:var(--navy-light);color:#fff
+}
+.nav a[aria-current="page"]{color:var(--violet);font-weight:600}
+body.page-light .header:not(.is-stuck) .nav a[aria-current="page"]{color:var(--violet)}
+
+/* ---------- FAQ visible en fin d'article ---------- */
+.art-faq{margin-top:var(--s-6)}
+.art-faq__item{border-top:1px solid var(--line);padding:var(--s-3) 0}
+.art-faq__item:last-child{border-bottom:1px solid var(--line)}
+.art-faq h3{font-family:var(--font-head);font-size:1.05rem;color:var(--text);margin:0 0 9px}
+.art-faq p{margin:0}
