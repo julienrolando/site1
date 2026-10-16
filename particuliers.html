@@ -38,7 +38,17 @@
       "description": "Conseil, accompagnement et formation sur les solutions d'intelligence artificielle pour particuliers et indépendants.",
       "url": "https://julienrolando.fr/",
       "email": "contact@julienrolando.fr",
-      "founder": { "@type": "Person", "name": "Julien Rolando Le Bian" },
+      "founder": {
+        "@type": "Person",
+        "@id": "https://julienrolando.fr/#julien",
+        "name": "Julien Rolando Le Bian",
+        "jobTitle": "Consultant en intelligence artificielle",
+        "sameAs": [
+          "https://www.linkedin.com/in/julienrolando",
+          "https://www.instagram.com/julienrolando",
+          "https://www.facebook.com/profile.php?id=61595437739787"
+        ]
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "10 Avenue Henri Guillaumet",
@@ -47,8 +57,42 @@
         "addressCountry": "FR"
       },
       "areaServed": [
-        { "@type": "Country", "name": "France" },
-        { "@type": "City", "name": "Toulouse" }
+        {
+          "@type": "AdministrativeArea",
+          "name": "Haute-Garonne"
+        },
+        {
+          "@type": "City",
+          "name": "Toulouse"
+        },
+        {
+          "@type": "City",
+          "name": "Blagnac"
+        },
+        {
+          "@type": "City",
+          "name": "Colomiers"
+        },
+        {
+          "@type": "City",
+          "name": "Balma"
+        },
+        {
+          "@type": "City",
+          "name": "Ramonville-Saint-Agne"
+        },
+        {
+          "@type": "City",
+          "name": "Tournefeuille"
+        },
+        {
+          "@type": "City",
+          "name": "Labège"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        }
       ],
       "priceRange": "À partir de 25 €",
       "knowsLanguage": "fr-FR",
@@ -56,10 +100,51 @@
         "@type": "OfferCatalog",
         "name": "Accompagnements IA",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Prise en main", "description": "Utiliser ChatGPT ou Claude comme assistant personnel : rédaction, organisation, recherche, démarches." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatisation", "description": "Audit des tâches chronophages et mise en place d'automatisations durables." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Création", "description": "Posts, visuels et supports de communication prêts à diffuser." } }
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Prise en main",
+              "description": "Utiliser ChatGPT ou Claude comme assistant personnel : rédaction, organisation, recherche, démarches."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automatisation",
+              "description": "Audit des tâches chronophages et mise en place d'automatisations durables."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Création",
+              "description": "Posts, visuels et supports de communication prêts à diffuser."
+            }
+          }
         ]
+      },
+      "telephone": "+33764440520",
+      "sameAs": [
+        "https://www.linkedin.com/in/julienrolando",
+        "https://www.instagram.com/julienrolando",
+        "https://www.facebook.com/profile.php?id=61595437739787"
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "SIRET",
+        "value": "830 012 175 00055"
+      },
+      "logo": "https://julienrolando.fr/assets/logo-mark.png",
+      "image": "https://julienrolando.fr/og-image.jpg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+33764440520",
+        "email": "contact@julienrolando.fr",
+        "availableLanguage": "fr-FR"
       }
     },
     {
@@ -68,34 +153,33 @@
       "url": "https://julienrolando.fr/",
       "name": "Julien Rolando Le Bian — Conseil & Solutions IA",
       "inLanguage": "fr-FR",
-      "publisher": { "@id": "https://julienrolando.fr/#organization" },
+      "publisher": {
+        "@id": "https://julienrolando.fr/#organization"
+      },
       "potentialAction": {
         "@type": "SearchAction",
-        "target": { "@type": "EntryPoint", "urlTemplate": "https://julienrolando.fr/?s={search_term_string}" },
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://julienrolando.fr/?s={search_term_string}"
+        },
         "query-input": "required name=search_term_string"
       }
     },
     {
-      "@type": "FAQPage",
-      "@id": "https://julienrolando.fr/#faq",
-      "mainEntity": [
-        { "@type": "Question", "name": "Je n'y connais rien en informatique, est-ce que c'est pour moi ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. On part de votre quotidien, pas de la technique. Aucun vocabulaire technique n'est nécessaire : si un mot est utile, je vous l'explique en une phrase." } },
-        { "@type": "Question", "name": "Faut-il acheter des logiciels ou des abonnements ?", "acceptedAnswer": { "@type": "Answer", "text": "Pas nécessairement. On commence avec les versions gratuites. Si un abonnement devient utile, je vous dis lequel, pourquoi et combien, et vous décidez." } },
-        { "@type": "Question", "name": "Est-ce que vous intervenez à distance ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, en visio partout en France, et en présentiel à Toulouse et dans le Sud-Ouest." } },
-        { "@type": "Question", "name": "Mes données sont-elles en sécurité ?", "acceptedAnswer": { "@type": "Answer", "text": "On choisit ensemble ce qui peut être confié à un outil et ce qui ne doit jamais en sortir. Aucune donnée client n'est conservée en dehors de ce qui est nécessaire à la mission, conformément au RGPD." } },
-        { "@type": "Question", "name": "Combien ça coûte ?", "acceptedAnswer": { "@type": "Answer", "text": "Prise en main à partir de 60 € la séance, création à partir de 25 € la prestation, automatisation sur devis après audit. Premier échange gratuit et sans engagement, devis clair et détaillé. TVA non applicable, article 293 B du CGI." } },
-        { "@type": "Question", "name": "Combien de temps avant de voir un résultat ?", "acceptedAnswer": { "@type": "Answer", "text": "Dès la première séance, vous repartez avec au moins un usage concret que vous pouvez refaire seul." } }
-      ]
-    },
-    {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://julienrolando.fr/" }
-      ]
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://julienrolando.fr/"
+        }
+      ],
+      "@id": "https://julienrolando.fr/particuliers.html#breadcrumb"
     }
   ]
 }
-</script>
+  </script>
 </head>
 <body>
 <!-- ============================ HEADER ============================ -->
