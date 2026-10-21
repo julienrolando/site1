@@ -26,6 +26,14 @@
 .morph__w{grid-area:1/1;justify-self:start;white-space:nowrap;color:#fff;opacity:0}
 .morph__w.is-on{opacity:1}
 .morph-svg{position:absolute;width:0;height:0;overflow:hidden}
+/* petit éclat à l'arrivée de chaque nouveau mot */
+.morph__w{display:inline-block;transform-origin:left 70%}
+.morph__w.is-pop{animation:morph-pop 650ms var(--e-spring)}
+@keyframes morph-pop{
+  0%{transform:scale(.92);color:var(--cyan-light);text-shadow:0 0 22px rgba(127,227,240,.9)}
+  55%{transform:scale(1.06);color:var(--cyan-light);text-shadow:0 0 18px rgba(127,227,240,.6)}
+  100%{transform:none;color:#fff;text-shadow:none}
+}
 
 /* ---------- 3. Halo lumineux qui suit la souris ---------- */
 .has-spot{position:relative}

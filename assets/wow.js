@@ -143,7 +143,7 @@
     tail.appendChild(box); tail.appendChild(sr); tail.appendChild(end);
     line.appendChild(pre); line.appendChild(tail);
 
-    var MORPH = 1.2, HOLD = 2.4;
+    var MORPH = 0.7, HOLD = 1.5;
     var idx = 0, morph = 0, cool = HOLD, last = 0, raf = 0, timer = 0;
 
     var widths = [];
@@ -179,6 +179,7 @@
         var f = morph / MORPH;
         if (f >= 1){
           idx = (idx + 1) % spans.length; cool = HOLD; rest();
+          var w = spans[idx]; w.classList.remove('is-pop'); void w.offsetWidth; w.classList.add('is-pop');
         } else setStyles(f);
       }
       raf = requestAnimationFrame(tick);
@@ -186,7 +187,7 @@
     function stop(){ cancelAnimationFrame(raf); clearTimeout(timer); }
     function startAfterWriting(){
       stop(); idx = 0; cool = HOLD; morph = 0; last = 0; rest();
-      timer = setTimeout(function(){ raf = requestAnimationFrame(tick); }, 3100);
+      timer = setTimeout(function(){ raf = requestAnimationFrame(tick); }, 2600);
     }
     measure(); rest();
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ measure(); rest(); });
