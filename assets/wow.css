@@ -1,0 +1,95 @@
+/* ============================================================
+   EFFETS « WAOUH » — inspirés du catalogue 21st.dev
+   (Morphing Text, Card Spotlight, Bento Grid, Particle Hero)
+   Réécrits en CSS/JS natif, aux couleurs de la charte.
+   Tout se coupe avec prefers-reduced-motion.
+   ============================================================ */
+
+/* ---------- 1. Fond de particules (hero) ---------- */
+.hero__particles{
+  position:absolute;inset:0;width:100%;height:100%;
+  z-index:0;pointer-events:none;
+  opacity:0;transition:opacity 1.2s var(--e-out);
+}
+.hero__particles.is-on{opacity:1}
+
+/* ---------- 2. Mot qui se transforme (titre d'accueil) ---------- */
+.morph{display:inline-grid;vertical-align:baseline}
+.morph.is-morphing{filter:url(#morph-threshold)}
+/* la ligne d'accent perd son dégradé global : chaque morceau porte sa couleur,
+   sinon le filtre du mot animé n'aurait rien à dessiner */
+.hw-text--accent.has-morph{background:none;color:#fff}
+.has-morph .morph-pre{
+  background:linear-gradient(104deg,var(--cyan-light) 10%,#fff 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.morph__w{grid-area:1/1;justify-self:start;white-space:nowrap;color:#fff;opacity:0}
+.morph__w.is-on{opacity:1}
+.morph-svg{position:absolute;width:0;height:0;overflow:hidden}
+
+/* ---------- 3. Halo lumineux qui suit la souris ---------- */
+.has-spot{position:relative}
+.spot{
+  position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:3;
+  opacity:0;transition:opacity var(--d-mid) var(--e-out);
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(79,48,166,.10),transparent 45%);
+}
+.spot::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;
+  background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%),rgba(79,48,166,.95),rgba(94,200,216,.75) 30%,transparent 62%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+          mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
+}
+.dark .spot{background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(127,227,240,.12),transparent 45%)}
+@media (hover:hover) and (pointer:fine){
+  .has-spot:hover > .spot{opacity:1}
+}
+
+/* ---------- 4. Réalisations en grille bento ---------- */
+@media (min-width:1025px){
+  .works--bento{grid-template-columns:repeat(3,1fr);grid-auto-rows:auto;grid-auto-flow:dense}
+  .works--bento > li{display:flex}
+  .works--bento > li > .work{height:100%}
+
+  /* tuile large : visuel à gauche, texte à droite */
+  .works--bento > li:nth-child(1),
+  .works--bento > li:nth-child(6){grid-column:span 2}
+  .works--bento > li:nth-child(1) .work,
+  .works--bento > li:nth-child(6) .work{flex-direction:row}
+  .works--bento > li:nth-child(1) .work__visual,
+  .works--bento > li:nth-child(6) .work__visual{flex:0 0 56%;aspect-ratio:auto;min-height:280px}
+  .works--bento > li:nth-child(1) .work__body,
+  .works--bento > li:nth-child(6) .work__body{justify-content:center;padding:var(--s-4)}
+  .works--bento > li:nth-child(1) .work__body h3,
+  .works--bento > li:nth-child(6) .work__body h3{font-size:1.35rem}
+
+  /* tuile haute : visuel qui remplit */
+  .works--bento > li:nth-child(2){grid-row:span 2}
+  .works--bento > li:nth-child(2) .work__visual{flex:1;aspect-ratio:auto;min-height:320px}
+  .works--bento > li:nth-child(2) .work__body{flex:0 0 auto}
+  .works--bento > li:nth-child(2) .work__body p{flex:0 0 auto}
+}
+@media (min-width:621px) and (max-width:1024px){
+  .works--bento > li:nth-child(1),
+  .works--bento > li:nth-child(6){grid-column:span 2}
+  .works--bento > li:nth-child(1) .work__visual,
+  .works--bento > li:nth-child(6) .work__visual{aspect-ratio:16/7}
+}
+
+/* inclinaison 3D légère au survol des tuiles */
+@media (hover:hover) and (pointer:fine){
+  .works--bento .work{transform-style:preserve-3d}
+  .works--bento .work.is-tilting{
+    transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(-6px);
+    transition:transform 120ms linear,box-shadow var(--d-mid) var(--e-out);
+  }
+}
+
+/* ---------- Mouvement réduit : on coupe tout ---------- */
+@media (prefers-reduced-motion:reduce){
+  .hero__particles{display:none!important}
+  .morph{filter:none}
+  .spot{display:none!important}
+  .works--bento .work.is-tilting{transform:none}
+}

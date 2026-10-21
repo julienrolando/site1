@@ -27,6 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/wow.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -195,7 +196,6 @@
       <a href="#calculateur">Temps gagné</a>
       <a href="#methode">Méthode</a>
       <a href="#offres">Offres</a>
-    <a href="conseils.html">Conseils</a>
       <a href="conseils.html">Conseils</a>
       <a href="#rendezvous">Rendez-vous</a>
     </nav>
@@ -218,6 +218,7 @@
     <a href="#calculateur">Temps gagné</a>
     <a href="#methode">Méthode</a>
     <a href="#offres">Offres</a>
+    <a href="conseils.html">Conseils</a>
     <a href="#rendezvous">Rendez-vous</a>
     <a class="btn btn--primary btn--block" href="#rendezvous">Réserver un audit</a>
   </div>
@@ -236,7 +237,7 @@
           <span class="hw-line"><span class="hw-text">Reprenez les heures</span><span class="hw-pen" aria-hidden="true"></span></span>
           <span class="hw-line"><span class="hw-text hw-text--accent">que l'admin vous vole</span><span class="hw-pen" aria-hidden="true"></span></span>
         </h1>
-        <p class="hero__lead">Facturation, relances, suivi client, publications&nbsp;: on audite d'abord ce qui vous mange vos soirées, puis on automatise ce qui peut l'être. Tout est documenté et reprenable par vous — vous n'achetez pas une dépendance, vous récupérez du temps.</p>
+        <p class="hero__lead">Facturation, relances, suivi client, publications&nbsp;: on audite d'abord ce qui vous mange vos soirées, puis on automatise ce qui peut l'être. Tout est documenté pour que vous puissiez le reprendre sans moi.</p>
 
         <div class="hero__actions">
           <a class="btn btn--primary btn--lg" href="#rendezvous" data-magnet>
@@ -345,7 +346,7 @@
 
       <div class="calc__result" aria-live="polite">
         <p class="calc__big"><span id="calcHours">0</span><span class="calc__unit">heures / an</span></p>
-        <p class="calc__note">soit environ <b id="calcDays">0</b> journées de travail rendues à ce qui compte vraiment.</p>
+        <p class="calc__note">soit environ <b id="calcDays">0</b> journées de travail récupérées.</p>
 
         <div class="calc__bars">
           <div class="calc__bar"><span>Mails et courriers</span><b id="barMailVal">0 h</b><span class="track"><span class="fill" id="barMail"></span></span></div>
@@ -363,7 +364,7 @@
     <div class="section-head" data-reveal>
       <p class="eyebrow">Démonstration</p>
       <h2>Votre lundi matin, <span class="accent">avant et après</span></h2>
-      <p class="lead">Basculez d'un onglet à l'autre. D'un côté, une semaine type sans aide. De l'autre, la même semaine une fois les automatisations en place — rien d'inventé, ce sont les premiers chantiers que l'on traite ensemble.</p>
+      <p class="lead">Basculez d'un onglet à l'autre. D'un côté, une semaine type sans aide. De l'autre, la même semaine une fois les automatisations en place. Ce sont les premiers chantiers que l'on traite ensemble.</p>
     </div>
 
     <div class="switcher" data-reveal>
@@ -437,7 +438,7 @@
           <span class="step__num" aria-hidden="true"></span>
           <div>
             <h3>Je vous propose un plan clair</h3>
-            <p>Un devis lisible : ce qu'on fait, dans quel ordre, ce que ça change, et ce que ça coûte. Pas de ligne obscure, pas d'abonnement caché.</p>
+            <p>Un devis lisible : ce qu'on fait, dans quel ordre, ce que ça change, et ce que ça coûte. Sans ligne obscure ni abonnement caché.</p>
             <span class="step__meta">Devis détaillé sous 48 h</span>
           </div>
         </li>
@@ -453,7 +454,7 @@
           <span class="step__num" aria-hidden="true"></span>
           <div>
             <h3>Vous repartez autonome</h3>
-            <p>Un mémo écrit avec vos réglages, vos modèles de messages et les étapes à refaire. Et un suivi si vous voulez aller plus loin — jamais par défaut.</p>
+            <p>Un mémo écrit avec vos réglages, vos modèles de messages et les étapes à refaire. Et un suivi si vous voulez aller plus loin, uniquement à votre demande.</p>
             <span class="step__meta">Mémo + suivi optionnel</span>
           </div>
         </li>
@@ -468,7 +469,7 @@
     <div class="section-head" data-reveal>
       <p class="eyebrow">Les offres</p>
       <h2>Deux leviers, <span class="accent">selon ce qui coince</span></h2>
-      <p class="lead">Le temps d'abord, l'image ensuite — ou les deux. Chaque mission démarre par le même audit gratuit, puis fait l'objet d'un devis clair, chiffré sur ce que vous avez réellement à gagner.</p>
+      <p class="lead">Gagner du temps, soigner votre image, ou les deux. Chaque mission démarre par le même audit gratuit, puis fait l'objet d'un devis clair, chiffré sur ce que vous avez réellement à gagner.</p>
     </div>
 
     <ul class="offers" data-stagger data-reveal style="max-width:880px;margin-inline:auto;grid-template-columns:repeat(2,1fr)">
@@ -552,11 +553,11 @@
       </div>
       <div class="faq__item" data-open="false">
         <h3><button class="faq__q" aria-expanded="false" aria-controls="faq4" id="faq4-btn">Mes données sont-elles en sécurité&nbsp;?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" width="14" height="14"><path d="M12 5v14M5 12h14"/></svg></span></button></h3>
-        <div class="faq__a" id="faq4" role="region" aria-labelledby="faq4-btn"><div><p>C'est un point que l'on traite dès la première séance. On trie ensemble ce qui peut passer par un outil et ce qui ne doit jamais en sortir — données clients, santé, pièces d'identité. Je ne conserve que ce qui est nécessaire à la mission, conformément au RGPD, et je vous explique où vont vos informations.</p></div></div>
+        <div class="faq__a" id="faq4" role="region" aria-labelledby="faq4-btn"><div><p>C'est un point que l'on traite dès la première séance. On trie ensemble ce qui peut passer par un outil et ce qui ne doit jamais en sortir&nbsp;: données clients, santé, pièces d'identité. Je ne conserve que ce qui est nécessaire à la mission, conformément au RGPD, et je vous explique où vont vos informations.</p></div></div>
       </div>
       <div class="faq__item" data-open="false">
         <h3><button class="faq__q" aria-expanded="false" aria-controls="faq5" id="faq5-btn">Comment sont chiffrées les missions&nbsp;?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" width="14" height="14"><path d="M12 5v14M5 12h14"/></svg></span></button></h3>
-        <div class="faq__a" id="faq5" role="region" aria-labelledby="faq5-btn"><div><p>L'automatisation est chiffrée sur devis après l'audit de vos tâches — parce qu'une relance automatique et une refonte complète de votre suivi client n'ont rien à voir. Les prestations de création démarrent à 25&nbsp;€, ou au pack mensuel. Le premier échange est gratuit, le devis arrive sous 48&nbsp;h, détaillé ligne par ligne. TVA non applicable, article 293 B du CGI.</p></div></div>
+        <div class="faq__a" id="faq5" role="region" aria-labelledby="faq5-btn"><div><p>L'automatisation est chiffrée sur devis après l'audit de vos tâches, parce qu'une relance automatique et une refonte complète de votre suivi client n'ont rien à voir. Les prestations de création démarrent à 25&nbsp;€, ou au pack mensuel. Le premier échange est gratuit, le devis arrive sous 48&nbsp;h, détaillé ligne par ligne. TVA non applicable, article 293 B du CGI.</p></div></div>
       </div>
       <div class="faq__item" data-open="false">
         <h3><button class="faq__q" aria-expanded="false" aria-controls="faq6" id="faq6-btn">En combien de temps je vois un retour&nbsp;?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" width="14" height="14"><path d="M12 5v14M5 12h14"/></svg></span></button></h3>
@@ -564,7 +565,7 @@
       </div>
       <div class="faq__item" data-open="false">
         <h3><button class="faq__q" aria-expanded="false" aria-controls="faq2" id="faq2-btn">Faut-il changer d'outils ou payer des abonnements&nbsp;?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" width="14" height="14"><path d="M12 5v14M5 12h14"/></svg></span></button></h3>
-        <div class="faq__a" id="faq2" role="region" aria-labelledby="faq2-btn"><div><p>On part de ce que vous utilisez déjà. Si un abonnement devient réellement rentable au regard des heures gagnées, je vous dis lequel, pourquoi et combien — chiffres à l'appui — et vous décidez.</p></div></div>
+        <div class="faq__a" id="faq2" role="region" aria-labelledby="faq2-btn"><div><p>On part de ce que vous utilisez déjà. Si un abonnement devient réellement rentable au regard des heures gagnées, je vous dis lequel, pourquoi et combien, chiffres à l'appui, et vous décidez.</p></div></div>
       </div>
     </div>
   </div>
@@ -576,7 +577,7 @@
     <div class="section-head" data-reveal>
       <p class="eyebrow">Prendre rendez-vous</p>
       <h2>Choisissez votre créneau, <span class="accent">directement dans mon agenda</span></h2>
-      <p class="lead">30 minutes, en visio ou en présentiel, sans engagement. On passe en revue votre semaine type, je repère les trois tâches qui vous coûtent le plus et je vous dis ce qui est automatisable — et ce qui ne l'est pas. Si vous préférez d'abord décrire votre besoin, le questionnaire juste en dessous prend trois minutes.</p>
+      <p class="lead">30 minutes, en visio ou en présentiel, sans engagement. On passe en revue votre semaine type, je repère les trois tâches qui vous coûtent le plus et je vous dis ce qui est automatisable et ce qui ne l'est pas. Si vous préférez d'abord décrire votre besoin, le questionnaire juste en dessous prend trois minutes.</p>
     </div>
 
     <div class="booking" id="booking" data-reveal="scale">
@@ -861,7 +862,7 @@
     <div class="section-head" style="text-align:center;margin-inline:auto" data-reveal>
       <p class="eyebrow" style="justify-content:center">Vous êtes plutôt…</p>
       <h2>Vous cherchez d'abord à comprendre ces outils&nbsp;?</h2>
-      <p class="lead">Si c'est votre quotidien personnel que vous voulez alléger — mails, démarches, organisation — le parcours particuliers va droit au but.</p>
+      <p class="lead">Si c'est votre quotidien personnel que vous voulez alléger (mails, démarches, organisation), le parcours particuliers va droit au but.</p>
     </div>
     <a class="btn btn--ghost btn--lg" href="particuliers.html" data-reveal>Voir l'accompagnement particuliers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
@@ -870,8 +871,8 @@
 <!-- ============================ CTA FINAL ============================ -->
 <section class="section dark cta-final">
   <div class="wrap wrap--narrow">
-    <h2 data-reveal>Chaque semaine qui passe, <span class="accent">ce sont des heures de perdues.</span></h2>
-    <p class="lead" data-reveal>Trente minutes d'audit gratuit pour chiffrer ce que l'automatisation peut vous rendre. Sans engagement, et sans rien vous vendre si le gain n'est pas là.</p>
+    <h2 data-reveal>Combien d'heures pourriez-vous récupérer&nbsp;? <span class="accent">Trente minutes suffisent pour le chiffrer.</span></h2>
+    <p class="lead" data-reveal>L'audit est gratuit et sans engagement. Si le gain n'est pas là, je vous le dis et on s'arrête là.</p>
     <div class="hero__actions" data-reveal>
       <a class="btn btn--light btn--lg" href="#rendezvous" data-magnet>
         Réserver mon échange
@@ -994,5 +995,6 @@
 </div>
 
 <script src="assets/app.js" defer></script>
+<script src="assets/wow.js" defer></script>
 </body>
 </html>
