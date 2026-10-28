@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Julien Rolando Le Bian — Conseil &amp; Solutions IA à Toulouse</title>
-<meta name="description" content="Conseil, accompagnement et formation IA. Deux parcours : particuliers (prise en main) et indépendants (automatisation). Premier échange gratuit, à Toulouse et en visio.">
+<meta name="description" content="Conseil et formation IA à Toulouse et en visio : prise en main pour les particuliers, automatisation pour les indépendants. Premier échange gratuit.">
 <meta name="author" content="Julien Rolando Le Bian">
 <meta name="theme-color" content="#13224A">
 <link rel="canonical" href="https://julienrolando.fr/">
@@ -23,11 +23,13 @@
 
 <link rel="icon" href="assets/logo-mark.png">
 
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/wow.css">
+<link rel="stylesheet" href="assets/enhance.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -124,6 +126,22 @@
               "name": "Création",
               "description": "Posts, visuels et supports de communication prêts à diffuser."
             }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://ouvrages.pro/",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sites internet pour artisans (Ouvrages.pro)",
+              "description": "Site vitrine d'une page, nom de domaine et hébergement, fiche Google optimisée selon la formule. Maquette offerte avant paiement, livraison en 3 jours après réception des éléments.",
+              "provider": {
+                "@id": "https://ouvrages.pro/#organization"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "France"
+              }
+            }
           }
         ]
       },
@@ -146,7 +164,18 @@
         "telephone": "+33764440520",
         "email": "contact@julienrolando.fr",
         "availableLanguage": "fr-FR"
-      }
+      },
+      "subOrganization": {
+        "@id": "https://ouvrages.pro/#organization"
+      },
+      "knowsAbout": [
+        "Intelligence artificielle",
+        "ChatGPT",
+        "Claude",
+        "Automatisation des tâches administratives",
+        "Création de contenus",
+        "Sites internet pour artisans"
+      ]
     },
     {
       "@type": "WebSite",
@@ -156,14 +185,6 @@
       "inLanguage": "fr-FR",
       "publisher": {
         "@id": "https://julienrolando.fr/#organization"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://julienrolando.fr/?s={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
       }
     },
     {
@@ -177,10 +198,20 @@
         }
       ],
       "@id": "https://julienrolando.fr/#breadcrumb"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ouvrages.pro/#organization",
+      "name": "Ouvrages.pro",
+      "url": "https://ouvrages.pro/",
+      "description": "Sites internet vitrine et fiche Google pour artisans, partout en France. Une offre de Julien Rolando Le Bian, Conseil & Solutions IA.",
+      "parentOrganization": {
+        "@id": "https://julienrolando.fr/#organization"
+      }
     }
   ]
 }
-  </script>
+</script>
 </head>
 <body>
 <!-- ============================ HEADER ============================ -->
@@ -327,6 +358,7 @@
 
     <ul class="offers" data-stagger data-reveal style="max-width:880px;margin-inline:auto">
       <li class="offer">
+        <div class="offer__media"><img src="https://images.unsplash.com/photo-1675179182019-3c0804f517af?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=640&amp;h=360&amp;q=70" srcset="https://images.unsplash.com/photo-1675179182019-3c0804f517af?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=400&amp;h=225&amp;q=70 400w, https://images.unsplash.com/photo-1675179182019-3c0804f517af?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=640&amp;h=360&amp;q=70 640w, https://images.unsplash.com/photo-1675179182019-3c0804f517af?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=900&amp;h=506&amp;q=70 900w" sizes="(max-width:1024px) 92vw, 430px" width="640" height="360" alt="Femme assise à sa table de cuisine, son téléphone à la main" loading="lazy" decoding="async"></div>
         <h3>Je suis un particulier</h3>
         <p class="offer__for">Découvrir et prendre en main</p>
         <p class="offer__price">À partir de 60&nbsp;€<small>la séance · après un premier échange gratuit</small></p>
@@ -340,6 +372,7 @@
       </li>
 
       <li class="offer offer--featured" data-badge="">
+        <div class="offer__media"><img src="https://images.unsplash.com/photo-1758611971329-94fa9d6aa8a5?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=640&amp;h=360&amp;q=70" srcset="https://images.unsplash.com/photo-1758611971329-94fa9d6aa8a5?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=400&amp;h=225&amp;q=70 400w, https://images.unsplash.com/photo-1758611971329-94fa9d6aa8a5?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=640&amp;h=360&amp;q=70 640w, https://images.unsplash.com/photo-1758611971329-94fa9d6aa8a5?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=900&amp;h=506&amp;q=70 900w" sizes="(max-width:1024px) 92vw, 430px" width="640" height="360" alt="Indépendant qui prend des notes à côté de son ordinateur portable" loading="lazy" decoding="async"></div>
         <h3>Je suis indépendant ou freelance</h3>
         <p class="offer__for">Automatiser et gagner du temps</p>
         <p class="offer__price">Sur devis<small>chiffré après l'audit de vos tâches</small></p>
@@ -353,7 +386,48 @@
       </li>
     </ul>
 
-    <p class="form__note" style="margin-top:var(--s-4);text-align:center">Vous hésitez&nbsp;? Prenez le premier échange gratuit&nbsp;: on verra ensemble lequel des deux vous correspond.</p>
+    <p class="form__note" style="margin-top:var(--s-4);text-align:center">Vous hésitez&nbsp;? Prenez le premier échange gratuit&nbsp;: on verra ensemble lequel des deux vous correspond. Vous êtes artisan et il vous faut un site&nbsp;? <a href="#artisans">C'est par ici</a>.</p>
+  </div>
+</section>
+
+<!-- ============================ PONT OUVRAGES.PRO ============================ -->
+<section class="section artisans" id="artisans" aria-labelledby="artisansTitle">
+  <div class="wrap">
+    <div class="artisans__grid">
+      <div class="artisans__text" data-reveal="left">
+        <p class="eyebrow">Vous êtes artisan&nbsp;?</p>
+        <h2 id="artisansTitle">Pour les artisans, une offre à part&nbsp;: <span class="accent">Ouvrages.pro</span></h2>
+        <p class="artisans__brand"><i aria-hidden="true">O</i>Ouvrages.pro<small>une offre Conseil &amp; Solutions IA</small></p>
+        <p class="lead">Menuisiers, peintres, plombiers, paysagistes&nbsp;: avant de vous appeler, vos clients regardent vos photos, vos avis et votre zone d'intervention. Ouvrages.pro crée votre site vitrine et votre fiche Google, avec la même méthode que mes accompagnements&nbsp;: vous voyez, vous validez, ensuite seulement vous payez.</p>
+
+        <ul class="artisans__facts" data-stagger>
+          <li class="artisans__fact"><b data-count="3" data-suffix="jours">3<span class="suffix">jours</span></b><span>pour livrer le site, après réception de vos éléments</span></li>
+          <li class="artisans__fact"><b>0<span class="suffix">€</span></b><span>à payer avant d'avoir validé la maquette</span></li>
+          <li class="artisans__fact"><b>1<span class="suffix">page</span></b><span>claire, rapide sur téléphone, avec votre zone d'intervention</span></li>
+        </ul>
+
+        <div class="hero__actions">
+          <a class="btn btn--wood btn--lg" href="https://ouvrages.pro/" target="_blank" rel="noopener" data-magnet>
+            Voir les sites Ouvrages.pro
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="/conseils/site-internet-artisan.html">Ce qu'un site d'artisan doit contenir</a>
+        </div>
+        <p class="artisans__note">Formules, tarifs et métiers détaillés sur ouvrages.pro. Partout en France, à distance.</p>
+      </div>
+
+      <div class="artisans__visual" data-reveal="right">
+        <figure class="artisans__photo" data-reveal="img">
+          <img src="https://images.unsplash.com/photo-1687422810663-c316494f725a?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=720&amp;h=900&amp;q=70" srcset="https://images.unsplash.com/photo-1687422810663-c316494f725a?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=480&amp;h=600&amp;q=70 480w, https://images.unsplash.com/photo-1687422810663-c316494f725a?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=720&amp;h=900&amp;q=70 720w, https://images.unsplash.com/photo-1687422810663-c316494f725a?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=960&amp;h=1200&amp;q=70 960w" sizes="(max-width:1024px) 92vw, 520px" width="720" height="900" alt="Artisan menuisier souriant qui travaille une pièce de bois dans son atelier" loading="lazy" decoding="async">
+        </figure>
+        <p class="artisans__card"><strong>Maquette offerte</strong><span>Vous voyez votre site avant de payer quoi que ce soit.</span></p>
+        <p class="artisans__chip">Domaine à votre nom</p>
+      </div>
+    </div>
+
+    <div class="marquee" aria-label="Métiers concernés">
+      <div class="marquee__track"><div class="marquee__set"><span>Menuisier</span><span>Peintre</span><span>Plombier</span><span>Électricien</span><span>Paysagiste</span><span>Maçon</span><span>Couvreur</span><span>Carreleur</span><span>Plaquiste</span><span>Chauffagiste</span><span>Serrurier</span><span>Jardinier</span><span>Charpentier</span><span>Façadier</span></div><div class="marquee__set" aria-hidden="true"><span>Menuisier</span><span>Peintre</span><span>Plombier</span><span>Électricien</span><span>Paysagiste</span><span>Maçon</span><span>Couvreur</span><span>Carreleur</span><span>Plaquiste</span><span>Chauffagiste</span><span>Serrurier</span><span>Jardinier</span><span>Charpentier</span><span>Façadier</span></div></div>
+    </div>
   </div>
 </section>
 
@@ -561,7 +635,40 @@
           </span>
         </button>
       </li>
+      <li>
+        <button type="button" class="work work--wide" data-cat="creation" data-title="Ouvrages.pro, des sites internet pour artisans" data-catlabel="Création" data-meta="Projet interne · 2026"
+                data-desc="Conception d'une offre complète pour les artisans : positionnement, formules, site de présentation et modèle de site client. Le site est en ligne sur ouvrages.pro." data-points="&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Site de présentation en ligne sur ouvrages.pro&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Modèle de site réutilisable pour chaque artisan&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Livraison en 3 jours après réception des éléments&lt;/li&gt;"
+                aria-haspopup="dialog">
+          <span class="work__cat">Création</span>
+          <span class="work__visual">
+            <img src="https://images.unsplash.com/photo-1768839725085-829e6ac7ac26?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=760&amp;h=428&amp;q=70" srcset="https://images.unsplash.com/photo-1768839725085-829e6ac7ac26?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=480&amp;h=270&amp;q=70 480w, https://images.unsplash.com/photo-1768839725085-829e6ac7ac26?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=760&amp;h=428&amp;q=70 760w, https://images.unsplash.com/photo-1768839725085-829e6ac7ac26?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=1100&amp;h=619&amp;q=70 1100w" sizes="(max-width:1024px) 92vw, 700px" width="760" height="428" alt="Mains d'un artisan qui applique un enduit au mur" loading="lazy" decoding="async">
+          </span>
+          <span class="work__body">
+            <h3>Ouvrages.pro, des sites internet pour artisans</h3>
+            <p>Une offre complète pensée pour les artisans&nbsp;: positionnement, formules, site de présentation et modèle de site client, livrable en 3 jours.</p>
+            <span class="work__more">Voir le détail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </span>
+        </button>
+      </li>
     </ul>
+    <p class="works__ext"><a href="https://ouvrages.pro/" target="_blank" rel="noopener">Voir le site Ouvrages.pro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></a></p>
+  </div>
+</section>
+
+<!-- ============================ BANDEAU PHOTO ============================ -->
+<section class="photo-band" aria-labelledby="bandTitle">
+  <div class="photo-band__img" data-depth="0.14">
+    <img src="https://images.unsplash.com/photo-1713946598564-960eb947fdee?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=1400&amp;h=788&amp;q=70" srcset="https://images.unsplash.com/photo-1713946598564-960eb947fdee?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=800&amp;h=450&amp;q=70 800w, https://images.unsplash.com/photo-1713946598564-960eb947fdee?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=1400&amp;h=788&amp;q=70 1400w, https://images.unsplash.com/photo-1713946598564-960eb947fdee?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=2000&amp;h=1125&amp;q=70 2000w" sizes="100vw" width="1400" height="788" alt="Un homme et une femme regardent ensemble un ordinateur portable autour d'une table" loading="lazy" decoding="async">
+  </div>
+  <div class="wrap">
+    <div class="photo-band__text" data-reveal>
+      <p class="eyebrow">Comment ça se passe</p>
+      <h2 id="bandTitle">À côté de vous, <span class="accent">pas à votre place.</span></h2>
+      <p>En visio partout en France, ou autour d'une table à Toulouse et dans le Sud-Ouest. Vous gardez le clavier, je vous montre, et vous repartez en sachant refaire seul.</p>
+      <div class="hero__actions">
+        <a class="btn btn--light btn--lg" href="#rendezvous" data-magnet>Réserver un échange <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -631,6 +738,7 @@
           <li><a href="conseils.html">Conseils</a></li>
           <li><a href="#realisations">Réalisations</a></li>
           <li><a href="#rendezvous">Prendre rendez-vous</a></li>
+          <li><a class="footer__ext" href="https://ouvrages.pro/" target="_blank" rel="noopener">Sites pour artisans ↗</a></li>
         </ul>
       </nav>
 
@@ -655,6 +763,11 @@
       </div>
     </div>
 
+    <div class="footer__partner">
+      <p><strong>Ouvrages.pro</strong> · sites internet et fiche Google pour artisans, une offre de Conseil &amp; Solutions IA.</p>
+      <a href="https://ouvrages.pro/" target="_blank" rel="noopener">Visiter ouvrages.pro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></a>
+    </div>
+
     <div class="footer__bottom">
       <p>© <span id="year">2026</span> Julien Rolando Le Bian — Conseil &amp; Solutions IA. Tous droits réservés.</p>
       <div class="footer__legal">
@@ -665,6 +778,7 @@
         </div>
       </div>
     </div>
+    <p class="footer__credits">Photos&nbsp;: <a href="https://unsplash.com/@ageing_better?utm_source=julienrolando&amp;utm_medium=referral" target="_blank" rel="noopener">Centre for Ageing Better</a>, <a href="https://unsplash.com/@silverkblack?utm_source=julienrolando&amp;utm_medium=referral" target="_blank" rel="noopener">Vitaly Gariev</a>, <a href="https://unsplash.com/@mkumbwajr?utm_source=julienrolando&amp;utm_medium=referral" target="_blank" rel="noopener">Ali Mkumbwa</a>, <a href="https://unsplash.com/@sasun1990?utm_source=julienrolando&amp;utm_medium=referral" target="_blank" rel="noopener">Sasun Bughdaryan</a> sur <a href="https://unsplash.com/?utm_source=julienrolando&amp;utm_medium=referral" target="_blank" rel="noopener">Unsplash</a>.</p>
   </div>
 </footer>
 
@@ -706,5 +820,6 @@
 
 <script src="assets/app.js" defer></script>
 <script src="assets/wow.js" defer></script>
+<script src="assets/enhance.js" defer></script>
 </body>
 </html>

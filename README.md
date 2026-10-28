@@ -54,7 +54,19 @@ Ces piliers ne sont plus associés à un profil (particulier/indépendant) mais 
 - **Créations** (`creations.html`) : la galerie reste en placeholders, mais la section "Études de cas" contient désormais 3 démonstrations fictives (une par pilier), chacune avec un badge "Démonstration · Pilier …" bien visible — jamais présentées comme de vrais clients.
 - **Calendrier de rendez-vous** : pas encore intégré (ni Calendly ni autre) — le formulaire de contact fait office de point d'entrée unique en attendant
 
+## Mise à jour du 28 octobre 2026 — pont Ouvrages.pro, photos, animations, SEO
+
+- **Ouvrages.pro** (offre sites internet pour artisans, https://ouvrages.pro/) est reliée partout : section dédiée sur l'accueil (`#artisans`, fond navy) et sur `/professionnels` (version claire), tuile pleine largeur dans les Réalisations, question dans la FAQ pro, bandeau partenaire + lien « Sites pour artisans » dans le pied de page de toutes les pages. Aucun prix d'Ouvrages.pro n'est affiché ici : les tarifs restent sur ouvrages.pro (une seule source à tenir à jour).
+- **Nouvel article** : `/conseils/site-internet-artisan.html` (Article + FAQPage + Breadcrumb en JSON-LD), listé en tête de `conseils.html` et lié depuis l'article sur les prix des abonnements.
+- **Photos** : Unsplash, chargées depuis le CDN officiel `images.unsplash.com` (méthode demandée par Unsplash) avec `srcset`. Crédits photographes en bas de chaque page concernée (`.footer__credits`). Correspondance photos ↔ pages : voir le script de génération décrit dans l'historique Git.
+- **Animations** : `assets/enhance.css` + `assets/enhance.js` (rideau sur les photos, parallaxe du bandeau photo, défilé des métiers, cartes flottantes, barre de lecture des articles). Tout est coupé si l'appareil demande moins d'animations.
+- **SEO** : titres et descriptions raccourcis, FAQPage générée à partir des FAQ visibles (accueil, particuliers, professionnels), Ouvrages.pro déclarée en `subOrganization`, suppression du faux moteur de recherche interne (`SearchAction`), `sitemap.xml` avec `lastmod` et images, fichier `llms.txt` pour les moteurs IA.
+- **Chatbot** : le prompt de `worker.js` connaît désormais Ouvrages.pro. Il faut **redéployer le Worker Cloudflare** pour que ce soit pris en compte (le site, lui, se met à jour tout seul).
+
 ## Ce qui reste en attente / à faire un jour
+
+- [ ] Ajouter sur ouvrages.pro un lien retour vers julienrolando.fr (pied de page « Une offre de Julien Rolando Le Bian, Conseil & Solutions IA »)
+- [ ] Redéployer le Worker du chatbot (`worker.js`) pour la partie Ouvrages.pro
 
 - [ ] Remplacer les placeholders de la galerie Créations par de vrais projets (les 3 démonstrations des études de cas restent fictives par nature)
 - [ ] Remplacer les animations CSS des piliers Automatisation/Création par de vraies vidéos courtes si un outil de génération externe est utilisé

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Particuliers — Prendre l'IA en main à votre rythme | Julien Rolando Le Bian</title>
-<meta name="description" content="Séances de prise en main de l'IA pour les particuliers, à partir de 60 €. Mails, démarches, organisation, recherche. Sans jargon, à Toulouse et en visio. Premier échange gratuit.">
+<title>Formation IA pour particuliers à Toulouse et en visio | Julien Rolando</title>
+<meta name="description" content="Apprendre à utiliser ChatGPT ou Claude au quotidien : mails, démarches, organisation. Séances sans jargon dès 60 €, à Toulouse et en visio.">
 <meta name="author" content="Julien Rolando Le Bian">
 <meta name="theme-color" content="#13224A">
 <link rel="canonical" href="https://julienrolando.fr/particuliers.html">
@@ -23,11 +23,13 @@
 
 <link rel="icon" href="assets/logo-mark.png">
 
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/wow.css">
+<link rel="stylesheet" href="assets/enhance.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -124,6 +126,22 @@
               "name": "Création",
               "description": "Posts, visuels et supports de communication prêts à diffuser."
             }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://ouvrages.pro/",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sites internet pour artisans (Ouvrages.pro)",
+              "description": "Site vitrine d'une page, nom de domaine et hébergement, fiche Google optimisée selon la formule. Maquette offerte avant paiement, livraison en 3 jours après réception des éléments.",
+              "provider": {
+                "@id": "https://ouvrages.pro/#organization"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "France"
+              }
+            }
           }
         ]
       },
@@ -146,7 +164,18 @@
         "telephone": "+33764440520",
         "email": "contact@julienrolando.fr",
         "availableLanguage": "fr-FR"
-      }
+      },
+      "subOrganization": {
+        "@id": "https://ouvrages.pro/#organization"
+      },
+      "knowsAbout": [
+        "Intelligence artificielle",
+        "ChatGPT",
+        "Claude",
+        "Automatisation des tâches administratives",
+        "Création de contenus",
+        "Sites internet pour artisans"
+      ]
     },
     {
       "@type": "WebSite",
@@ -156,14 +185,6 @@
       "inLanguage": "fr-FR",
       "publisher": {
         "@id": "https://julienrolando.fr/#organization"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://julienrolando.fr/?s={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
       }
     },
     {
@@ -177,10 +198,66 @@
         }
       ],
       "@id": "https://julienrolando.fr/particuliers.html#breadcrumb"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ouvrages.pro/#organization",
+      "name": "Ouvrages.pro",
+      "url": "https://ouvrages.pro/",
+      "description": "Sites internet vitrine et fiche Google pour artisans, partout en France. Une offre de Julien Rolando Le Bian, Conseil & Solutions IA.",
+      "parentOrganization": {
+        "@id": "https://julienrolando.fr/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://julienrolando.fr/particuliers.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Je n'y connais rien en informatique, est-ce que c'est pour moi ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, et c'est même le cas le plus fréquent. On part de votre quotidien, pas de la technique : vous me décrivez ce qui vous prend du temps, et je m'occupe des réglages. Vous n'avez rien à retenir par cœur, tout est noté dans un mémo à la fin."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il acheter des logiciels ou des abonnements ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pas nécessairement. On commence avec les versions gratuites des outils, qui suffisent dans la majorité des cas. Si un abonnement devient réellement utile, je vous dis lequel, pourquoi et combien, et vous décidez sans pression."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vous intervenez à distance ou sur place ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les deux. En visio partout en France, et en présentiel à Toulouse et dans tout le Sud-Ouest. Beaucoup de personnes commencent en présentiel puis passent en visio une fois à l'aise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte une séance ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Une séance de prise en main démarre à 60 €, et le premier échange de 30 minutes est gratuit. Le devis arrive sous 48 h, détaillé ligne par ligne, sans frais cachés ni abonnement imposé. TVA non applicable, article 293 B du CGI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Au bout de combien de temps je m'en sors seul ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dès la première séance, vous repartez avec au moins un usage concret que vous pouvez refaire seul le lendemain, et un mémo écrit avec vos réglages. Certaines personnes s'arrêtent là, d'autres enchaînent quelques séances pour aller plus loin, uniquement si elles le souhaitent."
+          }
+        }
+      ]
     }
   ]
 }
-  </script>
+</script>
 </head>
 <body>
 <!-- ============================ HEADER ============================ -->
@@ -383,6 +460,10 @@
           Prendre le premier rendez-vous
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
+        <figure class="method__photo" data-reveal="img">
+          <img src="https://images.unsplash.com/photo-1756312177615-e153c9db507d?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=720&amp;h=540&amp;q=70" srcset="https://images.unsplash.com/photo-1756312177615-e153c9db507d?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=480&amp;h=360&amp;q=70 480w, https://images.unsplash.com/photo-1756312177615-e153c9db507d?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=720&amp;h=540&amp;q=70 720w, https://images.unsplash.com/photo-1756312177615-e153c9db507d?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=960&amp;h=720&amp;q=70 960w" sizes="(max-width:1024px) 0px, 460px" width="720" height="540" alt="Femme au téléphone dans sa cuisine" loading="lazy" decoding="async">
+          <figcaption>Rien à préparer, rien à installer avant le premier échange.</figcaption>
+        </figure>
       </div>
 
       <ol class="method__steps">
@@ -640,6 +721,7 @@
           <li><a href="#faq">Questions fréquentes</a></li>
           <li><a href="#rendezvous">Prendre rendez-vous</a></li>
           <li><a href="index.html#realisations">Réalisations</a></li>
+          <li><a class="footer__ext" href="https://ouvrages.pro/" target="_blank" rel="noopener">Sites pour artisans ↗</a></li>
         </ul>
       </nav>
 
@@ -664,6 +746,11 @@
       </div>
     </div>
 
+    <div class="footer__partner">
+      <p><strong>Ouvrages.pro</strong> · sites internet et fiche Google pour artisans, une offre de Conseil &amp; Solutions IA.</p>
+      <a href="https://ouvrages.pro/" target="_blank" rel="noopener">Visiter ouvrages.pro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></a>
+    </div>
+
     <div class="footer__bottom">
       <p>© <span id="year">2026</span> Julien Rolando Le Bian — Conseil &amp; Solutions IA. Tous droits réservés.</p>
       <div class="footer__legal">
@@ -674,6 +761,7 @@
         </div>
       </div>
     </div>
+    <p class="footer__credits">Photos&nbsp;: <a href="https://unsplash.com/@ageing_better?utm_source=julienrolando&amp;utm_medium=referral" target="_blank" rel="noopener">Centre for Ageing Better</a> sur <a href="https://unsplash.com/?utm_source=julienrolando&amp;utm_medium=referral" target="_blank" rel="noopener">Unsplash</a>.</p>
   </div>
 </footer>
 
@@ -715,5 +803,6 @@
 
 <script src="assets/app.js" defer></script>
 <script src="assets/wow.js" defer></script>
+<script src="assets/enhance.js" defer></script>
 </body>
 </html>

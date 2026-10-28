@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Indépendants &amp; freelances — Automatiser ce qui vous prend du temps | Julien Rolando Le Bian</title>
-<meta name="description" content="Audit des tâches chronophages et automatisation IA pour indépendants et freelances : facturation, relances, suivi client, contenus. Sur devis après audit. Toulouse et visio.">
+<title>Automatisation IA pour indépendants et freelances | Julien Rolando</title>
+<meta name="description" content="Audit gratuit puis automatisation IA de vos tâches : facturation, relances, suivi client. Pour indépendants, freelances et artisans, à Toulouse et en visio.">
 <meta name="author" content="Julien Rolando Le Bian">
 <meta name="theme-color" content="#13224A">
 <link rel="canonical" href="https://julienrolando.fr/professionnels.html">
@@ -23,11 +23,13 @@
 
 <link rel="icon" href="assets/logo-mark.png">
 
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/wow.css">
+<link rel="stylesheet" href="assets/enhance.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -124,6 +126,22 @@
               "name": "Création",
               "description": "Posts, visuels et supports de communication prêts à diffuser."
             }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://ouvrages.pro/",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sites internet pour artisans (Ouvrages.pro)",
+              "description": "Site vitrine d'une page, nom de domaine et hébergement, fiche Google optimisée selon la formule. Maquette offerte avant paiement, livraison en 3 jours après réception des éléments.",
+              "provider": {
+                "@id": "https://ouvrages.pro/#organization"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "France"
+              }
+            }
           }
         ]
       },
@@ -146,7 +164,18 @@
         "telephone": "+33764440520",
         "email": "contact@julienrolando.fr",
         "availableLanguage": "fr-FR"
-      }
+      },
+      "subOrganization": {
+        "@id": "https://ouvrages.pro/#organization"
+      },
+      "knowsAbout": [
+        "Intelligence artificielle",
+        "ChatGPT",
+        "Claude",
+        "Automatisation des tâches administratives",
+        "Création de contenus",
+        "Sites internet pour artisans"
+      ]
     },
     {
       "@type": "WebSite",
@@ -156,14 +185,6 @@
       "inLanguage": "fr-FR",
       "publisher": {
         "@id": "https://julienrolando.fr/#organization"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://julienrolando.fr/?s={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
       }
     },
     {
@@ -177,10 +198,74 @@
         }
       ],
       "@id": "https://julienrolando.fr/professionnels.html#breadcrumb"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ouvrages.pro/#organization",
+      "name": "Ouvrages.pro",
+      "url": "https://ouvrages.pro/",
+      "description": "Sites internet vitrine et fiche Google pour artisans, partout en France. Une offre de Julien Rolando Le Bian, Conseil & Solutions IA.",
+      "parentOrganization": {
+        "@id": "https://julienrolando.fr/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://julienrolando.fr/professionnels.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Vous intervenez à distance ou sur place ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les deux. En visio partout en France, et en présentiel à Toulouse et dans tout le Sud-Ouest. Beaucoup de personnes commencent en présentiel puis passent en visio une fois à l'aise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mes données sont-elles en sécurité ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C'est un point que l'on traite dès la première séance. On trie ensemble ce qui peut passer par un outil et ce qui ne doit jamais en sortir : données clients, santé, pièces d'identité. Je ne conserve que ce qui est nécessaire à la mission, conformément au RGPD, et je vous explique où vont vos informations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment sont chiffrées les missions ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'automatisation est chiffrée sur devis après l'audit de vos tâches, parce qu'une relance automatique et une refonte complète de votre suivi client n'ont rien à voir. Les prestations de création démarrent à 25 €, ou au pack mensuel. Le premier échange est gratuit, le devis arrive sous 48 h, détaillé ligne par ligne. TVA non applicable, article 293 B du CGI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "En combien de temps je vois un retour ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les premières automatisations tournent en général sous deux à trois semaines, le temps de les régler sur vos vrais dossiers. Vous mesurez le gain en heures dès le premier mois, et tout est documenté pour que vous puissiez reprendre la main sans moi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il changer d'outils ou payer des abonnements ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On part de ce que vous utilisez déjà. Si un abonnement devient réellement rentable au regard des heures gagnées, je vous dis lequel, pourquoi et combien, chiffres à l'appui, et vous décidez."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vous créez aussi des sites internet ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, pour les artisans, avec Ouvrages.pro, une offre dédiée de Conseil & Solutions IA : site vitrine d'une page, fiche Google selon la formule, maquette offerte avant tout paiement. Pour les autres indépendants, on en parle lors du premier échange."
+          }
+        }
+      ]
     }
   ]
 }
-  </script>
+</script>
 </head>
 <body>
 <!-- ============================ HEADER ============================ -->
@@ -423,6 +508,10 @@
           Commencer par l'étape 1
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
+        <figure class="method__photo" data-reveal="img">
+          <img src="https://images.unsplash.com/photo-1758874573402-d0b928c95dd2?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=720&amp;h=540&amp;q=70" srcset="https://images.unsplash.com/photo-1758874573402-d0b928c95dd2?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=480&amp;h=360&amp;q=70 480w, https://images.unsplash.com/photo-1758874573402-d0b928c95dd2?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=720&amp;h=540&amp;q=70 720w, https://images.unsplash.com/photo-1758874573402-d0b928c95dd2?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=960&amp;h=720&amp;q=70 960w" sizes="(max-width:1024px) 0px, 460px" width="720" height="540" alt="Indépendant souriant qui travaille sur son ordinateur portable, une tasse fumante à côté" loading="lazy" decoding="async">
+          <figcaption>Objectif&nbsp;: vos soirées rendues à autre chose que l'administratif.</figcaption>
+        </figure>
       </div>
 
       <ol class="method__steps">
@@ -505,6 +594,47 @@
   </div>
 </section>
 
+<!-- ============================ PONT OUVRAGES.PRO ============================ -->
+<section class="section artisans artisans--light" id="artisans" aria-labelledby="artisansTitle">
+  <div class="wrap">
+    <div class="artisans__grid">
+      <div class="artisans__text" data-reveal="left">
+        <p class="eyebrow">Artisans du bâtiment, du jardin, de l'entretien</p>
+        <h2 id="artisansTitle">Avant d'automatiser, il faut être trouvé. <span class="accent">Ouvrages.pro s'en charge.</span></h2>
+        <p class="artisans__brand"><i aria-hidden="true">O</i>Ouvrages.pro<small>une offre Conseil &amp; Solutions IA</small></p>
+        <p class="lead">Pour un artisan, le premier levier est souvent un site clair et une fiche Google à jour. J'ai réuni les deux dans une offre dédiée, avec son propre site. L'option Suivi IA relance ensuite vos devis sans réponse et prépare vos réponses types&nbsp;: aucun message ne part sans votre accord.</p>
+
+        <ul class="artisans__facts" data-stagger>
+          <li class="artisans__fact"><b data-count="3" data-suffix="jours">3<span class="suffix">jours</span></b><span>pour livrer le site, après réception de vos éléments</span></li>
+          <li class="artisans__fact"><b>0<span class="suffix">€</span></b><span>à payer avant d'avoir validé la maquette</span></li>
+          <li class="artisans__fact"><b>1<span class="suffix">page</span></b><span>claire, rapide sur téléphone, avec votre zone d'intervention</span></li>
+        </ul>
+
+        <div class="hero__actions">
+          <a class="btn btn--wood btn--lg" href="https://ouvrages.pro/" target="_blank" rel="noopener" data-magnet>
+            Voir les sites Ouvrages.pro
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="/conseils/site-internet-artisan.html">Ce qu'un site d'artisan doit contenir</a>
+        </div>
+        <p class="artisans__note">Formules, tarifs et métiers détaillés sur ouvrages.pro. Partout en France, à distance.</p>
+      </div>
+
+      <div class="artisans__visual" data-reveal="right">
+        <figure class="artisans__photo" data-reveal="img">
+          <img src="https://images.unsplash.com/photo-1688372199140-cade7ae820fe?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=720&amp;h=900&amp;q=70" srcset="https://images.unsplash.com/photo-1688372199140-cade7ae820fe?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=480&amp;h=600&amp;q=70 480w, https://images.unsplash.com/photo-1688372199140-cade7ae820fe?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=720&amp;h=900&amp;q=70 720w, https://images.unsplash.com/photo-1688372199140-cade7ae820fe?ixlib=rb-4.1.0&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy&amp;w=960&amp;h=1200&amp;q=70 960w" sizes="(max-width:1024px) 92vw, 520px" width="720" height="900" alt="Peintre en bâtiment qui passe un rouleau de peinture jaune sur un mur" loading="lazy" decoding="async">
+        </figure>
+        <p class="artisans__card"><strong>Maquette offerte</strong><span>Vous voyez votre site avant de payer quoi que ce soit.</span></p>
+        <p class="artisans__chip">Domaine à votre nom</p>
+      </div>
+    </div>
+
+    <div class="marquee" aria-label="Métiers concernés">
+      <div class="marquee__track"><div class="marquee__set"><span>Menuisier</span><span>Peintre</span><span>Plombier</span><span>Électricien</span><span>Paysagiste</span><span>Maçon</span><span>Couvreur</span><span>Carreleur</span><span>Plaquiste</span><span>Chauffagiste</span><span>Serrurier</span><span>Jardinier</span><span>Charpentier</span><span>Façadier</span></div><div class="marquee__set" aria-hidden="true"><span>Menuisier</span><span>Peintre</span><span>Plombier</span><span>Électricien</span><span>Paysagiste</span><span>Maçon</span><span>Couvreur</span><span>Carreleur</span><span>Plaquiste</span><span>Chauffagiste</span><span>Serrurier</span><span>Jardinier</span><span>Charpentier</span><span>Façadier</span></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================ GARANTIES ============================ -->
 <section class="section dark" aria-labelledby="trustTitle">
   <div class="wrap">
@@ -566,6 +696,10 @@
       <div class="faq__item" data-open="false">
         <h3><button class="faq__q" aria-expanded="false" aria-controls="faq2" id="faq2-btn">Faut-il changer d'outils ou payer des abonnements&nbsp;?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" width="14" height="14"><path d="M12 5v14M5 12h14"/></svg></span></button></h3>
         <div class="faq__a" id="faq2" role="region" aria-labelledby="faq2-btn"><div><p>On part de ce que vous utilisez déjà. Si un abonnement devient réellement rentable au regard des heures gagnées, je vous dis lequel, pourquoi et combien, chiffres à l'appui, et vous décidez.</p></div></div>
+      </div>
+      <div class="faq__item" data-open="false">
+        <h3><button class="faq__q" aria-expanded="false" aria-controls="faq7" id="faq7-btn">Vous créez aussi des sites internet&nbsp;?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" width="14" height="14"><path d="M12 5v14M5 12h14"/></svg></span></button></h3>
+        <div class="faq__a" id="faq7" role="region" aria-labelledby="faq7-btn"><div><p>Oui, pour les artisans, avec <a href="https://ouvrages.pro/" target="_blank" rel="noopener">Ouvrages.pro</a>, une offre dédiée de Conseil &amp; Solutions IA&nbsp;: site vitrine d'une page, fiche Google selon la formule, maquette offerte avant tout paiement. Pour les autres indépendants, on en parle lors du premier échange.</p></div></div>
       </div>
     </div>
   </div>
@@ -921,6 +1055,7 @@
           <li><a href="#offres">Les offres</a></li>
           <li><a href="#faq">Questions fréquentes</a></li>
           <li><a href="#rendezvous">Prendre rendez-vous</a></li>
+          <li><a class="footer__ext" href="https://ouvrages.pro/" target="_blank" rel="noopener">Sites pour artisans ↗</a></li>
         </ul>
       </nav>
 
@@ -945,6 +1080,11 @@
       </div>
     </div>
 
+    <div class="footer__partner">
+      <p><strong>Ouvrages.pro</strong> · sites internet et fiche Google pour artisans, une offre de Conseil &amp; Solutions IA.</p>
+      <a href="https://ouvrages.pro/" target="_blank" rel="noopener">Visiter ouvrages.pro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></a>
+    </div>
+
     <div class="footer__bottom">
       <p>© <span id="year">2026</span> Julien Rolando Le Bian — Conseil &amp; Solutions IA. Tous droits réservés.</p>
       <div class="footer__legal">
@@ -955,6 +1095,7 @@
         </div>
       </div>
     </div>
+    <p class="footer__credits">Photos&nbsp;: <a href="https://unsplash.com/@mkumbwajr?utm_source=julienrolando&amp;utm_medium=referral" target="_blank" rel="noopener">Ali Mkumbwa</a>, <a href="https://unsplash.com/@silverkblack?utm_source=julienrolando&amp;utm_medium=referral" target="_blank" rel="noopener">Vitaly Gariev</a> sur <a href="https://unsplash.com/?utm_source=julienrolando&amp;utm_medium=referral" target="_blank" rel="noopener">Unsplash</a>.</p>
   </div>
 </footer>
 
@@ -996,5 +1137,6 @@
 
 <script src="assets/app.js" defer></script>
 <script src="assets/wow.js" defer></script>
+<script src="assets/enhance.js" defer></script>
 </body>
 </html>
