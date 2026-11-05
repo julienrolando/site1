@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Julien Rolando Le Bian — Conseil &amp; Solutions IA à Toulouse</title>
+<title>Julien ROLANDO LE BIAN — Conseil &amp; Solutions IA à Toulouse</title>
 <meta name="description" content="Conseil et formation IA à Toulouse et en visio : prise en main pour les particuliers, automatisation pour les indépendants. Premier échange gratuit.">
-<meta name="author" content="Julien Rolando Le Bian">
+<meta name="author" content="Julien ROLANDO LE BIAN">
 <meta name="theme-color" content="#13224A">
 <link rel="canonical" href="https://julienrolando.fr/">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:site_name" content="Julien Rolando Le Bian — Conseil & Solutions IA">
+<meta property="og:site_name" content="Julien ROLANDO LE BIAN — Conseil & Solutions IA">
 <meta property="og:title" content="Et si votre quotidien devenait enfin plus léger ?">
 <meta property="og:description" content="Deux chemins selon qui vous êtes : prendre l'IA en main, ou automatiser son activité. Premier échange gratuit.">
 <meta property="og:url" content="https://julienrolando.fr/">
@@ -22,6 +22,7 @@
 <meta name="twitter:image" content="https://julienrolando.fr/og-image.jpg">
 
 <link rel="icon" href="assets/logo-mark.png">
+<link rel="preload" as="image" href="assets/julien-profil.webp" type="image/webp" fetchpriority="high">
 
 <link rel="preconnect" href="https://images.unsplash.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,16 +36,16 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
+      "@type": ["LocalBusiness", "ProfessionalService"],
       "@id": "https://julienrolando.fr/#organization",
-      "name": "Julien Rolando Le Bian — Conseil & Solutions IA",
+      "name": "Julien ROLANDO LE BIAN — Conseil & Solutions IA",
       "description": "Conseil, accompagnement et formation sur les solutions d'intelligence artificielle pour particuliers et indépendants.",
       "url": "https://julienrolando.fr/",
       "email": "contact@julienrolando.fr",
       "founder": {
         "@type": "Person",
         "@id": "https://julienrolando.fr/#julien",
-        "name": "Julien Rolando Le Bian",
+        "name": "Julien ROLANDO LE BIAN",
         "jobTitle": "Consultant en intelligence artificielle",
         "sameAs": [
           "https://www.linkedin.com/in/julienrolando",
@@ -57,7 +58,13 @@
         "streetAddress": "10 Avenue Henri Guillaumet",
         "addressLocality": "Toulouse",
         "postalCode": "31500",
-        "addressCountry": "FR"
+        "addressCountry": "FR",
+        "addressRegion": "Occitanie"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.612848,
+        "longitude": 1.466340
       },
       "areaServed": [
         {
@@ -157,7 +164,7 @@
         "value": "830 012 175 00055"
       },
       "logo": "https://julienrolando.fr/assets/logo-mark.png",
-      "image": "https://julienrolando.fr/og-image.jpg",
+      "image": ["https://julienrolando.fr/assets/julien-profil.jpg", "https://julienrolando.fr/og-image.jpg"],
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
@@ -181,7 +188,7 @@
       "@type": "WebSite",
       "@id": "https://julienrolando.fr/#website",
       "url": "https://julienrolando.fr/",
-      "name": "Julien Rolando Le Bian — Conseil & Solutions IA",
+      "name": "Julien ROLANDO LE BIAN — Conseil & Solutions IA",
       "inLanguage": "fr-FR",
       "publisher": {
         "@id": "https://julienrolando.fr/#organization"
@@ -204,7 +211,7 @@
       "@id": "https://ouvrages.pro/#organization",
       "name": "Ouvrages.pro",
       "url": "https://ouvrages.pro/",
-      "description": "Sites internet vitrine et fiche Google pour artisans, partout en France. Une offre de Julien Rolando Le Bian, Conseil & Solutions IA.",
+      "description": "Sites internet vitrine et fiche Google pour artisans, partout en France. Une offre de Julien ROLANDO LE BIAN, Conseil & Solutions IA.",
       "parentOrganization": {
         "@id": "https://julienrolando.fr/#organization"
       }
@@ -217,7 +224,7 @@
 <!-- ============================ HEADER ============================ -->
 <header class="header" id="header">
   <div class="header__inner">
-    <a class="brand" href="index.html" aria-label="Julien Rolando Le Bian, Conseil &amp; Solutions IA — accueil">
+    <a class="brand" href="index.html" aria-label="Julien ROLANDO LE BIAN, Conseil &amp; Solutions IA — accueil">
       <span class="brand__mark" aria-hidden="true"></span>
       <span class="brand__name">Julien ROLANDO LE BIAN<span class="brand__tag">Conseil &amp; Solutions IA</span></span>
     </a>
@@ -319,9 +326,12 @@
         </div>
 
         <figure class="portrait" data-parallax="0.03">
-          <img src="assets/julien-profil.jpg" alt="Portrait de Julien Rolando Le Bian, consultant en solutions IA à Toulouse" width="676" height="760" fetchpriority="high" decoding="async">
+          <picture>
+            <source srcset="assets/julien-profil.webp" type="image/webp">
+            <img src="assets/julien-profil.jpg" alt="Portrait de Julien ROLANDO LE BIAN, consultant en solutions IA à Toulouse" width="676" height="760" fetchpriority="high" decoding="async">
+          </picture>
           <figcaption class="portrait__card">
-            <strong>Julien Rolando Le Bian</strong>
+            <strong>Julien ROLANDO LE BIAN</strong>
             <span>Je m'occupe de la technique, vous gardez la main.</span>
           </figcaption>
         </figure>
@@ -386,7 +396,56 @@
       </li>
     </ul>
 
-    <p class="form__note" style="margin-top:var(--s-4);text-align:center">Vous hésitez&nbsp;? Prenez le premier échange gratuit&nbsp;: on verra ensemble lequel des deux vous correspond. Vous êtes artisan et il vous faut un site&nbsp;? <a href="#artisans">C'est par ici</a>.</p>
+    <p class="form__note" style="margin-top:var(--s-4);text-align:center">Vous hésitez&nbsp;? <a href="#niveau">Trois questions</a> suffisent pour voir quel parcours vous correspond. Sinon, prenez le premier échange gratuit&nbsp;: on verra ensemble lequel des deux vous correspond. Vous êtes artisan et il vous faut un site&nbsp;? <a href="#artisans">C'est par ici</a>.</p>
+  </div>
+</section>
+
+
+<!-- ============================ NIVEAU ============================ -->
+<section class="section section--ice" id="niveau">
+  <div class="wrap wrap--narrow">
+    <div class="quiz" data-reveal>
+      <div class="quiz__head">
+        <picture>
+          <source srcset="assets/julien-profil-160.webp" type="image/webp">
+          <img src="assets/julien-profil-160.jpg" alt="Julien ROLANDO LE BIAN" width="72" height="80" decoding="async">
+        </picture>
+        <div>
+          <p class="eyebrow">Sans jargon, en trois questions</p>
+          <h2 id="quizTitle">Quel est votre niveau en IA&nbsp;?</h2>
+          <p>Pas de score, pas de promesse chiffrée. Juste le parcours du site qui correspond à votre situation, parmi ceux qui existent déjà.</p>
+        </div>
+      </div>
+      <p class="quiz__count" id="quizCount">Question 1 / 3</p>
+      <div class="quiz__bar" aria-hidden="true"><span id="quizProg"></span></div>
+      <div id="quiz">
+        <fieldset class="quiz__step" data-key="level">
+          <legend>Aujourd'hui, avec ChatGPT, Claude ou un outil du même genre&nbsp;:</legend>
+          <button type="button" data-quiz="jamais">Je n'ai jamais ouvert</button>
+          <button type="button" data-quiz="essaie">J'ai essayé, sans trop savoir quoi en faire</button>
+          <button type="button" data-quiz="sers">Je m'en sers déjà</button>
+        </fieldset>
+        <fieldset class="quiz__step" data-key="who" hidden>
+          <legend>Vous venez surtout pour&nbsp;:</legend>
+          <button type="button" data-quiz="particulier">Votre quotidien&nbsp;: mails, démarches, organisation</button>
+          <button type="button" data-quiz="pro">Votre activité d'indépendant ou de freelance</button>
+          <button type="button" data-quiz="artisan">Le site ou la fiche Google de votre métier d'artisan</button>
+        </fieldset>
+        <fieldset class="quiz__step" data-key="need" hidden>
+          <legend>Ce qui vous aiderait le plus, tout de suite&nbsp;:</legend>
+          <button type="button" data-quiz="accompagne">Qu'on m'accompagne pas à pas, à mon rythme</button>
+          <button type="button" data-quiz="taches">Qu'on regarde les tâches qui me prennent mes soirées</button>
+          <button type="button" data-quiz="page">Avoir une page claire que mes clients trouvent</button>
+        </fieldset>
+      </div>
+      <div class="quiz__result" id="quizResult" hidden>
+        <p class="eyebrow" id="quizKicker">Votre parcours</p>
+        <h3 id="quizResultTitle"></h3>
+        <p id="quizResultText"></p>
+        <div class="hero__actions" id="quizActions"></div>
+        <button type="button" class="quiz__again" id="quizAgain">Recommencer</button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -449,7 +508,7 @@
 
     <ul class="works" id="works" data-stagger data-reveal>
       <li>
-        <button type="button" class="work" data-cat="marque" data-title="Charte graphique complète" data-catlabel="Marque" data-meta="Projet interne · 2026"
+        <a class="work" id="realisation-charte-graphique" href="realisations.html#charte-graphique" data-slug="charte-graphique" data-cat="marque" data-title="Charte graphique complète" data-catlabel="Marque" data-meta="Projet interne · 2026"
                 data-desc="Identité de A à Z pour ma propre entreprise : symbole, palette navy / ice / violet, typographies, règles d'usage et bibliothèque de visuels." data-points="&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Logo et déclinaisons (couleur, blanc, noir)&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Palette documentée en HEX, RVB et CMJN&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Règles de voix et de ton par canal&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Document de référence de 16 pages&lt;/li&gt;"
                 aria-haspopup="dialog">
           <span class="work__cat">Marque</span>
@@ -471,13 +530,13 @@
           </span>
           <span class="work__body">
             <h3>Charte graphique complète</h3>
-            <p>Identité de A à Z pour ma propre entreprise : symbole, palette navy / ice / violet, typographies, règles d'usage et bibl…</p>
+            <p>Identité de A à Z pour ma propre entreprise : symbole, palette navy / ice / violet, typographies, règles d&#x27;usage et bibliothèque de visuels.</p>
             <span class="work__more">Voir le détail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </span>
-        </button>
+        </a>
       </li>
       <li>
-        <button type="button" class="work" data-cat="marque" data-title="Kit de marque et de communication pour une agence immobilière" data-catlabel="Marque" data-meta="Mission 2026 · client anonymisé"
+        <a class="work" id="realisation-kit-marque-agence" href="realisations.html#kit-marque-agence" data-slug="kit-marque-agence" data-cat="marque" data-title="Kit de marque et de communication pour une agence immobilière" data-catlabel="Marque" data-meta="Mission 2026 · client anonymisé"
                 data-desc="Kit de marque et de communication pour une agence immobilière du Tarn : supports de vente, modèles de publications et règles graphiques réutilisables par l'équipe." data-points="&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Déclinaisons print et réseaux sociaux&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Modèles réutilisables sans graphiste&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Formation de l&#x27;équipe à leur usage&lt;/li&gt;"
                 aria-haspopup="dialog">
           <span class="work__cat">Marque</span>
@@ -500,13 +559,13 @@
           </span>
           <span class="work__body">
             <h3>Kit de marque et de communication pour une agence immobilière</h3>
-            <p>Kit de marque et de communication pour une agence immobilière du Tarn : supports de vente, modèles de publications et …</p>
+            <p>Kit de marque et de communication pour une agence immobilière du Tarn : supports de vente, modèles de publications et règles graphiques réutilisables par l&#x27;équipe.</p>
             <span class="work__more">Voir le détail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </span>
-        </button>
+        </a>
       </li>
       <li>
-        <button type="button" class="work" data-cat="automatisation" data-title="Automatisation de la gestion de projets" data-catlabel="Automatisation" data-meta="Mission 2026 · client anonymisé"
+        <a class="work" id="realisation-automatisation-gestion-projets" href="realisations.html#automatisation-gestion-projets" data-slug="automatisation-gestion-projets" data-cat="automatisation" data-title="Automatisation de la gestion de projets" data-catlabel="Automatisation" data-meta="Mission 2026 · client anonymisé"
                 data-desc="Mise en place d'un suivi de projets automatisé pour une agence immobilière du Tarn : centralisation des informations, relances et points d'étape générés sans ressaisie." data-points="&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Fin de la double saisie entre outils&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Relances et rappels automatiques&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Tableau de suivi lisible par toute l&#x27;équipe&lt;/li&gt;"
                 aria-haspopup="dialog">
           <span class="work__cat">Automatisation</span>
@@ -532,13 +591,13 @@
           </span>
           <span class="work__body">
             <h3>Automatisation de la gestion de projets</h3>
-            <p>Mise en place d'un suivi de projets automatisé pour une agence immobilière du Tarn : centralisation des informations, relances et poin…</p>
+            <p>Mise en place d&#x27;un suivi de projets automatisé pour une agence immobilière du Tarn : centralisation des informations, relances et points d&#x27;étape générés sans ressaisie.</p>
             <span class="work__more">Voir le détail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </span>
-        </button>
+        </a>
       </li>
       <li>
-        <button type="button" class="work" data-cat="automatisation" data-title="Agent financier sur mesure" data-catlabel="Automatisation" data-meta="Mission 2026 · client anonymisé"
+        <a class="work" id="realisation-agent-financier" href="realisations.html#agent-financier" data-slug="agent-financier" data-cat="automatisation" data-title="Agent financier sur mesure" data-catlabel="Automatisation" data-meta="Mission 2026 · client anonymisé"
                 data-desc="Création d'un assistant dédié au suivi financier : lecture des documents comptables, synthèses mensuelles et alertes sur les écarts." data-points="&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Synthèses mensuelles générées automatiquement&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Alertes sur les écarts et les impayés&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Prise en main en une séance&lt;/li&gt;"
                 aria-haspopup="dialog">
           <span class="work__cat">Automatisation</span>
@@ -566,13 +625,13 @@
           </span>
           <span class="work__body">
             <h3>Agent financier sur mesure</h3>
-            <p>Création d'un assistant dédié au suivi financier : lecture des documents comptables, synthèses mensuelles et alertes s…</p>
+            <p>Création d&#x27;un assistant dédié au suivi financier : lecture des documents comptables, synthèses mensuelles et alertes sur les écarts.</p>
             <span class="work__more">Voir le détail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </span>
-        </button>
+        </a>
       </li>
       <li>
-        <button type="button" class="work" data-cat="creation" data-title="Site web et présence en ligne" data-catlabel="Création" data-meta="Projet interne · 2026"
+        <a class="work" id="realisation-site-web" href="realisations.html#site-web" data-slug="site-web" data-cat="creation" data-title="Site web et présence en ligne" data-catlabel="Création" data-meta="Projet interne · 2026"
                 data-desc="Conception et mise en ligne d'un site vitrine complet : structure, textes, visuels, hébergement et nom de domaine, sans agence ni abonnement mensuel." data-points="&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Site statique rapide et sans frais récurrents&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Textes et visuels produits en interne&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Nom de domaine et email professionnel configurés&lt;/li&gt;"
                 aria-haspopup="dialog">
           <span class="work__cat">Création</span>
@@ -596,13 +655,13 @@
           </span>
           <span class="work__body">
             <h3>Site web et présence en ligne</h3>
-            <p>Conception et mise en ligne d'un site vitrine complet : structure, textes, visuels, hébergement et nom de domaine, san…</p>
+            <p>Conception et mise en ligne d&#x27;un site vitrine complet : structure, textes, visuels, hébergement et nom de domaine, sans agence ni abonnement mensuel.</p>
             <span class="work__more">Voir le détail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </span>
-        </button>
+        </a>
       </li>
       <li>
-        <button type="button" class="work" data-cat="creation" data-title="Application de jeu multi-joueurs" data-catlabel="Création" data-meta="Projet personnel · 2026"
+        <a class="work" id="realisation-application-jeu" href="realisations.html#application-jeu" data-slug="application-jeu" data-cat="creation" data-title="Application de jeu multi-joueurs" data-catlabel="Création" data-meta="Projet personnel · 2026"
                 data-desc="Application de jeu complète conçue et développée de bout en bout : plusieurs niveaux de difficulté, trois tranches d'âge, animations, effets sonores et système de score jusqu'à 8 joueurs." data-points="&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Conçue, testée et corrigée sur un mois&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Trois modes selon l&#x27;âge, trois difficultés&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Preuve concrète de ce que l&#x27;IA permet de construire&lt;/li&gt;"
                 aria-haspopup="dialog">
           <span class="work__cat">Création</span>
@@ -630,13 +689,13 @@
           </span>
           <span class="work__body">
             <h3>Application de jeu multi-joueurs</h3>
-            <p>Application de jeu complète conçue et développée de bout en bout : plusieurs niveaux de difficulté, trois tranches d'â…</p>
+            <p>Application de jeu complète conçue et développée de bout en bout : plusieurs niveaux de difficulté, trois tranches d&#x27;âge, animations, effets sonores et système de score jusqu&#x27;à 8 joueurs.</p>
             <span class="work__more">Voir le détail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </span>
-        </button>
+        </a>
       </li>
       <li>
-        <button type="button" class="work work--wide" data-cat="creation" data-title="Ouvrages.pro, des sites internet pour artisans" data-catlabel="Création" data-meta="Projet interne · 2026"
+        <a class="work work--wide" id="realisation-ouvrages-pro" href="realisations.html#ouvrages-pro" data-slug="ouvrages-pro" data-cat="creation" data-title="Ouvrages.pro, des sites internet pour artisans" data-catlabel="Création" data-meta="Projet interne · 2026"
                 data-desc="Conception d'une offre complète pour les artisans : positionnement, formules, site de présentation et modèle de site client. Le site est en ligne sur ouvrages.pro." data-points="&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Site de présentation en ligne sur ouvrages.pro&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Modèle de site réutilisable pour chaque artisan&lt;/li&gt;&lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M20 6L9 17l-5-5&quot;/&gt;&lt;/svg&gt; Livraison en 3 jours après réception des éléments&lt;/li&gt;"
                 aria-haspopup="dialog">
           <span class="work__cat">Création</span>
@@ -645,12 +704,13 @@
           </span>
           <span class="work__body">
             <h3>Ouvrages.pro, des sites internet pour artisans</h3>
-            <p>Une offre complète pensée pour les artisans&nbsp;: positionnement, formules, site de présentation et modèle de site client, livrable en 3 jours.</p>
+            <p>Conception d&#x27;une offre complète pour les artisans : positionnement, formules, site de présentation et modèle de site client. Le site est en ligne sur ouvrages.pro.</p>
             <span class="work__more">Voir le détail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </span>
-        </button>
+        </a>
       </li>
     </ul>
+    <p class="works__ext"><a href="realisations.html">Fiches détaillées, chacune avec sa propre adresse</a></p>
     <p class="works__ext"><a href="https://ouvrages.pro/" target="_blank" rel="noopener">Voir le site Ouvrages.pro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></a></p>
   </div>
 </section>
@@ -682,7 +742,7 @@
     </div>
 
     <div class="booking" id="booking" data-reveal="scale">
-      <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25uoD1O1Y-dagX5nLsBhHxMVNaUTiB6Z2745vF_IbIQU9n8ObBLU2lw5xra8ya03DOLU56-fyI?gv=true" title="Agenda de prise de rendez-vous de Julien Rolando Le Bian" loading="lazy" frameborder="0"></iframe>
+      <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25uoD1O1Y-dagX5nLsBhHxMVNaUTiB6Z2745vF_IbIQU9n8ObBLU2lw5xra8ya03DOLU56-fyI?gv=true" title="Agenda de prise de rendez-vous de Julien ROLANDO LE BIAN" loading="lazy" frameborder="0"></iframe>
     </div>
     <p class="booking__note form__note">L'agenda est hébergé par Google&nbsp;: son affichage dépose des cookies Google. <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25uoD1O1Y-dagX5nLsBhHxMVNaUTiB6Z2745vF_IbIQU9n8ObBLU2lw5xra8ya03DOLU56-fyI?gv=true" target="_blank" rel="noopener">Ouvrir dans un nouvel onglet</a></p>
   </div>
@@ -713,6 +773,7 @@
     <p id="lbDesc"></p>
     <ul id="lbPoints"></ul>
     <p class="form__note" id="lbMeta" style="text-align:left"></p>
+    <p class="lightbox__share"><a id="lbPermalink" href="realisations.html">Page de cette réalisation</a><button type="button" id="lbCopy">Copier le lien</button></p>
     <a class="btn btn--primary btn--block" href="#rendezvous" id="lbCta">Parler d'un projet similaire</a>
   </div>
 </div>
@@ -755,6 +816,7 @@
       <div>
         <h3>Informations</h3>
         <ul>
+          <li><a href="/carte.html">Carte de visite</a></li>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
           <li><a href="confidentialite.html">Politique de confidentialité</a></li>
           <li>SIRET 830 012 175 00055</li>
@@ -769,12 +831,12 @@
     </div>
 
     <div class="footer__bottom">
-      <p>© <span id="year">2026</span> Julien Rolando Le Bian — Conseil &amp; Solutions IA. Tous droits réservés.</p>
+      <p>© <span id="year">2026</span> Julien ROLANDO LE BIAN — Conseil &amp; Solutions IA. Tous droits réservés.</p>
       <div class="footer__legal">
         <div class="social">
-          <a href="https://www.linkedin.com/in/julienrolando" target="_blank" rel="noopener me" aria-label="Julien Rolando Le Bian sur LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg> LinkedIn</a>
-          <a href="https://www.instagram.com/julienrolando" target="_blank" rel="noopener me" aria-label="Julien Rolando Le Bian sur Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg> Instagram</a>
-          <a href="https://www.facebook.com/profile.php?id=61595437739787" target="_blank" rel="noopener me" aria-label="Julien Rolando Le Bian sur Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg> Facebook</a>
+          <a href="https://www.linkedin.com/in/julienrolando" target="_blank" rel="noopener me" aria-label="Julien ROLANDO LE BIAN sur LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg> LinkedIn</a>
+          <a href="https://www.instagram.com/julienrolando" target="_blank" rel="noopener me" aria-label="Julien ROLANDO LE BIAN sur Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg> Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61595437739787" target="_blank" rel="noopener me" aria-label="Julien ROLANDO LE BIAN sur Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg> Facebook</a>
         </div>
       </div>
     </div>
@@ -789,7 +851,7 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M8 9.5h8M8 13h5"/></svg>
 </button>
 
-<div class="chat" id="chat" role="dialog" aria-modal="false" aria-label="Assistant de Julien Rolando Le Bian" hidden>
+<div class="chat" id="chat" role="dialog" aria-modal="false" aria-label="Assistant de Julien ROLANDO LE BIAN" hidden>
   <div class="chat__head">
     <span class="chat__avatar" aria-hidden="true"><span class="brand__mark"></span></span>
     <span>

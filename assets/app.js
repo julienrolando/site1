@@ -286,7 +286,7 @@ window.FORM_ACCESS_KEY = 'f4e2bd23-82e1-4c93-8df5-6d22a1750b63';
     sections.forEach(function(s){ ioN.observe(s.el); });
   }
 
-  /* ---------- Réalisations : filtres + visionneuse ---------- */
+  /* ---------- Réalisations : filtres + visionneuse + URL ---------- */
   (function(){
     var works = document.getElementById('works');
     var lb = document.getElementById('lightbox');
@@ -306,32 +306,91 @@ window.FORM_ACCESS_KEY = 'f4e2bd23-82e1-4c93-8df5-6d22a1750b63';
       });
     });
 
-    function openLb(card){
+    function slugOf(card){ return card.getAttribute('data-slug') || ''; }
+    function cardBySlug(slug){
+      for (var i = 0; i < cards.length; i++) if (slugOf(cards[i]) === slug) return cards[i];
+      return null;
+    }
+    function hashSlug(){
+      var h = (location.hash || '').replace(/^#/, '');
+      return h.indexOf('realisation-') === 0 ? h.slice('realisation-'.length) : '';
+    }
+    function setPermalink(card){
+      var a = document.getElementById('lbPermalink');
+      if (!a) return;
+      var slug = slugOf(card);
+      a.setAttribute('href', 'realisations.html#' + slug);
+      var copy = document.getElementById('lbCopy');
+      if (copy) copy.setAttribute('data-url', a.getAttribute('href'));
+    }
+    function openLb(card, fromHash){
       lastFocus = card;
       document.getElementById('lbCat').textContent = card.getAttribute('data-catlabel');
       document.getElementById('lbTitle').textContent = card.getAttribute('data-title');
       document.getElementById('lbDesc').textContent = card.getAttribute('data-desc');
       document.getElementById('lbPoints').innerHTML = card.getAttribute('data-points');
       document.getElementById('lbMeta').textContent = card.getAttribute('data-meta');
+      setPermalink(card);
       lb.hidden = false;
       requestAnimationFrame(function(){ lb.classList.add('is-open'); });
       document.body.classList.add('no-scroll');
       document.getElementById('lbClose').focus();
+      var slug = slugOf(card);
+      if (!fromHash && slug && location.hash !== '#realisation-' + slug){
+        history.pushState({work: slug}, '', '#realisation-' + slug);
+      }
       track('portfolio_open', {work: card.getAttribute('data-title')});
     }
-    function closeLb(){
+    function closeLb(fromHash){
       lb.classList.remove('is-open');
       document.body.classList.remove('no-scroll');
       setTimeout(function(){ if (!lb.classList.contains('is-open')) lb.hidden = true; }, 320);
+      if (!fromHash && hashSlug()){
+        history.pushState(null, '', location.pathname + location.search + '#realisations');
+      }
       if (lastFocus) lastFocus.focus();
     }
-    cards.forEach(function(c){ c.addEventListener('click', function(){ openLb(c); }); });
-    document.getElementById('lbClose').addEventListener('click', closeLb);
-    document.getElementById('lbCta').addEventListener('click', closeLb);
-    lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
-    document.addEventListener('keydown', function(e){
-      if (e.key === 'Escape' && lb.classList.contains('is-open')) closeLb();
+    function syncFromHash(){
+      var slug = hashSlug();
+      if (!slug){
+        if (lb.classList.contains('is-open')) closeLb(true);
+        return;
+      }
+      var card = cardBySlug(slug);
+      if (card && (!lb.classList.contains('is-open') || lastFocus !== card)) openLb(card, true);
+    }
+    cards.forEach(function(c){
+      c.addEventListener('click', function(e){
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button === 1) return;
+        e.preventDefault();
+        openLb(c, false);
+      });
     });
+    document.getElementById('lbClose').addEventListener('click', function(){ closeLb(false); });
+    var cta = document.getElementById('lbCta');
+    if (cta) cta.addEventListener('click', function(){ closeLb(true); });
+    var copyBtn = document.getElementById('lbCopy');
+    if (copyBtn){
+      copyBtn.addEventListener('click', function(){
+        var url = new URL(copyBtn.getAttribute('data-url') || 'realisations.html', location.href).href;
+        function ok(){
+          copyBtn.textContent = 'Lien copié';
+          setTimeout(function(){ copyBtn.textContent = 'Copier le lien'; }, 1600);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(url).then(ok).catch(function(){ window.prompt('Copiez le lien :', url); });
+        } else {
+          window.prompt('Copiez le lien :', url);
+        }
+      });
+    }
+    lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(false); });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && lb.classList.contains('is-open')) closeLb(false);
+    });
+    window.addEventListener('hashchange', syncFromHash);
+    window.addEventListener('popstate', syncFromHash);
+    if (hashSlug()) syncFromHash();
   })();
 
   /* ---------- Questionnaire multi-étapes ---------- */
@@ -596,7 +655,7 @@ window.FORM_ACCESS_KEY = 'f4e2bd23-82e1-4c93-8df5-6d22a1750b63';
       {k:['délai','delai','quand','rapidement','combien de temps','durée','duree'],
        a:"Dès la première séance, vous repartez avec au moins un usage concret, refaisable seul dès le lendemain. Les automatisations plus larges demandent quelques semaines, le temps de les régler sur vos vrais dossiers."},
       {k:['qui','julien','parcours','expérience','experience','formation','sérieux','serieux'],
-       a:"Julien Rolando Le Bian : vingt ans de terrain en commerce et gestion, puis une reconversion vers l'IA appliquée (formations Google, Anthropic et OpenAI). Micro-entreprise déclarée, basée à Toulouse, un seul interlocuteur du premier message au suivi."},
+       a:"Julien ROLANDO LE BIAN : vingt ans de terrain en commerce et gestion, puis une reconversion vers l'IA appliquée (formations Google, Anthropic et OpenAI). Micro-entreprise déclarée, basée à Toulouse, un seul interlocuteur du premier message au suivi."},
       {k:['contact','joindre','email','mail de','écrire','ecrire'],
        a:"Par email à contact@julienrolando.fr, ou en réservant directement un créneau dans l'agenda de cette page — c'est le plus rapide pour obtenir une réponse."}
     ];
@@ -696,7 +755,9 @@ window.FORM_ACCESS_KEY = 'f4e2bd23-82e1-4c93-8df5-6d22a1750b63';
       var q = e.target.textContent.trim();
       if (/rendez-vous/i.test(q)){
         close();
-        document.getElementById('rendezvous').scrollIntoView({behavior: reduced ? 'auto' : 'smooth'});
+        var rd = document.getElementById('rendezvous');
+        if (rd) rd.scrollIntoView({behavior: reduced ? 'auto' : 'smooth'});
+        else window.location.href = '/index.html#rendezvous';
         track('cta_click', {cta_text:'chat_rdv', cta_target:'#rendezvous'});
         return;
       }
@@ -780,4 +841,103 @@ window.FORM_ACCESS_KEY = 'f4e2bd23-82e1-4c93-8df5-6d22a1750b63';
         .catch(function(){ btn.disabled = false; versEmail(); });
     });
   })();
+
+  /* ---------- Quiz : orientation vers un parcours existant ---------- */
+  (function(){
+    var root = document.getElementById('quiz');
+    if (!root) return;
+    var steps = Array.prototype.slice.call(root.querySelectorAll('.quiz__step'));
+    var result = document.getElementById('quizResult');
+    var count = document.getElementById('quizCount');
+    var prog = document.getElementById('quizProg');
+    var again = document.getElementById('quizAgain');
+    var i = 0;
+    var answers = {};
+
+    function show(moveFocus){
+      steps.forEach(function(s, k){ s.hidden = k !== i; });
+      if (count) count.textContent = 'Question ' + (i + 1) + ' / ' + steps.length;
+      if (prog) prog.style.width = ((i) / steps.length * 100) + '%';
+      if (result) result.hidden = true;
+      var legend = steps[i] && steps[i].querySelector('legend');
+      if (moveFocus && legend) legend.focus();
+    }
+    function link(href, label, primary, blank){
+      var a = document.createElement('a');
+      a.className = 'btn ' + (primary ? 'btn--primary' : 'btn--ghost');
+      a.href = href;
+      a.textContent = label;
+      if (blank){ a.target = '_blank'; a.rel = 'noopener'; }
+      return a;
+    }
+    function finish(){
+      steps.forEach(function(s){ s.hidden = true; });
+      if (count) count.hidden = true;
+      if (prog && prog.parentElement) prog.parentElement.hidden = true;
+      var who = answers.who;
+      var level = answers.level;
+      var need = answers.need;
+      var levelLine = level === 'jamais'
+        ? 'Vous partez de zéro, et c\'est prévu.'
+        : (level === 'essaie'
+          ? 'Vous avez déjà essayé : on reprend à partir de là.'
+          : 'Vous vous en servez déjà : on peut aller sur vos vrais sujets.');
+      var title, text, primary, secondary;
+      if (who === 'artisan' || need === 'page'){
+        title = 'Votre page, c\'est Ouvrages.pro';
+        text = levelLine + ' Pour un site vitrine et une fiche Google d\'artisan, l\'offre est Ouvrages.pro : vous voyez la maquette avant de payer, et le site est livré en 3 jours après réception de vos éléments. Les tarifs sont sur ouvrages.pro.';
+        primary = link('https://ouvrages.pro/', 'Voir Ouvrages.pro', true, true);
+        secondary = link('/index.html#rendezvous', 'Premier échange gratuit', false, false);
+      } else if (who === 'pro' || (who !== 'particulier' && need === 'taches')){
+        title = 'Le parcours indépendants';
+        text = levelLine + ' On regarde les tâches qui vous prennent du temps (facturation, relances, suivi, contenus). L\'automatisation est chiffrée sur devis, après l\'audit. Une création de contenus, si vous en avez besoin, part de 25 €.';
+        primary = link('/professionnels.html', 'Voir l\'accompagnement pro', true, false);
+        secondary = link('/index.html#rendezvous', 'Réserver l\'échange gratuit', false, false);
+      } else {
+        title = 'Le parcours particuliers';
+        text = levelLine + ' Les séances de prise en main (mails, démarches, organisation) démarrent à 60 €, après le premier échange gratuit. On commence avec les versions gratuites des outils.';
+        primary = link('/particuliers.html', 'Voir l\'accompagnement particuliers', true, false);
+        secondary = link('/index.html#rendezvous', 'Réserver l\'échange gratuit', false, false);
+        if (need === 'taches'){
+          text += ' Si ces tâches viennent de votre activité, le parcours professionnels est plus adapté.';
+        }
+      }
+      document.getElementById('quizResultTitle').textContent = title;
+      document.getElementById('quizResultText').textContent = text;
+      var actions = document.getElementById('quizActions');
+      actions.innerHTML = '';
+      actions.appendChild(primary);
+      actions.appendChild(secondary);
+      if (who === 'particulier' && need === 'taches'){
+        actions.appendChild(link('/professionnels.html', 'Voir aussi le parcours pro', false, false));
+      }
+      result.hidden = false;
+      if (prog) prog.style.width = '100%';
+      document.getElementById('quizResultTitle').focus();
+      track('quiz_result', {who: who, level: level, need: need});
+    }
+    root.addEventListener('click', function(e){
+      var btn = e.target.closest('[data-quiz]');
+      if (!btn || !root.contains(btn)) return;
+      var step = btn.closest('.quiz__step');
+      answers[step.getAttribute('data-key')] = btn.getAttribute('data-quiz');
+      if (i < steps.length - 1){ i += 1; show(true); }
+      else finish();
+    });
+    if (again) again.addEventListener('click', function(){
+      answers = {};
+      i = 0;
+      if (count) count.hidden = false;
+      if (prog && prog.parentElement) prog.parentElement.hidden = false;
+      show(true);
+    });
+    steps.forEach(function(s){
+      var legend = s.querySelector('legend');
+      if (legend) legend.tabIndex = -1;
+    });
+    var h = document.getElementById('quizResultTitle');
+    if (h) h.tabIndex = -1;
+    show(false);
+  })();
+
 })();

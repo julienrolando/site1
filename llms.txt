@@ -1,4 +1,4 @@
-# Julien Rolando Le Bian — Conseil & Solutions IA
+# Julien ROLANDO LE BIAN — Conseil & Solutions IA
 
 > Entreprise individuelle basée à Toulouse (SIRET 830 012 175 00055). Conseil, accompagnement et formation sur l'intelligence artificielle pour les particuliers et les indépendants, en visio partout en France et en présentiel à Toulouse et dans le Sud-Ouest. Premier échange de 30 minutes gratuit.
 
@@ -8,6 +8,9 @@
 - [Particuliers](https://julienrolando.fr/particuliers.html): séances de prise en main de ChatGPT ou Claude (mails, démarches, organisation), à partir de 60 € la séance.
 - [Professionnels](https://julienrolando.fr/professionnels.html): audit des tâches chronophages et automatisations pour indépendants et freelances (facturation, relances, suivi client), sur devis ; création de contenus à partir de 25 €.
 - [Conseils](https://julienrolando.fr/conseils.html): articles sans jargon.
+- [Réalisations](https://julienrolando.fr/realisations.html): fiches détaillées, chacune avec une ancre stable.
+- [Carte de visite](https://julienrolando.fr/carte.html): nom, téléphone, email, lien vers le site et la prise de rendez-vous.
+- Quiz « quel est votre niveau en IA ? » sur l'accueil : oriente vers particuliers, professionnels ou Ouvrages.pro, sans score.
 
 ## Articles
 
@@ -16,7 +19,7 @@
 
 ## Offre associée
 
-- [Ouvrages.pro](https://ouvrages.pro/): sites internet vitrine et fiche Google pour artisans (bâtiment, jardin, entretien), partout en France. Une offre de Julien Rolando Le Bian, Conseil & Solutions IA. Maquette offerte avant paiement, livraison en 3 jours après réception des éléments, domaine au nom du client.
+- [Ouvrages.pro](https://ouvrages.pro/): sites internet vitrine et fiche Google pour artisans (bâtiment, jardin, entretien), partout en France. Une offre de Julien ROLANDO LE BIAN, Conseil & Solutions IA. Maquette offerte avant paiement, livraison en 3 jours après réception des éléments, domaine au nom du client.
 
 ## Contact
 

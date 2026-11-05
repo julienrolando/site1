@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Automatisation IA pour indépendants et freelances | Julien Rolando</title>
+<title>Automatisation IA pour indépendants et freelances | Julien ROLANDO LE BIAN</title>
 <meta name="description" content="Audit gratuit puis automatisation IA de vos tâches : facturation, relances, suivi client. Pour indépendants, freelances et artisans, à Toulouse et en visio.">
-<meta name="author" content="Julien Rolando Le Bian">
+<meta name="author" content="Julien ROLANDO LE BIAN">
 <meta name="theme-color" content="#13224A">
 <link rel="canonical" href="https://julienrolando.fr/professionnels.html">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:site_name" content="Julien Rolando Le Bian — Conseil & Solutions IA">
+<meta property="og:site_name" content="Julien ROLANDO LE BIAN — Conseil & Solutions IA">
 <meta property="og:title" content="Reprenez les heures que l'administratif vous prend">
 <meta property="og:description" content="Audit de vos tâches chronophages, automatisations documentées et reprenables par vous. Premier échange gratuit.">
 <meta property="og:url" content="https://julienrolando.fr/professionnels.html">
@@ -22,6 +22,7 @@
 <meta name="twitter:image" content="https://julienrolando.fr/og-image.jpg">
 
 <link rel="icon" href="assets/logo-mark.png">
+<link rel="preload" as="image" href="assets/julien-profil.webp" type="image/webp" fetchpriority="high">
 
 <link rel="preconnect" href="https://images.unsplash.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,16 +36,16 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
+      "@type": ["LocalBusiness", "ProfessionalService"],
       "@id": "https://julienrolando.fr/#organization",
-      "name": "Julien Rolando Le Bian — Conseil & Solutions IA",
+      "name": "Julien ROLANDO LE BIAN — Conseil & Solutions IA",
       "description": "Conseil, accompagnement et formation sur les solutions d'intelligence artificielle pour particuliers et indépendants.",
       "url": "https://julienrolando.fr/",
       "email": "contact@julienrolando.fr",
       "founder": {
         "@type": "Person",
         "@id": "https://julienrolando.fr/#julien",
-        "name": "Julien Rolando Le Bian",
+        "name": "Julien ROLANDO LE BIAN",
         "jobTitle": "Consultant en intelligence artificielle",
         "sameAs": [
           "https://www.linkedin.com/in/julienrolando",
@@ -57,7 +58,13 @@
         "streetAddress": "10 Avenue Henri Guillaumet",
         "addressLocality": "Toulouse",
         "postalCode": "31500",
-        "addressCountry": "FR"
+        "addressCountry": "FR",
+        "addressRegion": "Occitanie"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.612848,
+        "longitude": 1.466340
       },
       "areaServed": [
         {
@@ -157,7 +164,7 @@
         "value": "830 012 175 00055"
       },
       "logo": "https://julienrolando.fr/assets/logo-mark.png",
-      "image": "https://julienrolando.fr/og-image.jpg",
+      "image": ["https://julienrolando.fr/assets/julien-profil.jpg", "https://julienrolando.fr/og-image.jpg"],
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
@@ -181,7 +188,7 @@
       "@type": "WebSite",
       "@id": "https://julienrolando.fr/#website",
       "url": "https://julienrolando.fr/",
-      "name": "Julien Rolando Le Bian — Conseil & Solutions IA",
+      "name": "Julien ROLANDO LE BIAN — Conseil & Solutions IA",
       "inLanguage": "fr-FR",
       "publisher": {
         "@id": "https://julienrolando.fr/#organization"
@@ -204,7 +211,7 @@
       "@id": "https://ouvrages.pro/#organization",
       "name": "Ouvrages.pro",
       "url": "https://ouvrages.pro/",
-      "description": "Sites internet vitrine et fiche Google pour artisans, partout en France. Une offre de Julien Rolando Le Bian, Conseil & Solutions IA.",
+      "description": "Sites internet vitrine et fiche Google pour artisans, partout en France. Une offre de Julien ROLANDO LE BIAN, Conseil & Solutions IA.",
       "parentOrganization": {
         "@id": "https://julienrolando.fr/#organization"
       }
@@ -271,7 +278,7 @@
 <!-- ============================ HEADER ============================ -->
 <header class="header" id="header">
   <div class="header__inner">
-    <a class="brand" href="index.html" aria-label="Julien Rolando Le Bian, Conseil &amp; Solutions IA — accueil">
+    <a class="brand" href="index.html" aria-label="Julien ROLANDO LE BIAN, Conseil &amp; Solutions IA — accueil">
       <span class="brand__mark" aria-hidden="true"></span>
       <span class="brand__name">Julien ROLANDO LE BIAN<span class="brand__tag">Conseil &amp; Solutions IA</span></span>
     </a>
@@ -375,9 +382,12 @@
         </div>
 
         <figure class="portrait" data-parallax="0.03">
-          <img src="assets/julien-profil.jpg" alt="Portrait de Julien Rolando Le Bian, consultant en solutions IA à Toulouse" width="676" height="760" fetchpriority="high" decoding="async">
+          <picture>
+            <source srcset="assets/julien-profil.webp" type="image/webp">
+            <img src="assets/julien-profil.jpg" alt="Portrait de Julien ROLANDO LE BIAN, consultant en solutions IA à Toulouse" width="676" height="760" fetchpriority="high" decoding="async">
+          </picture>
           <figcaption class="portrait__card">
-            <strong>Julien Rolando Le Bian</strong>
+            <strong>Julien ROLANDO LE BIAN</strong>
             <span>Je m'occupe de la technique, vous gardez la main.</span>
           </figcaption>
         </figure>
@@ -715,7 +725,7 @@
     </div>
 
     <div class="booking" id="booking" data-reveal="scale">
-      <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25uoD1O1Y-dagX5nLsBhHxMVNaUTiB6Z2745vF_IbIQU9n8ObBLU2lw5xra8ya03DOLU56-fyI?gv=true" title="Agenda de prise de rendez-vous de Julien Rolando Le Bian" loading="lazy" frameborder="0"></iframe>
+      <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25uoD1O1Y-dagX5nLsBhHxMVNaUTiB6Z2745vF_IbIQU9n8ObBLU2lw5xra8ya03DOLU56-fyI?gv=true" title="Agenda de prise de rendez-vous de Julien ROLANDO LE BIAN" loading="lazy" frameborder="0"></iframe>
     </div>
     <p class="booking__note form__note">L'agenda est hébergé par Google&nbsp;: son affichage dépose des cookies Google. <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ25uoD1O1Y-dagX5nLsBhHxMVNaUTiB6Z2745vF_IbIQU9n8ObBLU2lw5xra8ya03DOLU56-fyI?gv=true" target="_blank" rel="noopener">Ouvrir dans un nouvel onglet</a></p>
   </div>
@@ -1072,6 +1082,7 @@
       <div>
         <h3>Informations</h3>
         <ul>
+          <li><a href="/carte.html">Carte de visite</a></li>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
           <li><a href="confidentialite.html">Politique de confidentialité</a></li>
           <li>SIRET 830 012 175 00055</li>
@@ -1086,12 +1097,12 @@
     </div>
 
     <div class="footer__bottom">
-      <p>© <span id="year">2026</span> Julien Rolando Le Bian — Conseil &amp; Solutions IA. Tous droits réservés.</p>
+      <p>© <span id="year">2026</span> Julien ROLANDO LE BIAN — Conseil &amp; Solutions IA. Tous droits réservés.</p>
       <div class="footer__legal">
         <div class="social">
-          <a href="https://www.linkedin.com/in/julienrolando" target="_blank" rel="noopener me" aria-label="Julien Rolando Le Bian sur LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg> LinkedIn</a>
-          <a href="https://www.instagram.com/julienrolando" target="_blank" rel="noopener me" aria-label="Julien Rolando Le Bian sur Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg> Instagram</a>
-          <a href="https://www.facebook.com/profile.php?id=61595437739787" target="_blank" rel="noopener me" aria-label="Julien Rolando Le Bian sur Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg> Facebook</a>
+          <a href="https://www.linkedin.com/in/julienrolando" target="_blank" rel="noopener me" aria-label="Julien ROLANDO LE BIAN sur LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg> LinkedIn</a>
+          <a href="https://www.instagram.com/julienrolando" target="_blank" rel="noopener me" aria-label="Julien ROLANDO LE BIAN sur Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg> Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61595437739787" target="_blank" rel="noopener me" aria-label="Julien ROLANDO LE BIAN sur Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg> Facebook</a>
         </div>
       </div>
     </div>
@@ -1106,7 +1117,7 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M8 9.5h8M8 13h5"/></svg>
 </button>
 
-<div class="chat" id="chat" role="dialog" aria-modal="false" aria-label="Assistant de Julien Rolando Le Bian" hidden>
+<div class="chat" id="chat" role="dialog" aria-modal="false" aria-label="Assistant de Julien ROLANDO LE BIAN" hidden>
   <div class="chat__head">
     <span class="chat__avatar" aria-hidden="true"><span class="brand__mark"></span></span>
     <span>

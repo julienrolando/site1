@@ -1,5 +1,5 @@
 /* ============================================================
-   DESIGN TOKENS — Charte Julien Rolando Le Bian
+   DESIGN TOKENS — Charte Julien ROLANDO LE BIAN
    ============================================================ */
 :root{
   color-scheme: light;
@@ -335,7 +335,7 @@ body.no-scroll{overflow:hidden}
   53%{transform:translate3d(var(--d2x),var(--d2y),0)}
   78%{transform:translate3d(var(--d3x),var(--d3y),0)}
   100%{transform:translate3d(0,0,0)}
-}50%{opacity:1}}50%{transform:translate3d(0,-14px,0)}}
+}
 .portrait{
   position:relative;z-index:1;width:min(100%,400px);aspect-ratio:4/5;
   overflow:visible;margin:0;
