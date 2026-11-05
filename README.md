@@ -1,14 +1,14 @@
-# Site Julien Rolando Le Bian — Conseil & Solutions IA
+# Site Julien ROLANDO LE BIAN — Conseil & Solutions IA
 
-Site vitrine statique (HTML/CSS/JS, sans framework) pour la micro-entreprise de conseil, formation IA et création de contenus de Julien Rolando Le Bian.
+Site vitrine statique (HTML/CSS/JS, sans framework) pour la micro-entreprise de conseil, formation IA et création de contenus de Julien ROLANDO LE BIAN.
 
 ## Informations de l'entreprise
 
-- **Dirigeant** : Julien Rolando Le Bian — EI (Entrepreneur Individuel)
+- **Dirigeant** : Julien ROLANDO LE BIAN — EI (Entrepreneur Individuel)
 - **SIREN** : 830 012 175 — **SIRET** : 830 012 175 00055 — **Code APE** : 6202A
 - **Adresse** : 10 Avenue Henri Guillaumet, Bât. C109, Étg 3, App. 109 — 31500 Toulouse
 - **TVA** : Non applicable (franchise en base, micro-entreprise)
-- **Site** : julienrolando.fr — **Email** : contact@julienrolando.fr — **Tél** : 06 52 49 48 73
+- **Site** : julienrolando.fr — **Email** : contact@julienrolando.fr — **Tél** : 07 64 44 05 20
 
 ## Stack technique
 
@@ -65,7 +65,7 @@ Ces piliers ne sont plus associés à un profil (particulier/indépendant) mais 
 
 ## Ce qui reste en attente / à faire un jour
 
-- [ ] Ajouter sur ouvrages.pro un lien retour vers julienrolando.fr (pied de page « Une offre de Julien Rolando Le Bian, Conseil & Solutions IA »)
+- [ ] Ajouter sur ouvrages.pro un lien retour vers julienrolando.fr (pied de page « Une offre de Julien ROLANDO LE BIAN, Conseil & Solutions IA »)
 - [ ] Redéployer le Worker du chatbot (`worker.js`) pour la partie Ouvrages.pro
 
 - [ ] Remplacer les placeholders de la galerie Créations par de vrais projets (les 3 démonstrations des études de cas restent fictives par nature)

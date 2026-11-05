@@ -24,64 +24,35 @@
     if (!ctx) return;
 
     var W = 0, H = 0, dpr = 1, pts = [], running = false, raf = 0;
-    var mouse = {x: -9999, y: -9999, on: false};
-    var LINK = 130, REACH = 170;
-
     function size(){
       var r = hero.getBoundingClientRect();
       dpr = Math.min(window.devicePixelRatio || 1, 2);
       W = r.width; H = r.height;
       cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      var n = Math.max(28, Math.min(90, Math.round(W * H / 15000)));
-      if (W < 620) n = Math.min(n, 38);
+      /* Quelques lueurs lentes, sans traits : le réseau de points faisait « visuel d'IA ». */
+      var n = W < 620 ? 10 : 16;
       pts = [];
       for (var i = 0; i < n; i++){
         pts.push({
           x: Math.random() * W, y: Math.random() * H,
-          vx: (Math.random() - .5) * .32, vy: (Math.random() - .5) * .32,
-          r: Math.random() * 1.6 + .7,
-          c: Math.random() < .22 ? '170,150,255' : '127,227,240'
+          vx: (Math.random() - .5) * .12, vy: (Math.random() - .5) * .12,
+          r: Math.random() * 1.4 + 0.8,
+          c: Math.random() < .35 ? '238,242,255' : '94,200,216',
+          a: 0.18 + Math.random() * 0.22
         });
       }
     }
 
     function frame(){
       ctx.clearRect(0, 0, W, H);
-      var i, j, p, q, dx, dy, d;
+      var i, p;
       for (i = 0; i < pts.length; i++){
         p = pts[i];
-        if (mouse.on){
-          dx = p.x - mouse.x; dy = p.y - mouse.y; d = Math.sqrt(dx*dx + dy*dy);
-          if (d < REACH && d > 0.1){
-            var f = (1 - d / REACH) * .9;
-            p.x += dx / d * f; p.y += dy / d * f;
-          }
-        }
         p.x += p.vx; p.y += p.vy;
         if (p.x < -10) p.x = W + 10; else if (p.x > W + 10) p.x = -10;
         if (p.y < -10) p.y = H + 10; else if (p.y > H + 10) p.y = -10;
-      }
-      ctx.lineWidth = 1;
-      for (i = 0; i < pts.length; i++){
-        p = pts[i];
-        for (j = i + 1; j < pts.length; j++){
-          q = pts[j]; dx = p.x - q.x; dy = p.y - q.y;
-          if (Math.abs(dx) > LINK || Math.abs(dy) > LINK) continue;
-          d = Math.sqrt(dx*dx + dy*dy);
-          if (d < LINK){
-            ctx.strokeStyle = 'rgba(127,227,240,' + ((1 - d / LINK) * .22).toFixed(3) + ')';
-            ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
-          }
-        }
-        if (mouse.on){
-          dx = p.x - mouse.x; dy = p.y - mouse.y; d = Math.sqrt(dx*dx + dy*dy);
-          if (d < REACH + 40){
-            ctx.strokeStyle = 'rgba(170,150,255,' + ((1 - d / (REACH + 40)) * .5).toFixed(3) + ')';
-            ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
-          }
-        }
-        ctx.fillStyle = 'rgba(' + p.c + ',.85)';
+        ctx.fillStyle = 'rgba(' + p.c + ',' + p.a.toFixed(2) + ')';
         ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832); ctx.fill();
       }
       raf = requestAnimationFrame(frame);
@@ -93,13 +64,6 @@
     requestAnimationFrame(function(){ cv.classList.add('is-on'); });
     var rt;
     window.addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(size, 200); });
-    if (finePointer){
-      hero.addEventListener('pointermove', function(e){
-        var r = hero.getBoundingClientRect();
-        mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; mouse.on = true;
-      });
-      hero.addEventListener('pointerleave', function(){ mouse.on = false; });
-    }
     var visible = true;
     if ('IntersectionObserver' in window){
       new IntersectionObserver(function(en){
